@@ -1,0 +1,18 @@
+{
+  "subject": "トーナメント",
+  "tone": "迫力",
+  "language": "英語",
+  "variant": "ATLAS6種オープニング",
+  "description": "再出力カタログの指定6種類を同じ部品から組み立てた20秒の大会オープニング。架空の対戦例。",
+  "date": "20261113",
+  "version": 1,
+  "stem": "トーナメント_迫力20秒_英語_横型_ATLAS6種オープニング_20261113_v01",
+  "job": "atlas-reexport-tournament-20261113",
+  "durationSeconds": 20,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "26c296ade3541dad9af88868f131e18f845c1046ee80bc5a29b727cc2a9ec780",
+  "previewSHA256": "01717aaa509ba5c16e4e5f9ef3a3f13422985163d43c6a874698f5fc168ade4e",
+  "sourceJob": "promo-studio/jobs/atlas-reexport-tournament-20261113"
+}

@@ -1,0 +1,89 @@
+{
+  "project": "dd-premium-20261112",
+  "compositionId": "DdPremium",
+  "durationSeconds": 20,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "brand": "AXEON / DD INTELLIGENCE",
+  "music": "audio/dd-premium-original.wav",
+  "cta": "DDデモで体験する",
+  "disclaimer": "同梱の架空CSVを使用 / 最終判断は人が行います",
+  "scenes": [
+    {
+      "from": 0,
+      "to": 3,
+      "kind": "intro",
+      "eyebrow": "CLARITY. BEFORE THE DECISION.",
+      "lines": [
+        "判断を支える、",
+        "確かな根拠を。"
+      ],
+      "motionIds": [
+        "M-003"
+      ]
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "kind": "product",
+      "eyebrow": "AXEON / DD INTELLIGENCE",
+      "lines": [
+        "資料をつなぎ、",
+        "判断に備える。"
+      ],
+      "detail": "給与と勤怠を照らし合わせる。\nその一歩を、実際の画面で。",
+      "image": "captures/dd/input.jpg",
+      "motionIds": [
+        "M-003",
+        "M-012"
+      ]
+    },
+    {
+      "from": 7,
+      "to": 10.5,
+      "kind": "result",
+      "eyebrow": "01 / RECONCILIATION",
+      "lines": [
+        "給与 × 勤怠。",
+        "差異を、見える形に。"
+      ],
+      "detail": "照合した結果を確認。\n気になる差異から、根拠へ。",
+      "image": "captures/dd/result.jpg",
+      "motionIds": [
+        "M-003",
+        "M-012",
+        "M-005"
+      ]
+    },
+    {
+      "from": 10.5,
+      "to": 14,
+      "kind": "proof",
+      "eyebrow": "02 / TRACEABLE EVIDENCE",
+      "lines": [
+        "数字の先にある、",
+        "参照行まで。"
+      ],
+      "detail": "給与台帳と勤怠データの\n参照行を、実画面で確認。",
+      "image": "captures/dd/evidence-card.jpg",
+      "motionIds": [
+        "M-003",
+        "M-012",
+        "M-005"
+      ]
+    },
+    {
+      "from": 14,
+      "to": 20,
+      "kind": "end",
+      "eyebrow": "EVIDENCE FOR YOUR NEXT DECISION",
+      "lines": [
+        "根拠から、次の判断へ。"
+      ],
+      "motionIds": [
+        "M-003"
+      ]
+    }
+  ]
+}

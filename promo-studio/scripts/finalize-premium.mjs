@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {hash,assertMediaQA,read} from './library.mjs';
+const job='jobs/dd-premium-20261112';
+const qa=read(`${job}/qa/result.json`),request=read(`${job}/request.json`);
+assertMediaQA(qa,request,hash(`${job}/output/promo_16x9.mp4`));
+const registry=read('src/catalog/registry.json');
+const motion=registry.find(m=>m.id==='M-005');
+Object.assign(motion,{runtimeStatus:'verified',implementationPath:'src/motions/premium.tsx',exportName:'M005',propsSchema:{items:'string[]',durationFrames:'positive integer',accentColor:'optional CSS color'},selectionReason:'高級感・信頼感の構成で、3枚の要約カードを38px以内・0.15秒間隔で丁寧に展開する',verificationPath:`${job}/qa/result.json`,previewPath:`${job}/output/preview/index.html`});
+fs.writeFileSync('src/catalog/registry.json',JSON.stringify(registry,null,2));
+fs.writeFileSync(`${job}/motion-registry.json`,JSON.stringify(['M-003','M-012','M-005'].map(id=>registry.find(m=>m.id===id)),null,2));
+fs.writeFileSync(`${job}/render-report.md`,`# DD / 高級感・信頼感 — 制作報告\n\n状態：完成・検査済み。理想.mdの要望とユーザー指定のDDを対象に制作。\n\n20秒・1920×1080・30fps・600フレーム。0–3秒導入、3–7秒製品、7–14秒照合結果と根拠、14–20秒サービス名とCTA。低彩度・余白・スローズーム・段階表示・3枚のカード展開。M-003 / M-012 / M-005の3種類。\n\n## 成果物\n\n- output/promo_16x9.mp4\n- output/preview/index.html と同階層のMP4・ポスター\n- ../../../動画ライブラリ/ の作品名付きフォルダ（HTMLとMP4を1作品1フォルダに集約）\n- composition.json、storyboard.md、request.json、delivery.json、assets.json\n- 編集：StudioのDdPremium、src/PremiumPromo.tsx、src/motions/premium.tsx\n- 再生成：node scripts/render.mjs ${job} → node scripts/qa.cjs ${job}\n\n## 検査\n\n- TypeScript成功。Reactはフレームからの決定論的描画、条件付きフック・副作用・外部通信なし。\n- ${qa.format.video} / ${qa.format.width}×${qa.format.height} / ${qa.format.frames} frames、全編デコード成功。\n- AAC音声、ピーク${qa.audioPeakDB.toFixed(2)} dBFS。オリジナルのピアノ風合成音＋持続音、第三者録音なし。\n- ${qa.everyFrameQA.checked}フレーム検査、全黒フレームなし。\n- ローカルHTMLで音声ありの全編再生成功、エラーなし、PC・モバイルで横はみ出しなし。\n- 全シーンと切り替え付近の静止画を生成・目視確認。結果画面の文字と画像の重なりを修正済み。\n- MP4 SHA-256：${qa.mediaSHA256}\n\n実画面の静止キャプチャを再利用したCM。ライブ操作の新規録画ではない。カードは明示した機能の要約。サンプルデータ・最終判断は人が行う旨を全編表示。機能と権利の制約はfeature-audit.md。元アプリ・過去動画・本番DBを変更せず、push・外部公開なし。\n`);
+console.log('Premium report finalized; M-005 verified.');

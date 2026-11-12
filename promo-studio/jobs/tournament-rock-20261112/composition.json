@@ -1,0 +1,16 @@
+{
+  "project":"tournament-rock-20261112","compositionId":"TournamentRock","durationSeconds":22,"fps":30,"width":1920,"height":1080,"bpm":180,
+  "music":"audio/tournament-rock-original.wav",
+  "scenes":[
+    {"from":0,"to":2,"kind":"type","word":"IGNITE.","copy":["その一投で、","空気が変わる。"],"accent":"#d6ff35","motionIds":["M-001","M-015","M-060"]},
+    {"from":2,"to":4,"kind":"screen","source":"draw","sourceStart":8,"sourceEnd":119,"word":"DRAW.","copy":["引け。"],"accent":"#d6ff35","scale":1.08,"motionIds":["M-012","M-013","M-060"]},
+    {"from":4,"to":6,"kind":"split","source":"draw","sourceStart":72,"sourceEnd":119,"word":"CONNECT.","copy":["出会え。"],"accent":"#ff6334","motionIds":["M-001","M-013","M-015"]},
+    {"from":6,"to":8,"kind":"screen","source":"vs","sourceStart":25,"sourceEnd":89,"word":"FACE OFF.","copy":["ぶつかれ。"],"accent":"#ff6334","scale":1.15,"motionIds":["M-012","M-022","M-060"]},
+    {"from":8,"to":10,"kind":"type","word":"NEXT / MATCH.","copy":["次の勝負へ。"],"accent":"#d6ff35","motionIds":["M-001","M-013","M-015"]},
+    {"from":10,"to":12,"kind":"screen","source":"result","sourceStart":0,"sourceEnd":89,"word":"RISE.","copy":["勝ち上がれ。"],"accent":"#d6ff35","scale":1.2,"motionIds":["M-012","M-022","M-060"]},
+    {"from":12,"to":14,"kind":"split","source":"vs","sourceStart":12,"sourceEnd":89,"word":"NO LIMIT.","copy":["まだ、","終わらない。"],"accent":"#ff6334","motionIds":["M-001","M-013","M-015"]},
+    {"from":14,"to":16,"kind":"screen","source":"champion","sourceStart":12,"sourceEnd":105,"word":"OWN IT.","copy":["主役を、つかめ。"],"accent":"#d6ff35","scale":1.08,"motionIds":["M-012","M-022","M-060"]},
+    {"from":16,"to":18,"kind":"rally","source":"champion","sourceStart":70,"sourceEnd":119,"word":"MAKE / SOME / NOISE.","copy":["沸かせ。"],"accent":"#d6ff35","motionIds":["M-001","M-013","M-060"]},
+    {"from":18,"to":22,"kind":"end","source":"champion","sourceStart":65,"sourceEnd":119,"word":"DARTS / TOURNAMENT","copy":["次の大会を、もっと熱く。"],"cta":"演出プレビューを体験","accent":"#d6ff35","motionIds":["M-001","M-015","M-060"]}
+  ]
+}

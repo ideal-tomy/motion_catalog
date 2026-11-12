@@ -1,0 +1,80 @@
+{
+  "compositionId": "AtlasTournament",
+  "durationSeconds": 20,
+  "audio": "audio/atlas-reexport.wav",
+  "theme": {
+    "background": "#070c16",
+    "primary": "#56f0df",
+    "accent": "#ffcd72",
+    "foreground": "#f5f7f6"
+  },
+  "scenes": [
+    {
+      "id": "M-009",
+      "from": 0,
+      "to": 3,
+      "startFrame": 0,
+      "endFrame": 90,
+      "text": "ENTER THE ARENA",
+      "speed": 1,
+      "easing": "easeOut",
+      "audioCue": 0
+    },
+    {
+      "id": "M-017",
+      "from": 3,
+      "to": 6,
+      "startFrame": 90,
+      "endFrame": 180,
+      "text": "SAMPLE DARTS OPEN",
+      "speed": 1,
+      "easing": "easeOut",
+      "audioCue": 0
+    },
+    {
+      "id": "M-060",
+      "from": 6,
+      "to": 10,
+      "startFrame": 180,
+      "endFrame": 300,
+      "text": "PLAYER A  /  VS  /  PLAYER B",
+      "speed": 1,
+      "easing": "easeOut",
+      "audioCue": 12
+    },
+    {
+      "id": "M-054",
+      "from": 10,
+      "to": 13,
+      "startFrame": 300,
+      "endFrame": 390,
+      "text": "MATCH CONFIRMED",
+      "speed": 1,
+      "easing": "easeOut",
+      "audioCue": 0
+    },
+    {
+      "id": "M-014",
+      "from": 13,
+      "to": 17,
+      "startFrame": 390,
+      "endFrame": 510,
+      "text": "MAKE YOUR MOMENT",
+      "speed": 1,
+      "easing": "easeOut",
+      "audioCue": 0
+    },
+    {
+      "id": "M-016",
+      "from": 17,
+      "to": 20,
+      "startFrame": 510,
+      "endFrame": 600,
+      "text": "OWN THE NIGHT",
+      "speed": 1,
+      "easing": "easeOut",
+      "audioCue": 0
+    }
+  ],
+  "disclaimer": "演出用サンプル。実在の大会・選手・結果ではありません。"
+}

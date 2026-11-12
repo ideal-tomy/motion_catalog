@@ -1,0 +1,40 @@
+{
+  "linksChecked": 10,
+  "catalogNavigation": true,
+  "catalogCards": 60,
+  "desktopAndMobile": true,
+  "mobileOverflow": false,
+  "videos": [
+    {
+      "name": "DD / 照合と根拠確認",
+      "width": 1920,
+      "height": 1080,
+      "duration": 20.011
+    },
+    {
+      "name": "DD / 給与勤怠照合",
+      "width": 1920,
+      "height": 1080,
+      "duration": 22.016
+    },
+    {
+      "name": "トーナメント / 初版",
+      "width": 1920,
+      "height": 1080,
+      "duration": 20.011
+    },
+    {
+      "name": "トーナメント / 9種転換",
+      "width": 1920,
+      "height": 1080,
+      "duration": 22.016
+    },
+    {
+      "name": "トーナメント / ロック",
+      "width": 1920,
+      "height": 1080,
+      "duration": 22.016
+    }
+  ],
+  "errors": []
+}

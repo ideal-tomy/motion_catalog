@@ -1,0 +1,40 @@
+{
+  "source": "dd_demo/src",
+  "route": "http://127.0.0.1:4212/ai",
+  "viewport": {
+    "width": 1600,
+    "height": 1000,
+    "deviceScaleFactor": 1.5
+  },
+  "framing": "bottom padding for framing only; no source changes",
+  "clip": {
+    "x": 430,
+    "y": 65,
+    "width": 1100,
+    "height": 850
+  },
+  "frames": 120,
+  "fps": 30,
+  "actions": [
+    "open /ai",
+    "自社で入力",
+    "set fictional company with valid dummy revenue",
+    "対象企業として設定",
+    "サンプル資料を投入",
+    "根拠を見る",
+    "発見に戻る"
+  ],
+  "resultText": "ライブ層 — 給与×勤怠の実解析\n\n同梱の架空CSVを突合します。処理は本物・結果は既知です。\n\n実解析\n\n4ヶ月を突合 — 乖離 3件 / 推計 0.1〜0.1百万円相当\n\n2024-03 山田太郎 打刻28.5h − 支給15h = +13.5h\nEXIT時: 処置済みとして開示可 → 評価ディスカウント回避\n根拠を見る\n2024-03 佐藤花子 打刻22h − 支給10h = +12h\nEXIT時: 処置済みとして開示可 → 評価ディスカウント回避\n根拠を見る\n2024-03 鈴木一郎 打刻31h − 支給18h = +13h\nEXIT時: 処置済みとして開示可 → 評価ディスカウント回避\n根拠を見る\n実況を見る(5件)再実行",
+  "evidenceText": "根拠 — 山田太郎 / 2024-03\n\n給与台帳 4行目 / 勤怠 4行目\n\n打刻残業\t28.5 時間\n支給計上残業\t15 時間\n乖離\t+13.5 時間（約21,600円）\n発見に戻る",
+  "csvReads": [
+    "http://127.0.0.1:4212/live-samples/payroll.csv",
+    "http://127.0.0.1:4212/live-samples/attendance.csv"
+  ],
+  "errors": [],
+  "failed": [],
+  "writes": [],
+  "blockedExternalResources": [
+    "https://fonts.googleapis.com/css2"
+  ],
+  "liveAIRequests": 0
+}

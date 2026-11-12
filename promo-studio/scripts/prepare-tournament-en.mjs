@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const job='jobs/tournament-rock-en-transitions-20261112';fs.mkdirSync(job,{recursive:true});
+const plan=JSON.parse(fs.readFileSync('jobs/tournament-rock-20261112/composition.json','utf8'));
+const copies=[['ONE THROW.','CHANGES EVERYTHING.'],['DRAW YOUR TEAM.'],['FIND YOUR','TEAM.'],['BRING IT ON.'],['ON TO THE NEXT.'],['RISE TO THE TOP.'],['NOT.','DONE YET.'],['TAKE THE SPOTLIGHT.'],['TURN IT UP.'],['BRING MORE HEAT TO YOUR NEXT TOURNAMENT.']];
+const names=['Fly-through zoom','Whip spin','3D cube turn','Diagonal sweep','Iris tunnel','Card flip','Split gate','Whip pan','Quad burst'];
+const kinds=['fly-through','whip-spin','cube','diagonal','iris','card-flip','split-gate','whip-pan','quad-burst'];
+plan.project='tournament-rock-en-transitions-20261112';plan.compositionId='TournamentRockEnglish';plan.locale='en';plan.transitionWindowFrames=18;
+plan.scenes.forEach((s,i)=>{s.copy=copies[i];s.locale='en';s.captureRoot='captures/tournament-en';if(i===9)s.cta='EXPERIENCE THE SHOW';});
+plan.transitions=names.map((name,i)=>({id:`TR-${String(i+1).padStart(3,'0')}`,name,kind:kinds[i],atFrame:(i+1)*60,durationFrames:18,fromScene:i,toScene:i+1}));
+fs.writeFileSync(`${job}/composition.json`,JSON.stringify(plan,null,2));
+const req=JSON.parse(fs.readFileSync('jobs/tournament-rock-20261112/request.json','utf8'));
+Object.assign(req,{project:plan.project,instruction:'Translate the tournament rock cut into English and use a different continuous two-scene transition at every cut.',locale:'en',captureMode:'actual-ui-localized',preserveOriginal:true});
+fs.writeFileSync(`${job}/request.json`,JSON.stringify(req,null,2));
+console.log('English plan prepared: 10 scenes / 9 unique transitions / 22 seconds.');

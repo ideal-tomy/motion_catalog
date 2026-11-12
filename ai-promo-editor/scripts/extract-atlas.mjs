@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const file='reference/catalog/MOTION_ATLAS_60/index.html',html=fs.readFileSync(file,'utf8');
+const start=html.indexOf('const W=1280'),end=html.indexOf('function draw(){');
+if(start<0||end<=start)throw Error('Unknown Atlas source structure');
+const body=html.slice(start,end);
+if(/document\.|requestAnimationFrame|Date\.now|Math\.random/.test(body))throw Error('Unexpected global dependencies in drawing functions');
+fs.mkdirSync('src/atlas',{recursive:true});
+fs.writeFileSync('src/atlas/renderer.js',`// Generated from unmodified Atlas. Do not edit. Source SHA256: ${crypto.createHash('sha256').update(html).digest('hex')}\nimport data from '../../reference/catalog/MOTION_ATLAS_60/motions.json';\nexport function createAtlasRenderer(ctx){\n${body}\nreturn (id,progress)=>{const index=data.motions.findIndex(m=>m.id===id);if(index<0)throw Error('Unknown motion ID');const m=data.motions[index],u=clamp(progress),t=u*2;ctx.clearRect(0,0,W,H);bg(t,index);scene(m,u,t,index);frame(index,id,m.en,t);};\n}\n`);
+fs.writeFileSync('src/atlas/renderer.d.ts',`export function createAtlasRenderer(ctx:CanvasRenderingContext2D):(id:string,progress:number)=>void;\n`);
+console.log('Extracted original 60-motion drawing module');

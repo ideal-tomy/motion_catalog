@@ -1,0 +1,299 @@
+{
+  "project": "tournament-rock-en-transitions-20261112",
+  "compositionId": "TournamentRockEnglish",
+  "durationSeconds": 22,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "bpm": 180,
+  "music": "audio/tournament-rock-original.wav",
+  "scenes": [
+    {
+      "from": 0,
+      "to": 2,
+      "kind": "type",
+      "word": "IGNITE.",
+      "copy": [
+        "ONE THROW.",
+        "CHANGES EVERYTHING."
+      ],
+      "accent": "#d6ff35",
+      "motionIds": [
+        "M-001",
+        "M-015",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "kind": "screen",
+      "source": "draw",
+      "sourceStart": 8,
+      "sourceEnd": 119,
+      "word": "DRAW.",
+      "copy": [
+        "DRAW YOUR TEAM."
+      ],
+      "accent": "#d6ff35",
+      "scale": 1.08,
+      "motionIds": [
+        "M-012",
+        "M-013",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "kind": "split",
+      "source": "draw",
+      "sourceStart": 72,
+      "sourceEnd": 119,
+      "word": "CONNECT.",
+      "copy": [
+        "FIND YOUR",
+        "TEAM."
+      ],
+      "accent": "#ff6334",
+      "motionIds": [
+        "M-001",
+        "M-013",
+        "M-015"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "kind": "screen",
+      "source": "vs",
+      "sourceStart": 25,
+      "sourceEnd": 89,
+      "word": "FACE OFF.",
+      "copy": [
+        "BRING IT ON."
+      ],
+      "accent": "#ff6334",
+      "scale": 1.15,
+      "motionIds": [
+        "M-012",
+        "M-022",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "kind": "type",
+      "word": "NEXT / MATCH.",
+      "copy": [
+        "ON TO THE NEXT."
+      ],
+      "accent": "#d6ff35",
+      "motionIds": [
+        "M-001",
+        "M-013",
+        "M-015"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "kind": "screen",
+      "source": "result",
+      "sourceStart": 0,
+      "sourceEnd": 89,
+      "word": "RISE.",
+      "copy": [
+        "RISE TO THE TOP."
+      ],
+      "accent": "#d6ff35",
+      "scale": 1.2,
+      "motionIds": [
+        "M-012",
+        "M-022",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 12,
+      "to": 14,
+      "kind": "split",
+      "source": "vs",
+      "sourceStart": 12,
+      "sourceEnd": 89,
+      "word": "NO LIMIT.",
+      "copy": [
+        "NOT.",
+        "DONE YET."
+      ],
+      "accent": "#ff6334",
+      "motionIds": [
+        "M-001",
+        "M-013",
+        "M-015"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 14,
+      "to": 16,
+      "kind": "screen",
+      "source": "champion",
+      "sourceStart": 12,
+      "sourceEnd": 105,
+      "word": "OWN IT.",
+      "copy": [
+        "TAKE THE SPOTLIGHT."
+      ],
+      "accent": "#d6ff35",
+      "scale": 1.08,
+      "motionIds": [
+        "M-012",
+        "M-022",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "kind": "rally",
+      "source": "champion",
+      "sourceStart": 70,
+      "sourceEnd": 119,
+      "word": "MAKE / SOME / NOISE.",
+      "copy": [
+        "TURN IT UP."
+      ],
+      "accent": "#d6ff35",
+      "motionIds": [
+        "M-001",
+        "M-013",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    },
+    {
+      "from": 18,
+      "to": 22,
+      "kind": "end",
+      "source": "champion",
+      "sourceStart": 65,
+      "sourceEnd": 119,
+      "word": "DARTS / TOURNAMENT",
+      "copy": [
+        "BRING MORE HEAT TO YOUR NEXT TOURNAMENT."
+      ],
+      "cta": "EXPERIENCE THE SHOW",
+      "accent": "#d6ff35",
+      "motionIds": [
+        "M-001",
+        "M-015",
+        "M-060"
+      ],
+      "locale": "en",
+      "captureRoot": "captures/tournament-en"
+    }
+  ],
+  "locale": "en",
+  "transitionWindowFrames": 18,
+  "transitions": [
+    {
+      "id": "TR-001",
+      "name": "Fly-through zoom",
+      "kind": "fly-through",
+      "atFrame": 60,
+      "durationFrames": 18,
+      "fromScene": 0,
+      "toScene": 1
+    },
+    {
+      "id": "TR-002",
+      "name": "Whip spin",
+      "kind": "whip-spin",
+      "atFrame": 120,
+      "durationFrames": 18,
+      "fromScene": 1,
+      "toScene": 2
+    },
+    {
+      "id": "TR-003",
+      "name": "3D cube turn",
+      "kind": "cube",
+      "atFrame": 180,
+      "durationFrames": 18,
+      "fromScene": 2,
+      "toScene": 3
+    },
+    {
+      "id": "TR-004",
+      "name": "Diagonal sweep",
+      "kind": "diagonal",
+      "atFrame": 240,
+      "durationFrames": 18,
+      "fromScene": 3,
+      "toScene": 4
+    },
+    {
+      "id": "TR-005",
+      "name": "Iris tunnel",
+      "kind": "iris",
+      "atFrame": 300,
+      "durationFrames": 18,
+      "fromScene": 4,
+      "toScene": 5
+    },
+    {
+      "id": "TR-006",
+      "name": "Card flip",
+      "kind": "card-flip",
+      "atFrame": 360,
+      "durationFrames": 18,
+      "fromScene": 5,
+      "toScene": 6
+    },
+    {
+      "id": "TR-007",
+      "name": "Split gate",
+      "kind": "split-gate",
+      "atFrame": 420,
+      "durationFrames": 18,
+      "fromScene": 6,
+      "toScene": 7
+    },
+    {
+      "id": "TR-008",
+      "name": "Whip pan",
+      "kind": "whip-pan",
+      "atFrame": 480,
+      "durationFrames": 18,
+      "fromScene": 7,
+      "toScene": 8
+    },
+    {
+      "id": "TR-009",
+      "name": "Quad burst",
+      "kind": "quad-burst",
+      "atFrame": 540,
+      "durationFrames": 18,
+      "fromScene": 8,
+      "toScene": 9
+    }
+  ]
+}

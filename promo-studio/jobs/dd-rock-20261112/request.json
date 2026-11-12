@@ -1,0 +1,8 @@
+{
+ "project":"dd-rock-20261112","source":"C:/Users/ryoji/00myapp/ai_demo_workspace/dd_demo",
+ "instruction":"DDの実画面を使い、ロック調BGMと前回とは異なるモーションの組み合わせで宣伝動画を作る",
+ "durationSeconds":22,"fps":30,"width":1920,"height":1080,
+ "captureMode":"actual-ui","audience":"DD・M&A・経営企画の担当者","goal":"給与×勤怠の突合と根拠確認の機能理解",
+ "visualTone":"rock / forensic / fast","brand":"AXEON DD INTELLIGENCE",
+ "noGo":["source or production changes","real personal data","live AI costs","financial advice","unverified performance claims","borrowed recordings"]
+}

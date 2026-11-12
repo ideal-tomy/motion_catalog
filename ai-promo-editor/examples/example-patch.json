@@ -1,0 +1,38 @@
+{
+  "proposalId": "prop-explain-001",
+  "baseRevision": 1,
+  "targetSceneId": "sc-explain",
+  "reason": "3コマ目を9秒に延長し、タイプ演出とスキャンを重ねる",
+  "operations": [
+    {
+      "op": "setSceneDuration",
+      "sceneId": "sc-explain",
+      "durationFrames": 270
+    },
+    {
+      "op": "setLayerMotionStack",
+      "sceneId": "sc-explain",
+      "layerId": "text-explain",
+      "motionStack": [
+        {
+          "motionId": "M-017",
+          "startOffsetFrames": 0,
+          "durationFrames": 42,
+          "params": {
+            "charactersPerSecond": 12
+          }
+        },
+        {
+          "motionId": "M-008",
+          "startOffsetFrames": 10,
+          "durationFrames": 60,
+          "params": {
+            "opacity": 0.25,
+            "scope": "layer-bounds"
+          }
+        }
+      ]
+    }
+  ],
+  "expectedTotalFrames": 660
+}

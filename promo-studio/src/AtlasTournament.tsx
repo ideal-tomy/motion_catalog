@@ -1,0 +1,14 @@
+import React from 'react';
+import {AbsoluteFill,Audio,Sequence,staticFile,useCurrentFrame} from 'remotion';
+import {M009} from './motions/M009';
+import {M017} from './motions/M017';
+import {M060} from './motions/M060';
+import {M054} from './motions/M054';
+import {M014} from './motions/M014';
+import {M016} from './motions/M016';
+import type {MotionProps,Theme} from './motions/atlas-types';
+export const atlasComponents:Record<string,React.FC<MotionProps>>={'M-009':M009,'M-017':M017,'M-060':M060,'M-054':M054,'M-014':M014,'M-016':M016};
+type Scene={id:string;startFrame:number;endFrame:number;text:string;speed:number;easing:string;audioCue:number};
+export type AtlasPlan={theme:Theme;audio:string;scenes:Scene[]};
+export const AtlasSingle:React.FC<{scene:Scene;theme:Theme}>=({scene,theme})=>{const frame=useCurrentFrame(),Component=atlasComponents[scene.id];return <Component frame={frame} durationInFrames={scene.endFrame-scene.startFrame} text={scene.text} theme={theme} speed={scene.speed} easing={scene.easing as MotionProps['easing']} startFrame={0} endFrame={scene.endFrame-scene.startFrame} audioCue={scene.audioCue}/>};
+export const AtlasTournament:React.FC<{plan:AtlasPlan}>=({plan})=><AbsoluteFill>{plan.scenes.map(scene=><Sequence key={scene.startFrame} from={scene.startFrame} durationInFrames={scene.endFrame-scene.startFrame}><AtlasSingle scene={scene} theme={plan.theme}/></Sequence>)}<Audio src={staticFile(plan.audio)}/></AbsoluteFill>;

@@ -1,0 +1,18 @@
+{
+  "subject": "トーナメント",
+  "tone": "迫力",
+  "language": "英語",
+  "variant": "9種転換",
+  "description": "画面内も英語化し、全9か所で異なる切り替えを見せるロック調CM。",
+  "date": "20261112",
+  "version": 1,
+  "stem": "トーナメント_迫力22秒_英語_横型_9種転換_20261112_v01",
+  "job": "tournament-rock-en-transitions-20261112",
+  "durationSeconds": 22,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "7b0f7abd25afe85c9f87159931915e0bb461cc22dd7f17f5b4d153695da860a1",
+  "previewSHA256": "45c73f0d8e0a7ef556e5e59f1cb2fb36e5c997793512fb2ebdbb24721893da96",
+  "sourceJob": "promo-studio/jobs/tournament-rock-en-transitions-20261112"
+}

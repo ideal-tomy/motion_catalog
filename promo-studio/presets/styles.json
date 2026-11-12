@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "presets": [
+    {
+      "id": "energetic",
+      "label": "迫力",
+      "durationSeconds": 22,
+      "mood": "energetic",
+      "energyCurve": [
+        5,
+        3,
+        4,
+        5,
+        3
+      ],
+      "durations": [
+        2,
+        4,
+        6,
+        6,
+        4
+      ],
+      "music": "ロック調、操作中は音量を控える",
+      "palette": "高コントラスト、黄緑・黒",
+      "allowShake": true,
+      "maxLight": "high"
+    },
+    {
+      "id": "calm",
+      "label": "落ち着き",
+      "durationSeconds": 20,
+      "mood": "calm",
+      "energyCurve": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "durations": [
+        3,
+        4,
+        6,
+        4,
+        3
+      ],
+      "music": "静かなインスト、控えめなアタック",
+      "palette": "紺・白、低い発光",
+      "allowShake": false,
+      "maxLight": "low"
+    },
+    {
+      "id": "contrast",
+      "label": "緩急",
+      "durationSeconds": 20,
+      "mood": "energetic",
+      "energyCurve": [
+        5,
+        1,
+        2,
+        5,
+        1
+      ],
+      "durations": [
+        2,
+        4,
+        6,
+        5,
+        3
+      ],
+      "music": "冒頭と結果でヒット、操作は落ち着かせる",
+      "palette": "暗い基調、結果でアクセント",
+      "allowShake": true,
+      "maxLight": "medium"
+    },
+    {
+      "id": "healing",
+      "label": "癒し",
+      "durationSeconds": 20,
+      "mood": "healing",
+      "energyCurve": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "durations": [
+        3,
+        4,
+        6,
+        4,
+        3
+      ],
+      "music": "穏やかなアンビエント。音源は別途用意・検証",
+      "palette": "柔らかい低コントラスト、光量を抑える",
+      "allowShake": false,
+      "maxLight": "low"
+    }
+  ],
+  "showcase": {
+    "id": "transition-showcase",
+    "referenceJob": "tournament-rock-en-transitions-20261112",
+    "purpose": "全9境界の演出比較。通常の機能紹介とは区別"
+  }
+}

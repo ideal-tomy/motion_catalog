@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "job": "dd-premium-20261112",
+  "captureMode": "actual-ui",
+  "assets": [
+    {
+      "id": "input",
+      "path": "captures/dd/input.jpg",
+      "kind": "still",
+      "frames": 1,
+      "fps": 30,
+      "availableSeconds": null,
+      "feature": "給与・勤怠資料の入力",
+      "phase": "before",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/dd_demo",
+      "provenance": "実画面を架空CSVで操作",
+      "localization": "元画面の表示",
+      "evidence": "../dd-rock-20261112/captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "professional",
+          "forensic"
+        ],
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "scan",
+      "path": "captures/dd/scan",
+      "kind": "image-sequence",
+      "frames": 120,
+      "fps": 30,
+      "availableSeconds": 4,
+      "feature": "給与×勤怠の突合",
+      "phase": "operation",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/dd_demo",
+      "provenance": "実画面を架空CSVで操作",
+      "localization": "元画面の表示",
+      "evidence": "../dd-rock-20261112/captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "professional",
+          "forensic"
+        ],
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "result",
+      "path": "captures/dd/result.jpg",
+      "kind": "still",
+      "frames": 1,
+      "fps": 30,
+      "availableSeconds": null,
+      "feature": "突合結果",
+      "phase": "result",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/dd_demo",
+      "provenance": "実画面を架空CSVで操作",
+      "localization": "元画面の表示",
+      "evidence": "../dd-rock-20261112/captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "professional",
+          "forensic"
+        ],
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "evidence",
+      "path": "captures/dd/evidence.jpg",
+      "kind": "still",
+      "frames": 1,
+      "fps": 30,
+      "availableSeconds": null,
+      "feature": "結果の根拠確認",
+      "phase": "result",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/dd_demo",
+      "provenance": "実画面を架空CSVで操作",
+      "localization": "元画面の表示",
+      "evidence": "../dd-rock-20261112/captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "professional",
+          "forensic"
+        ],
+        "status": "provisional"
+      }
+    }
+  ],
+  "notes": [
+    "静止画の表示時間は構成側で指定",
+    "撮影尺より長いシーンは末尾保持か素材追加が必要。撮影尺を偽らない",
+    "この一覧は素材の所在と根拠を記録するもの。全機能の検証ではない",
+    "既存撮影素材を再利用。機能とサンプルデータは変更しない。実画面は静止キャプチャを使用。"
+  ]
+}

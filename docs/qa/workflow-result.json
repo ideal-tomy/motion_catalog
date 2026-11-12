@@ -1,0 +1,46 @@
+{
+  "taggedMotions": 60,
+  "taggedTransitions": 9,
+  "plans": 16,
+  "verifiedOnly": true,
+  "negativeCases": true,
+  "deliveries": 4,
+  "search": true,
+  "presetSwitching": true,
+  "mobileOverflow": false,
+  "playback": [
+    {
+      "job": "dd-rock-20261112",
+      "portable": true,
+      "ended": true,
+      "width": 1920,
+      "height": 1080,
+      "duration": 22.016
+    },
+    {
+      "job": "tournament-20261112",
+      "portable": true,
+      "ended": true,
+      "width": 1920,
+      "height": 1080,
+      "duration": 20.011
+    },
+    {
+      "job": "tournament-rock-en-transitions-20261112",
+      "portable": true,
+      "ended": true,
+      "width": 1920,
+      "height": 1080,
+      "duration": 22.016
+    },
+    {
+      "job": "tournament-rock-20261112",
+      "portable": true,
+      "ended": true,
+      "width": 1920,
+      "height": 1080,
+      "duration": 22.016
+    }
+  ],
+  "errors": []
+}

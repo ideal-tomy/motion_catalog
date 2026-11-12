@@ -1,0 +1,58 @@
+{
+  "originalCatalogCount": 60,
+  "selectedIds": [
+    "M-009",
+    "M-017",
+    "M-060",
+    "M-054",
+    "M-014",
+    "M-016"
+  ],
+  "singleVideoPreviews": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": 3,
+      "seek": 0.9253,
+      "error": null
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": 3,
+      "seek": 0.9206,
+      "error": null
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": 4,
+      "seek": 0.9227,
+      "error": null
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": 3,
+      "seek": 0.9228,
+      "error": null
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": 4,
+      "seek": 0.927,
+      "error": null
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "duration": 3,
+      "seek": 0.925,
+      "error": null
+    }
+  ],
+  "mobileNoOverflow": true,
+  "collectedHTMLPlayback": true,
+  "errors": []
+}

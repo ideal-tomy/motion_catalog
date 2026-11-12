@@ -1,0 +1,23 @@
+{
+  "project": "dd-premium-20261112",
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/dd_demo",
+  "instruction": "理想.md：高級感・信頼感。余白と抑制された動きでサービスの品質を伝える20秒CM。実画面・機能を優先。",
+  "durationSeconds": 20,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "captureMode": "actual-ui",
+  "visualTone": "premium / trustworthy / restrained",
+  "audience": "DD・M&A・経営企画の担当者",
+  "goal": "給与×勤怠の照合と根拠確認の機能理解",
+  "locale": "ja",
+  "noGo": [
+    "unverified accuracy claims",
+    "unverified financial outcomes",
+    "production writes",
+    "new AI calls",
+    "invented contact details",
+    "strobe",
+    "camera shake"
+  ]
+}

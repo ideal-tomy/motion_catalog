@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "mood": [
+    "energetic",
+    "calm",
+    "healing",
+    "cinematic",
+    "professional"
+  ],
+  "energy": {
+    "min": 1,
+    "max": 5
+  },
+  "pace": [
+    "slow",
+    "medium",
+    "fast"
+  ],
+  "role": [
+    "hook",
+    "focus",
+    "operation",
+    "result",
+    "transition",
+    "cta"
+  ],
+  "light": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "tagStatus": [
+    "provisional",
+    "reviewed"
+  ],
+  "runtimeStatus": [
+    "demo-only",
+    "implemented",
+    "verified"
+  ],
+  "rules": [
+    "タグのレビュー状態と実装・動画検証状態は分離",
+    "緩急はシーンごとの強弱と保持時間で構成",
+    "癒しは低い光量・揺れなし・低いenergyで絞り込む",
+    "未実装は推薦候補から除外し、除外理由を表示",
+    "縦型の適性は未確認。横型検証から流用しない"
+  ]
+}

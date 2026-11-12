@@ -1,0 +1,22 @@
+{
+  "durationSeconds": 22,
+  "bpm": 180,
+  "channels": 2,
+  "sampleRate": 48000,
+  "peakDB": -1.3100309751286456,
+  "rmsDB": -15.677364139994907,
+  "music": "original procedurally composed instrumental rock",
+  "samples": "none",
+  "cutCuesSeconds": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18
+  ]
+}

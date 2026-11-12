@@ -1,0 +1,1422 @@
+{
+  "version": 1,
+  "profiles": {
+    "soft": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45
+    },
+    "clear": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36
+    },
+    "dimensional": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30
+    },
+    "lively": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24
+    },
+    "impact": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24
+    }
+  },
+  "tags": {
+    "M-001": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-002": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-003": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-004": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-005": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-006": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-007": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-008": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-009": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-010": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-011": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-012": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-013": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-014": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-015": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-016": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-017": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-018": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-019": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-020": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-021": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-022": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-023": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-024": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-025": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-026": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-027": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-028": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-029": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-030": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-031": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-032": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-033": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-034": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-035": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-036": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-037": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-038": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-039": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-040": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-041": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-042": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-043": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-044": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-045": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-046": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-047": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-048": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "transition"
+      ],
+      "motionType": "transition",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-049": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-050": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-051": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-052": {
+      "mood": [
+        "cinematic",
+        "calm"
+      ],
+      "energy": 3,
+      "pace": "medium",
+      "light": "medium",
+      "shake": false,
+      "hold": 30,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 30,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-053": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-054": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-055": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-056": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "effect",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-057": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "audio-cue",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-058": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "audio-cue",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-059": {
+      "mood": [
+        "energetic",
+        "cinematic"
+      ],
+      "energy": 4,
+      "pace": "fast",
+      "light": "medium",
+      "shake": false,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "audio-cue",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "M-060": {
+      "mood": [
+        "energetic"
+      ],
+      "energy": 5,
+      "pace": "fast",
+      "light": "high",
+      "shake": true,
+      "hold": 24,
+      "role": [
+        "hook",
+        "result"
+      ],
+      "motionType": "audio-cue",
+      "minReadableFrames": 24,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    }
+  }
+}

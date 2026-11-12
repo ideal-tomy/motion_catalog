@@ -1,0 +1,24 @@
+{
+  "project": "tournament-rock-en-transitions-20261112",
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+  "instruction": "Translate the tournament rock cut into English and use a different continuous two-scene transition at every cut.",
+  "durationSeconds": 22,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "captureMode": "actual-ui-localized",
+  "audience": "ダーツ大会の主催者・参加者",
+  "goal": "会場演出への期待感",
+  "visualTone": "high-energy sports commercial",
+  "music": "original 180 BPM distorted-guitar-style instrumental rock",
+  "noGo": [
+    "production writes",
+    "source modifications",
+    "borrowed brand assets or slogans",
+    "borrowed music",
+    "full-screen strobe",
+    "unverified performance claims"
+  ],
+  "locale": "en",
+  "preserveOriginal": true
+}

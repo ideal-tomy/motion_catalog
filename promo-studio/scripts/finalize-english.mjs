@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const job='jobs/tournament-rock-en-transitions-20261112';
+const plan=JSON.parse(fs.readFileSync(`${job}/composition.json`,'utf8'));
+const qa=JSON.parse(fs.readFileSync(`${job}/qa/result.json`,'utf8'));
+if(qa.format.frames!==660||qa.everyFrameQA.black.length||!qa.playback.ended||qa.errors.length)throw Error('QA has not passed');
+if(plan.transitions.length!==9||new Set(plan.transitions.map(t=>t.kind)).size!==9)throw Error('Transitions must be unique');
+const copy=plan.scenes.map(s=>[s.copy,s.cta]);
+if(/[\u3040-\u30ff\u3400-\u9fff]/.test(JSON.stringify(copy)))throw Error('Japanese copy remains');
+fs.writeFileSync(`${job}/transition-guide.md`, `# English / Transition Showcase\n\n22秒、10カット。最初の9カットは各2秒、最後は4秒。180 BPMのオリジナル・ロック音源。\n\n${plan.transitions.map(t=>`- ${(t.atFrame/30).toFixed(0)}秒: ${t.id} / ${t.kind}`).join('\n')}\n\n切り替えは境界の前後9フレーム、計18フレーム。前後の画面を重ねて動かす。通常区間にも緩やかなズームを継続。TRは今回追加した独自トランジションのID。既存カタログIDとは区別。\n\nアプリ画面の日本語は撮影時のDOM上だけで英語化。元アプリのファイルは変更していない。選手名・大会名・勝利表示も英語化し、サンプルデータである旨を英語で表示。\n`);
+fs.writeFileSync(`${job}/render-report.md`, `# Tournament Rock — English / Transitions\n\n状態: 完成・検査済み\n\n- 動画: output/promo_16x9.mp4\n- プレビュー: output/preview/index.html\n- 共有用: output/tournament-rock-en-share.zip（展開してpreview/index.htmlを開く）\n- 編集: src/RockEnglishPromo.tsx、src/transitions/variety.tsx、composition.json\n- 再生成: node scripts/render.mjs ${job}\n- 検査: node scripts/qa.cjs ${job}\n\n日本語版を保持し、別成果物として英語版を作成。全9境界で異なるトランジションを使用。詳細はtransition-guide.md。After Effects本体ではなくRemotionで実装。\n\n## 検査結果\n\n- H.264 / 1920×1080 / 30fps / ${qa.format.frames}フレーム / ${qa.format.duration}秒\n- AAC音声、ピーク${qa.audioPeakDB.toFixed(2)} dBFS\n- 全編デコード成功、${qa.everyFrameQA.checked}フレーム検査、全黒フレームなし\n- HTMLローカル再生が音声ありで最後まで完了、JavaScriptエラーなし\n- PC / モバイル表示確認、横はみ出しなし\n- 39枚の静止画を生成、各トランジションの前半・中央・後半と主要カットを目視確認\n- 撮影対象の画面内に日本語が残らないことを撮影時に検査。コピーとCTAも検査\n\n元のアプリ、過去の動画、公開設定は変更していない。映像は既存Animation Previewによる架空の大会・結果。元素材の権利等の制約は日本語版のfeature-audit.mdを継承。コミット・push・外部公開なし。\n`);
+console.log('English report and transition guide finalized.');

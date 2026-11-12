@@ -1,0 +1,44 @@
+[
+  {
+    "id": "M-009",
+    "durationInFrames": 90,
+    "seekDeterministic": true,
+    "animated": true,
+    "singleMatchesCombined": true
+  },
+  {
+    "id": "M-017",
+    "durationInFrames": 90,
+    "seekDeterministic": true,
+    "animated": true,
+    "singleMatchesCombined": true
+  },
+  {
+    "id": "M-060",
+    "durationInFrames": 120,
+    "seekDeterministic": true,
+    "animated": true,
+    "singleMatchesCombined": true
+  },
+  {
+    "id": "M-054",
+    "durationInFrames": 90,
+    "seekDeterministic": true,
+    "animated": true,
+    "singleMatchesCombined": true
+  },
+  {
+    "id": "M-014",
+    "durationInFrames": 120,
+    "seekDeterministic": true,
+    "animated": true,
+    "singleMatchesCombined": true
+  },
+  {
+    "id": "M-016",
+    "durationInFrames": 90,
+    "seekDeterministic": true,
+    "animated": true,
+    "singleMatchesCombined": true
+  }
+]

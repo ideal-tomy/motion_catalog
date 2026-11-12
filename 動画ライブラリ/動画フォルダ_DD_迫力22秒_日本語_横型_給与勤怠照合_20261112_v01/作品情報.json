@@ -1,0 +1,18 @@
+{
+  "subject": "DD",
+  "tone": "迫力",
+  "language": "日本語",
+  "variant": "給与勤怠照合",
+  "description": "架空CSVによる給与×勤怠の突合と根拠確認を見せるロック調CM。",
+  "date": "20261112",
+  "version": 1,
+  "stem": "DD_迫力22秒_日本語_横型_給与勤怠照合_20261112_v01",
+  "job": "dd-rock-20261112",
+  "durationSeconds": 22,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "4f1ad0867bc3e4e0b1bbe2d42678198998183df7283b8aec78b8a3db9ed7da89",
+  "previewSHA256": "68d7cdd250bb146d0805ee167d0c4a58a7fd79f66de8287173d0de6e8a43005f",
+  "sourceJob": "promo-studio/jobs/dd-rock-20261112"
+}

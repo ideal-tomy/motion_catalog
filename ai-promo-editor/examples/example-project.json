@@ -1,0 +1,253 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectId": "promo-sample-001",
+  "revision": 1,
+  "title": "AI PROMO STUDIO｜サンプルCM",
+  "brief": "高級感を重視した20秒動画。説明的にならず、印象的に見せる。",
+  "video": {
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "targetDurationFrames": 600,
+    "durationPolicy": "ripple"
+  },
+  "theme": {
+    "requestedColors": {
+      "primary": "#14243A",
+      "secondary": null
+    },
+    "palette": {
+      "background": "#0C1522",
+      "surface": "#14243A",
+      "text": "#F5F7FA",
+      "primary": "#356997",
+      "accent": "#6BC5DA",
+      "mutedText": "#B9C5D1"
+    },
+    "suggestedUsage": {
+      "basePct": 80,
+      "primaryPct": 15,
+      "accentPct": 5,
+      "note": "参考値。実画面のピクセル占有面積を保証しない。"
+    }
+  },
+  "assets": [],
+  "scenes": [
+    {
+      "sceneId": "sc-intro",
+      "role": "intro",
+      "durationFrames": 90,
+      "layout": {
+        "type": "single",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 15
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "txt-intro",
+          "kind": "text",
+          "zIndex": 10,
+          "inFrame": 5,
+          "durationFrames": 75,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "text": "伝えたい価値を、印象的に。",
+          "transform": {
+            "x": 0.1,
+            "y": 0.3,
+            "width": 0.8,
+            "height": 0.3,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 100,
+            "colorToken": "text",
+            "align": "center"
+          },
+          "motionStack": [
+            {
+              "motionId": "M-003",
+              "startOffsetFrames": 0,
+              "durationFrames": 30,
+              "params": {
+                "intensity": 0.45
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "sc-feature",
+      "role": "feature",
+      "durationFrames": 120,
+      "layout": {
+        "type": "split2",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 2
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 40
+        },
+        {
+          "position": 1,
+          "intensity": 55
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "txt-feature",
+          "kind": "text",
+          "zIndex": 10,
+          "inFrame": 15,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "text": "操作と変化を、ひと目で。",
+          "transform": {
+            "x": 0.07,
+            "y": 0.31,
+            "width": 0.86,
+            "height": 0.32,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 84,
+            "colorToken": "text",
+            "align": "center"
+          },
+          "motionStack": []
+        }
+      ]
+    },
+    {
+      "sceneId": "sc-explain",
+      "role": "explanation",
+      "durationFrames": 210,
+      "layout": {
+        "type": "grid4",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 4
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 35
+        },
+        {
+          "position": 0.5,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "text-explain",
+          "kind": "text",
+          "zIndex": 10,
+          "inFrame": 30,
+          "durationFrames": 180,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "text": "画面の見どころを、短く伝える。",
+          "transform": {
+            "x": 0.08,
+            "y": 0.29,
+            "width": 0.84,
+            "height": 0.42,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 76,
+            "colorToken": "text",
+            "align": "center"
+          },
+          "motionStack": []
+        }
+      ]
+    },
+    {
+      "sceneId": "sc-outro",
+      "role": "cta",
+      "durationFrames": 180,
+      "layout": {
+        "type": "single",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 48
+        },
+        {
+          "position": 1,
+          "intensity": 10
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "txt-outro",
+          "kind": "text",
+          "zIndex": 10,
+          "inFrame": 30,
+          "durationFrames": 140,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "text": "次の体験へ。",
+          "transform": {
+            "x": 0.15,
+            "y": 0.33,
+            "width": 0.7,
+            "height": 0.35,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 116,
+            "colorToken": "text",
+            "align": "center"
+          },
+          "motionStack": []
+        }
+      ]
+    }
+  ],
+  "audioTracks": [],
+  "locks": [],
+  "meta": {
+    "dataNotice": "画面・機能・数値は例示。実案件で事実確認して置換する。",
+    "renderReady": false,
+    "originalAtlasVersion": "0.2.0"
+  }
+}

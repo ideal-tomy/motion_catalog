@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "job": "tournament-rock-en-transitions-20261112",
+  "captureMode": "actual-ui-localized",
+  "assets": [
+    {
+      "id": "draw",
+      "path": "captures/tournament-en/draw",
+      "kind": "image-sequence",
+      "frames": 120,
+      "fps": 30,
+      "availableSeconds": 4,
+      "feature": "ペア発表",
+      "phase": "operation",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+      "provenance": "既存Animation Preview。実際の本番大会ではない",
+      "localization": "撮影時に表示テキストを英語化",
+      "evidence": "captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "energetic",
+          "event"
+        ],
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "vs",
+      "path": "captures/tournament-en/vs",
+      "kind": "image-sequence",
+      "frames": 90,
+      "fps": 30,
+      "availableSeconds": 3,
+      "feature": "対戦演出",
+      "phase": "operation",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+      "provenance": "既存Animation Preview。実際の本番大会ではない",
+      "localization": "撮影時に表示テキストを英語化",
+      "evidence": "captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "energetic",
+          "event"
+        ],
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "result",
+      "path": "captures/tournament-en/result",
+      "kind": "image-sequence",
+      "frames": 90,
+      "fps": 30,
+      "availableSeconds": 3,
+      "feature": "勝利演出",
+      "phase": "result",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+      "provenance": "既存Animation Preview。実際の本番大会ではない",
+      "localization": "撮影時に表示テキストを英語化",
+      "evidence": "captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "energetic",
+          "event"
+        ],
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "champion",
+      "path": "captures/tournament-en/champion",
+      "kind": "image-sequence",
+      "frames": 120,
+      "fps": 30,
+      "availableSeconds": 4,
+      "feature": "優勝演出",
+      "phase": "result",
+      "sample": true,
+      "verification": "captured",
+      "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+      "provenance": "既存Animation Preview。実際の本番大会ではない",
+      "localization": "撮影時に表示テキストを英語化",
+      "evidence": "captures/evidence.json",
+      "focusRegion": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "status": "full-frame; crop review required"
+      },
+      "textDensity": "high",
+      "verticalCrop": "unreviewed",
+      "rights": "元画面の素材利用条件は要確認",
+      "moodTags": {
+        "value": [
+          "energetic",
+          "event"
+        ],
+        "status": "provisional"
+      }
+    }
+  ],
+  "notes": [
+    "静止画の表示時間は構成側で指定",
+    "撮影尺より長いシーンは末尾保持か素材追加が必要。撮影尺を偽らない",
+    "この一覧は素材の所在と根拠を記録するもの。全機能の検証ではない"
+  ]
+}

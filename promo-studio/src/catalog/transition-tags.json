@@ -1,0 +1,227 @@
+[
+  {
+    "id": "TR-001",
+    "name": "Fly-through zoom",
+    "kind": "fly-through",
+    "atFrame": 60,
+    "durationFrames": 18,
+    "fromScene": 0,
+    "toScene": 1,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-002",
+    "name": "Whip spin",
+    "kind": "whip-spin",
+    "atFrame": 120,
+    "durationFrames": 18,
+    "fromScene": 1,
+    "toScene": 2,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-003",
+    "name": "3D cube turn",
+    "kind": "cube",
+    "atFrame": 180,
+    "durationFrames": 18,
+    "fromScene": 2,
+    "toScene": 3,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-004",
+    "name": "Diagonal sweep",
+    "kind": "diagonal",
+    "atFrame": 240,
+    "durationFrames": 18,
+    "fromScene": 3,
+    "toScene": 4,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-005",
+    "name": "Iris tunnel",
+    "kind": "iris",
+    "atFrame": 300,
+    "durationFrames": 18,
+    "fromScene": 4,
+    "toScene": 5,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 3,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-006",
+    "name": "Card flip",
+    "kind": "card-flip",
+    "atFrame": 360,
+    "durationFrames": 18,
+    "fromScene": 5,
+    "toScene": 6,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-007",
+    "name": "Split gate",
+    "kind": "split-gate",
+    "atFrame": 420,
+    "durationFrames": 18,
+    "fromScene": 6,
+    "toScene": 7,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-008",
+    "name": "Whip pan",
+    "kind": "whip-pan",
+    "atFrame": 480,
+    "durationFrames": 18,
+    "fromScene": 7,
+    "toScene": 8,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  },
+  {
+    "id": "TR-009",
+    "name": "Quad burst",
+    "kind": "quad-burst",
+    "atFrame": 540,
+    "durationFrames": 18,
+    "fromScene": 8,
+    "toScene": 9,
+    "mood": [
+      "energetic",
+      "cinematic"
+    ],
+    "energy": 5,
+    "pace": "fast",
+    "role": [
+      "transition"
+    ],
+    "runtimeStatus": "verified",
+    "tagStatus": "provisional",
+    "verificationPath": "jobs/tournament-rock-en-transitions-20261112/qa/result.json",
+    "implementationPath": "src/transitions/variety.tsx",
+    "aspectRatios": [
+      "16:9"
+    ]
+  }
+]

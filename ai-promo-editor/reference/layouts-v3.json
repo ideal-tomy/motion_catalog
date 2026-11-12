@@ -1,0 +1,18 @@
+{
+  "_note": "UIデザイン検討用のレイアウト定義。既存アプリのスキーマ未確認のため、そのまま上書きせずアダプターで変換すること。値は0..1の正規化座標。",
+  "schemaVersion": "draft-v1",
+  "layouts": [
+    {"id":"L-01","name":"全画面","type":"full","regions":[{"id":"a","x":0,"y":0,"w":1,"h":1,"mask":"rect"}]},
+    {"id":"L-02","name":"左右均等","type":"split","regions":[{"id":"a","x":0,"y":0,"w":0.5,"h":1,"mask":"rect"},{"id":"b","x":0.5,"y":0,"w":0.5,"h":1,"mask":"rect"}]},
+    {"id":"L-03","name":"左右非対称","type":"split","regions":[{"id":"a","x":0,"y":0,"w":0.7,"h":1,"mask":"rect"},{"id":"b","x":0.7,"y":0,"w":0.3,"h":1,"mask":"rect"}]},
+    {"id":"L-04","name":"上下分割","type":"split","regions":[{"id":"a","x":0,"y":0,"w":1,"h":0.5,"mask":"rect"},{"id":"b","x":0,"y":0.5,"w":1,"h":0.5,"mask":"rect"}]},
+    {"id":"L-05","name":"主役＋縦2小窓","type":"split","regions":[{"id":"a","x":0,"y":0,"w":0.7,"h":1,"mask":"rect"},{"id":"b","x":0.7,"y":0,"w":0.3,"h":0.5,"mask":"rect"},{"id":"c","x":0.7,"y":0.5,"w":0.3,"h":0.5,"mask":"rect"}]},
+    {"id":"L-06","name":"4分割","type":"grid","regions":[{"id":"a","x":0,"y":0,"w":0.5,"h":0.5,"mask":"rect"},{"id":"b","x":0.5,"y":0,"w":0.5,"h":0.5,"mask":"rect"},{"id":"c","x":0,"y":0.5,"w":0.5,"h":0.5,"mask":"rect"},{"id":"d","x":0.5,"y":0.5,"w":0.5,"h":0.5,"mask":"rect"}]},
+    {"id":"L-07","name":"主役＋3小窓","type":"collage","regions":[{"id":"a","x":0,"y":0,"w":0.66,"h":1,"mask":"rect"},{"id":"b","x":0.66,"y":0,"w":0.34,"h":0.3333,"mask":"rect"},{"id":"c","x":0.66,"y":0.3333,"w":0.34,"h":0.3333,"mask":"rect"},{"id":"d","x":0.66,"y":0.6666,"w":0.34,"h":0.3334,"mask":"rect"}]},
+    {"id":"L-08","name":"ピクチャーインピクチャー","type":"overlay","regions":[{"id":"a","x":0,"y":0,"w":1,"h":1,"mask":"rect"},{"id":"b","x":0.67,"y":0.62,"w":0.27,"h":0.28,"mask":"round-rect"}]},
+    {"id":"L-09","name":"円形フレーム","type":"mask","regions":[{"id":"a","x":0,"y":0,"w":1,"h":1,"mask":"rect"},{"id":"b","x":0.12,"y":0.16,"w":0.39,"h":0.68,"mask":"ellipse"}]},
+    {"id":"L-10","name":"ひし形フレーム","type":"mask","regions":[{"id":"a","x":0,"y":0,"w":1,"h":1,"mask":"rect"},{"id":"b","x":0.14,"y":0.14,"w":0.42,"h":0.72,"mask":"diamond"}]},
+    {"id":"L-11","name":"斜め分割","type":"polygon","regions":[{"id":"a","x":0,"y":0,"w":0.65,"h":1,"mask":"diagonal-left"},{"id":"b","x":0.45,"y":0,"w":0.55,"h":1,"mask":"diagonal-right"}]},
+    {"id":"L-12","name":"フリーコラージュ","type":"collage","regions":[{"id":"a","x":0.04,"y":0.11,"w":0.63,"h":0.74,"mask":"round-rect"},{"id":"b","x":0.72,"y":0.08,"w":0.24,"h":0.42,"mask":"ellipse"},{"id":"c","x":0.59,"y":0.51,"w":0.32,"h":0.38,"mask":"diamond"}]}
+  ]
+}

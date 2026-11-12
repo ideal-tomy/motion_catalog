@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "job": "tournament-rock-20261112",
+  "preset": "calm",
+  "label": "落ち着き",
+  "status": "proposed-not-rendered",
+  "durationSeconds": 20,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "sceneEnergyCurve": [
+    2,
+    1,
+    2,
+    2,
+    1
+  ],
+  "musicDirection": "静かなインスト、控えめなアタック",
+  "paletteDirection": "紺・白、低い発光",
+  "selected": [
+    {
+      "id": "M-003",
+      "name": "マスク・リビール",
+      "runtimeStatus": "verified",
+      "tagStatus": "provisional",
+      "reason": "typography / calm/healing / energy 1"
+    },
+    {
+      "id": "M-012",
+      "name": "ドリー・プッシュ",
+      "runtimeStatus": "verified",
+      "tagStatus": "provisional",
+      "reason": "camera / calm/professional / energy 2"
+    },
+    {
+      "id": "M-005",
+      "name": "カード・カスケード",
+      "runtimeStatus": "verified",
+      "tagStatus": "provisional",
+      "reason": "ui-focus / calm/professional / energy 2"
+    },
+    {
+      "id": "M-008",
+      "name": "スキャニングUI",
+      "runtimeStatus": "verified",
+      "tagStatus": "provisional",
+      "reason": "ui-focus / calm/professional / energy 2"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "M-001",
+      "name": "キネティック・タイポグラフィ",
+      "reason": "光量の上限を超える",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-002",
+      "name": "テキスト・スクランブル",
+      "reason": "光量の上限を超える",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-004",
+      "name": "数字カウントアップ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-006",
+      "name": "ダッシュボード構築",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-007",
+      "name": "チャート・ドロー",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-009",
+      "name": "トンネル・フライスルー",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-010",
+      "name": "オービット・カメラ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-011",
+      "name": "パララックス・フライ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-013",
+      "name": "グリッチ・カット",
+      "reason": "揺れを避ける指定",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-014",
+      "name": "パーティクル・バースト",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-015",
+      "name": "ライト・ストリーク",
+      "reason": "光量の上限を超える",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-016",
+      "name": "セレブレーション",
+      "reason": "光量の上限を超える",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-017",
+      "name": "タイプライターとカーソル",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-018",
+      "name": "分割文字の合流",
+      "reason": "光量の上限を超える",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-019",
+      "name": "ウェーブ・レター",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-020",
+      "name": "フォーカス・ブラーイン",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-021",
+      "name": "曲線に沿う文字",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-022",
+      "name": "スタンプ・インパクト",
+      "reason": "揺れを避ける指定",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-023",
+      "name": "文字フリップ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-024",
+      "name": "アウトラインから塗り",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-025",
+      "name": "リスト・スタガー",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-026",
+      "name": "ステップ進捗",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-027",
+      "name": "タブ・スイッチ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-029",
+      "name": "トグル連動",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-030",
+      "name": "ドラッグ・スナップ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-031",
+      "name": "ワークフロー接続",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-033",
+      "name": "ビフォー／アフター比較",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-034",
+      "name": "KPIカードの入替",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-035",
+      "name": "ドリーズーム錯視",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-036",
+      "name": "アイソメトリック回転",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-037",
+      "name": "水平パニング",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-038",
+      "name": "ティルトアップ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-039",
+      "name": "ラックフォーカス",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-040",
+      "name": "オブジェクト追跡",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-042",
+      "name": "斜めマスク・スライド",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-043",
+      "name": "インクの広がり",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-044",
+      "name": "3Dフリップ転換",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-045",
+      "name": "ピクセル分解",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-046",
+      "name": "シャッター開閉",
+      "reason": "揺れを避ける指定",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-047",
+      "name": "フラッシュ・カット",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-048",
+      "name": "図形モーフ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-049",
+      "name": "ネオン・アウトライン",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-050",
+      "name": "ホログラム走査",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-051",
+      "name": "流体グラデーション",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-052",
+      "name": "磁力パーティクル",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-053",
+      "name": "空間ワープ",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-054",
+      "name": "エネルギーリング",
+      "reason": "光量の上限を超える",
+      "runtimeStatus": "verified"
+    },
+    {
+      "id": "M-055",
+      "name": "分解と再構築",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-056",
+      "name": "流星ストリーム",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-057",
+      "name": "ビート・パルス",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-058",
+      "name": "低音リアクション",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-059",
+      "name": "スペクトラム・バー",
+      "reason": "未検証・未実装、または仕様変更の再レビューが必要",
+      "runtimeStatus": "demo-only"
+    },
+    {
+      "id": "M-060",
+      "name": "インパクト・ヒット同期",
+      "reason": "揺れを避ける指定",
+      "runtimeStatus": "verified"
+    }
+  ],
+  "scenes": [
+    {
+      "from": 0,
+      "to": 3,
+      "role": "hook",
+      "assetId": "draw",
+      "feature": "ペア発表",
+      "motionIds": [
+        "M-003"
+      ],
+      "energy": 2,
+      "holdFrames": 45,
+      "footagePolicy": "play",
+      "reason": "マスク・リビール：hook、強さ2に対しタグenergy=1。calm/healing、slow。"
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "role": "before",
+      "assetId": "draw",
+      "feature": "ペア発表",
+      "motionIds": [
+        "M-012"
+      ],
+      "energy": 1,
+      "holdFrames": 36,
+      "footagePolicy": "play",
+      "reason": "ドリー・プッシュ：before、強さ1に対しタグenergy=2。calm/professional、medium。"
+    },
+    {
+      "from": 7,
+      "to": 13,
+      "role": "operation",
+      "assetId": "draw",
+      "feature": "ペア発表",
+      "motionIds": [
+        "M-005"
+      ],
+      "energy": 2,
+      "holdFrames": 60,
+      "footagePolicy": "play-then-hold-last-frame",
+      "reason": "カード・カスケード：operation、強さ2に対しタグenergy=2。calm/professional、medium。"
+    },
+    {
+      "from": 13,
+      "to": 17,
+      "role": "result",
+      "assetId": "result",
+      "feature": "勝利演出",
+      "motionIds": [
+        "M-008"
+      ],
+      "energy": 2,
+      "holdFrames": 36,
+      "footagePolicy": "play-then-hold-last-frame",
+      "reason": "スキャニングUI：result、強さ2に対しタグenergy=2。calm/professional、medium。"
+    },
+    {
+      "from": 17,
+      "to": 20,
+      "role": "cta",
+      "assetId": "result",
+      "feature": "勝利演出",
+      "motionIds": [
+        "M-003"
+      ],
+      "energy": 1,
+      "holdFrames": 45,
+      "footagePolicy": "play",
+      "reason": "マスク・リビール：cta、強さ1に対しタグenergy=1。calm/healing、slow。"
+    }
+  ],
+  "warnings": [
+    "タグは初期分類。映像の印象は人によるレビューが必要",
+    "このデータは構成候補であり既存Compositionの書き出し入力ではない。新しい動画は未生成",
+    "音源・色・動きの調整は候補の方針。既存の音源を自動で別ジャンルに変換しない",
+    "縦型の切り出しは未レビュー。今回は16:9",
+    "実画面にある機能・サンプル以外の実績や効果を追加しない"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "subject": "トーナメント",
+  "tone": "機能紹介",
+  "language": "日本語",
+  "variant": "初版",
+  "description": "抽選・対戦・勝利・優勝のAnimation Previewを紹介する20秒版。",
+  "date": "20261112",
+  "version": 1,
+  "stem": "トーナメント_機能紹介20秒_日本語_横型_初版_20261112_v01",
+  "job": "tournament-20261112",
+  "durationSeconds": 20,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "989c850cbf8a0099eb224f4d1cfce870023dddb1bf9a888ad051ba30e49887e5",
+  "previewSHA256": "38ad3c5d695435e9215ad684e7a669fc7b11ac1deef68d032cef2be451b8fe42",
+  "sourceJob": "promo-studio/jobs/tournament-20261112"
+}

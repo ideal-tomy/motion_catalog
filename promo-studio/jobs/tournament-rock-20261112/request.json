@@ -1,0 +1,12 @@
+{
+  "project":"tournament-rock-20261112",
+  "source":"C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+  "instruction":"迫力あるアップテンポなスポーツCM。10カット、最初の9カットは2秒、最後は4秒。ロック調BGMと激しい切り替え、After Effects風の躍動的なモーショングラフィックス。",
+  "durationSeconds":22,"fps":30,"width":1920,"height":1080,
+  "captureMode":"actual-ui",
+  "audience":"ダーツ大会の主催者・参加者",
+  "goal":"会場演出への期待感",
+  "visualTone":"high-energy sports commercial",
+  "music":"original 180 BPM distorted-guitar-style instrumental rock",
+  "noGo":["production writes","source modifications","borrowed brand assets or slogans","borrowed music","full-screen strobe","unverified performance claims"]
+}

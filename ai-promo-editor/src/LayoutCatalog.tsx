@@ -1,0 +1,5 @@
+import React from 'react';
+import {layoutPresets,type LayoutPreset} from './layouts';
+import {maskClip} from './geometry';
+export function LayoutDiagram({preset}:{preset:LayoutPreset}){return <div className="layout-diagram" aria-hidden="true">{preset.regions.map((r,i)=><div key={r.id} style={{left:`${r.x*100}%`,top:`${r.y*100}%`,width:`${r.w*100}%`,height:`${r.h*100}%`,clipPath:maskClip(r.mask),borderRadius:r.mask==='round-rect'?8:0,background:['#3b6b7d','#b8ba88','#6e9f9c','#9f799a'][i%4],zIndex:i}}>{i+1}</div>)}</div>}
+export function LayoutCatalog({onTry,onClose}:{onTry:(p:LayoutPreset)=>void;onClose:()=>void}){return <div className="modal-backdrop"><section className="modal" role="dialog" aria-label="レイアウト12種"><div className="row"><h2>画面構成を試着する</h2><button onClick={onClose}>レイアウトを閉じる</button></div><p>選択コマだけの初期配置。採用後も自由編集できます。余る素材は保留トレイへ残します。</p><div className="layout-grid">{layoutPresets.map(p=><button key={p.id} data-layout-id={p.id} onClick={()=>onTry(p)}><LayoutDiagram preset={p}/><b>{p.id} {p.name}</b></button>)}</div></section></div>}

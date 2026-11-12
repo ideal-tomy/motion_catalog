@@ -1,0 +1,56 @@
+[
+  {
+    "id": "M-002",
+    "name": "テキスト・スクランブル",
+    "exportName": "M002",
+    "implementationPath": "src/motions/dd.tsx",
+    "runtimeStatus": "verified",
+    "selectionReason": "符号から意味が立ち上がる文字収束でDDの発見を表現",
+    "verificationPath": "jobs/dd-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-008",
+    "name": "スキャニングUI",
+    "exportName": "M008",
+    "implementationPath": "src/motions/dd.tsx",
+    "runtimeStatus": "verified",
+    "selectionReason": "実際のCSV突合画面に走査線を重ね、処理対象を明示",
+    "verificationPath": "jobs/dd-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-018",
+    "name": "分割文字の合流",
+    "exportName": "M018",
+    "implementationPath": "src/motions/dd.tsx",
+    "runtimeStatus": "verified",
+    "selectionReason": "人の判断へつながる短い日本語コピーを強く確定",
+    "verificationPath": "jobs/dd-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-028",
+    "name": "モーダル・ズーム",
+    "exportName": "M028",
+    "implementationPath": "src/motions/dd.tsx",
+    "runtimeStatus": "verified",
+    "selectionReason": "実画面と根拠ダイアログを起点から拡大して注目させる",
+    "verificationPath": "jobs/dd-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-032",
+    "name": "データ・パケット流動",
+    "exportName": "M032",
+    "implementationPath": "src/motions/dd.tsx",
+    "runtimeStatus": "verified",
+    "selectionReason": "給与と勤怠の二つのソースをつなぐ説明図",
+    "verificationPath": "jobs/dd-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-046",
+    "name": "シャッター開閉",
+    "exportName": "M046",
+    "implementationPath": "src/motions/dd.tsx",
+    "runtimeStatus": "verified",
+    "selectionReason": "2秒ごとの切り替えを交互の帯で鋭く開く",
+    "verificationPath": "jobs/dd-rock-20261112/qa/result.json"
+  }
+]

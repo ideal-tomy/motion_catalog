@@ -1,0 +1,43 @@
+{
+  "plans": [
+    {
+      "scene": "draw",
+      "frames": 120,
+      "start": 0,
+      "end": 4.89
+    },
+    {
+      "scene": "vs",
+      "frames": 90,
+      "start": 4.2,
+      "end": 5.939
+    },
+    {
+      "scene": "result",
+      "frames": 90,
+      "start": 0,
+      "end": 2.789
+    },
+    {
+      "scene": "champion",
+      "frames": 120,
+      "start": 0,
+      "end": 3.5
+    }
+  ],
+  "viewport": {
+    "width": 1920,
+    "height": 1400
+  },
+  "capture": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30
+  },
+  "source": "existing isolated Animation Preview; sample data, not a live tournament",
+  "errors": [],
+  "failed": [],
+  "writes": [],
+  "external": [],
+  "localization": "English text substitution in the live preview DOM only; source code unchanged; names remain fictional"
+}

@@ -1,0 +1,180 @@
+{
+  "project": "dd-rock-20261112",
+  "compositionId": "DdRock",
+  "durationSeconds": 22,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "bpm": 180,
+  "music": "audio/dd-rock-original.wav",
+  "scenes": [
+    {
+      "from": 0,
+      "to": 2,
+      "kind": "hook",
+      "word": "UNSEEN.",
+      "copy": [
+        "数字だけでは、",
+        "見えない。"
+      ],
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018"
+      ]
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "kind": "input",
+      "source": "input",
+      "word": "CONNECT.",
+      "copy": [
+        "資料を、つなぐ。"
+      ],
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018",
+        "M-028"
+      ]
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "kind": "scan",
+      "source": "scan",
+      "word": "RECONCILE.",
+      "copy": [
+        "給与 × 勤怠。"
+      ],
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018",
+        "M-028",
+        "M-008"
+      ]
+    },
+    {
+      "from": 6,
+      "to": 8,
+      "kind": "signal",
+      "word": "SIGNAL.",
+      "copy": [
+        "違和感を、",
+        "見逃すな。"
+      ],
+      "accent": "#ff714b",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018"
+      ]
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "kind": "result",
+      "source": "result",
+      "word": "DETECTED.",
+      "copy": [
+        "ズレを、捉える。"
+      ],
+      "accent": "#ff714b",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018",
+        "M-028"
+      ]
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "kind": "data",
+      "word": "TRACE THE GAP.",
+      "copy": [
+        "その差には、",
+        "理由がある。"
+      ],
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018",
+        "M-032"
+      ]
+    },
+    {
+      "from": 12,
+      "to": 14,
+      "kind": "proof",
+      "source": "evidence-card",
+      "word": "EVIDENCE.",
+      "copy": [
+        "根拠まで、",
+        "たどる。"
+      ],
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018",
+        "M-028"
+      ]
+    },
+    {
+      "from": 14,
+      "to": 16,
+      "kind": "detail",
+      "source": "evidence-card",
+      "word": "BACK TO SOURCE.",
+      "copy": [
+        "元の一行へ。"
+      ],
+      "accent": "#ff714b",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018",
+        "M-028"
+      ]
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "kind": "human",
+      "word": "HUMAN DECISION.",
+      "copy": [
+        "決めるのは、",
+        "あなた。"
+      ],
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018"
+      ]
+    },
+    {
+      "from": 18,
+      "to": 22,
+      "kind": "end",
+      "word": "DD INTELLIGENCE",
+      "copy": [
+        "見抜く。その先を、決める。"
+      ],
+      "cta": "DD診断デモを体験",
+      "accent": "#7eefff",
+      "motionIds": [
+        "M-002",
+        "M-046",
+        "M-018"
+      ]
+    }
+  ]
+}

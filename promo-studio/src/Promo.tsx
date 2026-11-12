@@ -1,0 +1,22 @@
+import React from 'react';
+import {AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame, interpolate} from 'remotion';
+import {M003,M012,M016,M041,M054} from './motions';
+type Scene={from:number;to:number;role:string;lines?:string[];source?:string;frames?:number;title?:string;label?:string;cta?:string;motionIds:string[]};
+type Plan={scenes:Scene[]};
+const font='"Yu Gothic", "Meiryo", sans-serif';
+const cyan='#8af0ed',gold='#edc078';
+const Backdrop:React.FC=()=> <AbsoluteFill style={{background:'radial-gradient(ellipse at 80% 20%,#143337 0%,transparent 45%),radial-gradient(ellipse at 0% 100%,#14243d 0%,transparent 60%),#070d17'}}><div style={{position:'absolute',inset:70,border:'1px solid #ffffff10'}}/><div style={{position:'absolute',top:180,right:150,width:500,height:500,border:'1px solid #7ad6da15',borderRadius:'50%'}}/></AbsoluteFill>;
+const Header:React.FC=()=> <div style={{position:'absolute',left:100,right:100,top:65,display:'flex',justifyContent:'space-between',alignItems:'center',color:'#c6d9e0',fontSize:22,letterSpacing:5}}><div><span style={{color:cyan}}>●</span> DARTS TOURNAMENT</div><div style={{fontSize:18,color:'#7a909e'}}>MOTION ATLAS / PROMO 01</div></div>;
+const Title:React.FC<{scene:Scene;duration:number}>=({scene,duration})=>{
+  const f=useCurrentFrame();const isEnd=scene.role==='cta';
+  return <AbsoluteFill><M054 durationFrames={duration} intensity={.19} accentColor={isEnd?gold:cyan}/><div style={{position:'absolute',left:150,top:isEnd?250:270}}><div style={{fontSize:24,letterSpacing:8,color:gold,marginBottom:36}}>{isEnd?'MAKE YOUR NEXT TOURNAMENT':'FROM THE DRAW TO THE GLORY'}</div>{scene.lines?.map((line,i)=><Sequence key={line} from={i*6} layout="none"><M003 durationFrames={duration} text={line}><div style={{fontSize:104,fontWeight:800,lineHeight:1.4,letterSpacing:-4,color:i?cyan:'#f3f5f5'}}>{line}</div></M003></Sequence>)}{isEnd?<div style={{display:'inline-flex',alignItems:'center',gap:35,marginTop:38,padding:'22px 34px',border:`1px solid ${gold}88`,fontSize:31,color:gold,opacity:interpolate(f,[14,28],[0,1],{extrapolateLeft:'clamp',extrapolateRight:'clamp'})}}>{scene.cta}<span>↗</span></div>:<div style={{marginTop:38,fontSize:30,color:'#a1b5c1'}}>抽選・対戦・勝利を、ひとつのショーへ。</div>}</div><div style={{position:'absolute',bottom:100,left:150,color:'#7d929f',fontSize:21,letterSpacing:3}}>DARTS / PRESENTATION / EXPERIENCE</div></AbsoluteFill>;
+};
+const Demo:React.FC<{scene:Scene;duration:number}>=({scene,duration})=>{
+  const f=useCurrentFrame();const image=`captures/${scene.source}/${String(Math.min(f,(scene.frames??1)-1)).padStart(4,'0')}.jpg`;
+  const screen=<div style={{width:'100%',height:'100%',overflow:'hidden',borderRadius:12}}><Img src={staticFile(image)} style={{width:'100%',height:'100%',objectFit:'cover'}}/></div>;
+  return <AbsoluteFill><div style={{position:'absolute',left:100,top:135,color:gold,fontSize:22,letterSpacing:5}}>{scene.label}</div><div style={{position:'absolute',left:100,top:177,color:'#f2f6f6',fontSize:54,fontWeight:800,letterSpacing:-1}}><M003 durationFrames={duration} text={scene.title}/></div><div style={{position:'absolute',left:248,top:300,width:1424,height:801,border:'1px solid #41606b',borderRadius:14,boxShadow:'0 20px 90px #0009',overflow:'hidden',transform:'scale(.86)',transformOrigin:'top center'}}><M041 durationFrames={duration}>{scene.motionIds.includes('M-012')?<M012 durationFrames={duration} intensity={.018}>{screen}</M012>:screen}</M041></div>{scene.source==='champion'&&<M016 durationFrames={duration} intensity={.4}/>}<div style={{position:'absolute',left:100,top:980,color:'#78909c',fontSize:21}}>既存アプリの演出プレビューを撮影</div></AbsoluteFill>;
+};
+export const Promo:React.FC<{plan:Plan}>=({plan})=>{
+  const f=useCurrentFrame();
+  return <AbsoluteFill style={{fontFamily:font,color:'#fff',background:'#070d17'}}><Backdrop/><Header/>{plan.scenes.map((scene,i)=><Sequence key={i} from={scene.from*30} durationInFrames={(scene.to-scene.from)*30}>{scene.source?<Demo scene={scene} duration={(scene.to-scene.from)*30}/>:<Title scene={scene} duration={(scene.to-scene.from)*30}/>}</Sequence>)}<div style={{position:'absolute',right:100,bottom:48,color:'#a0adb8',fontSize:20}}>サンプル演出・実際の大会結果ではありません</div><div style={{position:'absolute',bottom:0,left:0,height:4,width:`${(f+1)/600*100}%`,background:cyan}}/><Audio src={staticFile('audio/promo-original.wav')} volume={.7}/></AbsoluteFill>;
+};

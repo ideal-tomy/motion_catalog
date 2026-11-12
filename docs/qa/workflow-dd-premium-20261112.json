@@ -1,0 +1,23 @@
+{
+  "taggedMotions": 60,
+  "taggedTransitions": 9,
+  "plans": 20,
+  "verifiedOnly": true,
+  "negativeCases": true,
+  "deliveries": 5,
+  "search": true,
+  "presetSwitching": true,
+  "mobileOverflow": false,
+  "portableScope": "dd-premium-20261112",
+  "playback": [
+    {
+      "job": "dd-premium-20261112",
+      "portable": true,
+      "ended": true,
+      "width": 1920,
+      "height": 1080,
+      "duration": 20.011
+    }
+  ],
+  "errors": []
+}

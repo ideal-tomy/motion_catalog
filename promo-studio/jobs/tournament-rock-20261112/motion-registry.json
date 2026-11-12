@@ -1,0 +1,56 @@
+[
+  {
+    "id": "M-001",
+    "name": "キネティック・タイポグラフィ",
+    "implementationPath": "src/motions/rock.tsx",
+    "exportName": "M001",
+    "runtimeStatus": "verified",
+    "selectionReason": "大きな見出しを時間差・上下左右移動で素早く確定する",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-012",
+    "name": "ドリー・プッシュ",
+    "implementationPath": "src/motions/index.tsx",
+    "exportName": "M012",
+    "runtimeStatus": "verified",
+    "selectionReason": "主役の実画面に近づき、画面の迫力を増す",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-013",
+    "name": "グリッチ・カット",
+    "implementationPath": "src/motions/rock.tsx",
+    "exportName": "M013",
+    "runtimeStatus": "verified",
+    "selectionReason": "カット頭6フレーム以内の短いスライス転換",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-015",
+    "name": "ライト・ストリーク",
+    "implementationPath": "src/motions/rock.tsx",
+    "exportName": "M015",
+    "runtimeStatus": "verified",
+    "selectionReason": "斜めの光跡による高速移動感",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-022",
+    "name": "スタンプ・インパクト",
+    "implementationPath": "src/motions/rock.tsx",
+    "exportName": "M022",
+    "runtimeStatus": "verified",
+    "selectionReason": "勝負を示す文字をヒットと同時に押印",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json"
+  },
+  {
+    "id": "M-060",
+    "name": "インパクト・ヒット同期",
+    "implementationPath": "src/motions/rock.tsx",
+    "exportName": "M060",
+    "runtimeStatus": "verified",
+    "selectionReason": "実際のBGMの0,2,4…18秒のヒットと衝撃リングを同期",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json"
+  }
+]

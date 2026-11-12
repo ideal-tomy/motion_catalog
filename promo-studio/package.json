@@ -1,0 +1,35 @@
+{
+  "name": "motion-atlas-promo-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node scripts/capture.cjs",
+    "music": "node scripts/music.mjs",
+    "studio": "remotion studio src/index.tsx --port=3190",
+    "render": "node scripts/render.mjs",
+    "typecheck": "tsc --noEmit",
+    "qa": "node scripts/qa.cjs",
+    "music:rock": "node scripts/music-rock.mjs",
+    "render:rock": "node scripts/render.mjs jobs/tournament-rock-20261112",
+    "qa:rock": "node scripts/qa.cjs jobs/tournament-rock-20261112",
+    "music:dd": "node scripts/music-rock.mjs dd",
+    "render:dd": "node scripts/render.mjs jobs/dd-rock-20261112",
+    "qa:dd": "node scripts/qa.cjs jobs/dd-rock-20261112",
+    "catalog:sync": "node scripts/catalog.mjs",
+    "plan": "node scripts/planner.mjs",
+    "library": "node scripts/library.mjs --all",
+    "verify:workflow": "node scripts/verify-workflow.mjs"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.542",
+    "@remotion/cli": "4.0.542",
+    "@remotion/renderer": "4.0.542",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.542",
+    "typescript": "7.0.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "project": "tournament-20261112",
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+  "instruction": "ダーツ大会アプリの実画面を使った20秒の宣伝動画を制作する",
+  "durationSeconds": 20,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "captureMode": "actual-ui",
+  "audience": "ダーツ大会の主催者・運営担当者",
+  "goal": "会場向け演出の機能理解",
+  "visualTone": "energetic",
+  "sourceMode": "isolated-animation-preview-with-explicit-sample-labels",
+  "music": "original procedural instrumental, no borrowed recording",
+  "noGo": ["production writes", "source modifications", "personal data", "unverified performance claims"]
+}

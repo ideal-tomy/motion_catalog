@@ -1,0 +1,13 @@
+{
+  "project":"tournament-20261112",
+  "durationSeconds":20,"fps":30,"width":1920,"height":1080,
+  "captureMode":"actual-ui",
+  "scenes":[
+    {"from":0,"to":3,"role":"hook","lines":["大会の瞬間を、","見せ場に。"],"motionIds":["M-003","M-054"]},
+    {"from":3,"to":7,"role":"real-demo","source":"draw","frames":120,"title":"ペア発表から。","label":"01 / THE DRAW","motionIds":["M-041","M-012"]},
+    {"from":7,"to":10,"role":"real-demo","source":"vs","frames":90,"title":"対戦の緊張まで。","label":"02 / THE MATCHUP","motionIds":["M-041","M-012"]},
+    {"from":10,"to":13,"role":"real-demo","source":"result","frames":90,"title":"勝利を、会場へ。","label":"03 / THE WINNER","motionIds":["M-041"]},
+    {"from":13,"to":17,"role":"real-demo","source":"champion","frames":120,"title":"最後は、主役に。","label":"04 / THE CHAMPION","motionIds":["M-016","M-012"]},
+    {"from":17,"to":20,"role":"cta","lines":["次の大会を、","もっと熱く。"],"cta":"演出プレビューを体験","motionIds":["M-003","M-054"]}
+  ]
+}

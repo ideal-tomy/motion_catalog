@@ -1,0 +1,172 @@
+[
+  {
+    "tags": [
+      "TEXT",
+      "mask reveal"
+    ],
+    "suitableFor": "価値提案・章タイトル・ロゴ登場",
+    "notSuitableFor": "文字や実画面を隠す過剰演出、事実未確認の成果表現",
+    "runtimeStatus": "verified",
+    "implementationPath": "src/motions/index.tsx",
+    "exportName": "M003",
+    "minDurationFrames": 15,
+    "recommendedDurationFrames": 60,
+    "propsSchema": {
+      "durationFrames": "positive integer",
+      "text": "optional string",
+      "accentColor": "optional CSS color",
+      "intensity": "optional number"
+    },
+    "selectionReason": "冒頭とCTAを短いマスク表示で読みやすく提示する",
+    "id": "M-003",
+    "name": "マスク・リビール",
+    "en": "MASK REVEAL",
+    "category": "TEXT",
+    "duration": "0.5〜1.4秒",
+    "usage": "価値提案・章タイトル・ロゴ登場",
+    "tech": "CSS clip-path / GSAP / Remotion",
+    "desc": "スリットや細い矩形の奥から文字が現れる、整ったタイトル演出。",
+    "prompt": "タイトルの文字をマスク領域の内側から上方向にスライドして表示する。3行を0.1秒ずつ遅延し、各行の出現は0.65秒。マスク外には文字を描画しない。見出しの座標、行間、フォントサイズは再利用可能なpropsで指定する。",
+    "mark": "MASK",
+    "sourceAsset": "../MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/index.html",
+    "promptPath": "../MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/prompts/M-003.md",
+    "verificationPath": "jobs/tournament-20261112/qa/result.json",
+    "previewPath": "jobs/tournament-20261112/output/preview/index.html",
+    "style": {
+      "mood": [
+        "calm",
+        "healing"
+      ],
+      "energy": 1,
+      "pace": "slow",
+      "light": "low",
+      "shake": false,
+      "hold": 45,
+      "role": [
+        "hook",
+        "cta"
+      ],
+      "motionType": "typography",
+      "minReadableFrames": 45,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    }
+  },
+  {
+    "tags": [
+      "CAMERA",
+      "dolly push"
+    ],
+    "suitableFor": "注目させたい対象・対戦開始・ロゴ",
+    "notSuitableFor": "文字や実画面を隠す過剰演出、事実未確認の成果表現",
+    "runtimeStatus": "verified",
+    "implementationPath": "src/motions/index.tsx",
+    "exportName": "M012",
+    "minDurationFrames": 15,
+    "recommendedDurationFrames": 60,
+    "propsSchema": {
+      "durationFrames": "positive integer",
+      "text": "optional string",
+      "accentColor": "optional CSS color",
+      "intensity": "optional number"
+    },
+    "selectionReason": "主役の実画面に近づき、画面の迫力を増す",
+    "id": "M-012",
+    "name": "ドリー・プッシュ",
+    "en": "DOLLY PUSH",
+    "category": "CAMERA",
+    "duration": "1.0〜2.5秒",
+    "usage": "注目させたい対象・対戦開始・ロゴ",
+    "tech": "Three.js / Canvas projection",
+    "desc": "カメラが主役へ滑らかに近づき、緊張感と集中を作る。",
+    "prompt": "画面奥にある中央ターゲットへカメラが2秒で接近する。広角感の変化と背景のスケール差を使って単純なCSS scaleと区別する。最後の0.4秒は主役を大きく静止させる。",
+    "mark": "◎",
+    "sourceAsset": "../MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/index.html",
+    "promptPath": "../MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/prompts/M-012.md",
+    "verificationPath": "jobs/tournament-rock-20261112/qa/result.json",
+    "previewPath": "jobs/tournament-rock-20261112/output/preview/index.html",
+    "style": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "focus",
+        "operation"
+      ],
+      "motionType": "camera",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    }
+  },
+  {
+    "tags": [
+      "UI",
+      "card cascade"
+    ],
+    "suitableFor": "機能紹介・サービス一覧・複数メリット",
+    "notSuitableFor": "文字や実画面を隠す過剰演出、事実未確認の成果表現",
+    "runtimeStatus": "verified",
+    "implementationPath": "src/motions/premium.tsx",
+    "exportName": "M005",
+    "minDurationFrames": 15,
+    "recommendedDurationFrames": 60,
+    "propsSchema": {
+      "items": "string[]",
+      "durationFrames": "positive integer",
+      "accentColor": "optional CSS color"
+    },
+    "selectionReason": "高級感・信頼感の構成で、3枚の要約カードを38px以内・0.15秒間隔で丁寧に展開する",
+    "id": "M-005",
+    "name": "カード・カスケード",
+    "en": "CARD CASCADE",
+    "category": "UI",
+    "duration": "1.0〜2.2秒",
+    "usage": "機能紹介・サービス一覧・複数メリット",
+    "tech": "React / GSAP / Remotion",
+    "desc": "半透明のUIカードが時間差で展開し、複数の情報を整理して表示する。",
+    "prompt": "ガラス調の3枚のUIカードを奥行きのある位置から順次展開する。カード1〜3に0.15秒のstaggerを設定し、移動距離は80px以内。最終位置では読みやすい静止時間を0.7秒確保する。カード内容・アクセント色はpropsに切り出す。",
+    "mark": "▤ ▤",
+    "sourceAsset": "../MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/index.html",
+    "promptPath": "../MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/prompts/M-005.md",
+    "style": {
+      "mood": [
+        "calm",
+        "professional"
+      ],
+      "energy": 2,
+      "pace": "medium",
+      "light": "low",
+      "shake": false,
+      "hold": 36,
+      "role": [
+        "operation",
+        "result"
+      ],
+      "motionType": "ui-focus",
+      "minReadableFrames": 36,
+      "aspectRatios": [
+        "16:9"
+      ],
+      "verticalStatus": "unreviewed",
+      "tagStatus": "provisional",
+      "tagBasis": "参照カタログの名称・説明・依頼文に基づく初期分類。映像の印象は要レビュー。"
+    },
+    "verificationPath": "jobs/dd-premium-20261112/qa/result.json",
+    "previewPath": "jobs/dd-premium-20261112/output/preview/index.html"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Path": "MOTION_ATLAS_AI_PROMO_STUDIO_要件定義 (1).md",
+    "Bytes": 11537,
+    "SHA256": "B205FA7B616610F93703F478A11C8C1D8E72C8FFFA5A85D5F94E53DF330BE107",
+    "CanonicalOrBackup": "docs/archive/before-cleanup-20261112.zip"
+  },
+  {
+    "Path": "MOTION_ATLAS_AI_PROMO_STUDIO_Codex初回指示 (1).md",
+    "Bytes": 4000,
+    "SHA256": "F1633E47947ECFD70A2F1EB18AD6A854CC1724F8DE97413F0EF8EB242CC25601",
+    "CanonicalOrBackup": "docs/archive/before-cleanup-20261112.zip"
+  },
+  {
+    "Path": "PROMPTS_60.md",
+    "Bytes": 70541,
+    "SHA256": "22838A954829E5430AED6078F447BCDCBD95AA67B27D5E6D61C3D0AF9F15A402",
+    "CanonicalOrBackup": "MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/PROMPTS_60.md"
+  },
+  {
+    "Path": "motion_catalog_60.jpg",
+    "Bytes": 827584,
+    "SHA256": "48759F29891832B104D807B84DD7F9175B5750A3F3E6F768306969CCBA3DD68F",
+    "CanonicalOrBackup": "MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60/motion_catalog_60.jpg"
+  }
+]

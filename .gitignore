@@ -1,0 +1,31 @@
+# 依存・ビルド成果物
+node_modules/
+dist/
+build/
+build-atlas-preview/
+.cache/
+workspace/
+
+# 動画・音声・配布ZIP（ローカル保管のみ）
+*.mp4
+*.webm
+*.mov
+*.wav
+*.mp3
+*.zip
+
+# 撮影画像・QAフレーム
+promo-studio/public/captures/
+promo-studio/jobs/*/output/
+promo-studio/jobs/**/*.png
+promo-studio/jobs/**/*.jpg
+docs/qa/*.png
+動画ライブラリ/**/*.png
+
+# 編集ツールの作業データ・バックアップ（個人の素材を含む）
+ai-promo-editor/docs/backups/
+
+# ローカル作業メモ
+Untitled
+.env
+.env.*

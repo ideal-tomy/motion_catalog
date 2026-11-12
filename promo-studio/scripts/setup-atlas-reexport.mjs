@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root=path.resolve('..'),source=path.join(root,'再出力_MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60'),old=path.join(root,'MOTION_ATLAS_60_AEE99382E38383%88/MOTION_ATLAS_60');
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const files=fs.readdirSync(source,{recursive:true}).filter(f=>fs.statSync(path.join(source,f)).isFile());
+const differences=files.map(file=>({file,status:!fs.existsSync(path.join(old,file))?'new':hash(path.join(old,file))===hash(path.join(source,file))?'identical':'changed'}));
+const data=JSON.parse(fs.readFileSync(path.join(source,'motions.json'),'utf8'));
+const ids=['M-009','M-017','M-060','M-054','M-014','M-016'];
+const job='jobs/atlas-reexport-tournament-20261113';fs.mkdirSync(job,{recursive:true});
+const write=(f,v)=>fs.writeFileSync(f,JSON.stringify(v,null,2)+'\n');
+write(job+'/source-audit.json',{source,files:differences,motionCount:data.motions.length,selected:data.motions.filter(m=>ids.includes(m.id))});
+const bounds=[0,90,180,300,390,510,600],texts=['ENTER THE ARENA','SAMPLE DARTS OPEN','PLAYER A  /  VS  /  PLAYER B','MATCH CONFIRMED','MAKE YOUR MOMENT','OWN THE NIGHT'];
+const plan={compositionId:'AtlasTournament',durationSeconds:20,audio:'audio/atlas-reexport.wav',theme:{background:'#070c16',primary:'#56f0df',accent:'#ffcd72',foreground:'#f5f7f6'},scenes:ids.map((id,i)=>({id,from:bounds[i]/30,to:bounds[i+1]/30,startFrame:bounds[i],endFrame:bounds[i+1],text:texts[i],speed:1,easing:'easeOut',audioCue:i===2?12:0})),disclaimer:'演出用サンプル。実在の大会・選手・結果ではありません。'};
+write(job+'/composition.json',plan);
+write(job+'/request.json',{project:'atlas-reexport-tournament-20261113',durationSeconds:20,fps:30,width:1920,height:1080,locale:'en',captureMode:'motion-graphics',source});
+write(job+'/delivery.json',{subject:'トーナメント',tone:'迫力',language:'英語',variant:'ATLAS6種オープニング',description:'再出力カタログの指定6種類を同じ部品から組み立てた20秒の大会オープニング。架空の対戦例。',date:'20261113',version:1});
+console.log(JSON.stringify({files:files.length,differences:differences.filter(x=>x.status!=='identical'),motionCount:data.motions.length}));
