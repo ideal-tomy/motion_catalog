@@ -1,0 +1,3 @@
+import fs from 'node:fs';
+const files=['App.tsx','AnimationPanel.tsx','PresentationControls.tsx','MediaLibrary.tsx','MotionCatalog.tsx','LayoutCatalog.tsx','MovieLibrary.tsx','HandoffPanel.tsx','EditStage.tsx'],items=[];
+for(const name of files){const text=fs.readFileSync('docs/backups/uiux-before-20261113/src/'+name,'utf8');for(const m of text.matchAll(/(?:aria-label|placeholder|label)=(?:"[^"]*"|\{[^\n]*?\})/g))items.push({file:name,line:text.slice(0,m.index).split('\n').length,attribute:m[0]});}fs.writeFileSync('docs/qa/uiux/control-inventory.json',JSON.stringify(items,null,2));console.log(items.length+' source control names inventoried');

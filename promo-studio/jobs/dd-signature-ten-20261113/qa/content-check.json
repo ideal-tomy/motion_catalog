@@ -1,0 +1,38 @@
+{
+  "scenes": 10,
+  "secondsPerScene": 3,
+  "uniqueSceneMotions": 10,
+  "uniqueTransitions": 9,
+  "transitionSeconds": 0.6,
+  "secondSceneScan": "M-008",
+  "preserved": [
+    {
+      "job": "dd-signature-20261113",
+      "sha256": "7d2faa637d6a8803785d6bfd7c804b94e16de19adea7f63da6423698f621bcca"
+    },
+    {
+      "job": "atlas-reexport-tournament-20261113",
+      "sha256": "26c296ade3541dad9af88868f131e18f845c1046ee80bc5a29b727cc2a9ec780"
+    },
+    {
+      "job": "dd-premium-20261112",
+      "sha256": "db3a33fc560c4d5c24a2443b354d1a6ffa640be75ff40f4738c3c6b398ac2b33"
+    },
+    {
+      "job": "dd-rock-20261112",
+      "sha256": "4f1ad0867bc3e4e0b1bbe2d42678198998183df7283b8aec78b8a3db9ed7da89"
+    },
+    {
+      "job": "tournament-20261112",
+      "sha256": "989c850cbf8a0099eb224f4d1cfce870023dddb1bf9a888ad051ba30e49887e5"
+    },
+    {
+      "job": "tournament-rock-en-transitions-20261112",
+      "sha256": "7b0f7abd25afe85c9f87159931915e0bb461cc22dd7f17f5b4d153695da860a1"
+    },
+    {
+      "job": "tournament-rock-20261112",
+      "sha256": "09533261ecb0c1fe50f5524c5b328379564728a5a6c09f8b169b85f37b353346"
+    }
+  ]
+}

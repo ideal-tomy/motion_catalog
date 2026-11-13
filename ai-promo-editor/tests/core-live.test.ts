@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import example from '../examples/example-project.json' with {type:'json'};
+import {clone,validateProject,totalFrames,previewPatch,markManual,type Project} from '../src/core.ts';
+import {allMotionIds,motionStyle} from '../src/motion-engine.ts';
+import {splitSceneAt} from '../src/clip-edit.ts';
+test('60 IDはシーンとレイヤーに保存でき、未知IDと不正paramsは拒否',()=>{
+ for(const motionId of allMotionIds){const p=clone(example) as Project,m={motionId,startOffsetFrames:0,durationFrames:60,params:{speed:1}};p.scenes[0].motionStack=[m];p.scenes[0].layers[0].motionStack=[m];validateProject(p);const a=motionStyle(m,5),b=motionStyle(m,30);assert.ok(Object.keys(a).length>3);assert.equal(JSON.stringify(a),JSON.stringify(motionStyle(m,5)));assert.ok(!JSON.stringify(b).includes('NaN'));}
+ const p=clone(example) as Project;p.scenes[0].motionStack=[{motionId:'M-999',startOffsetFrames:0,durationFrames:60,params:{}}];assert.throws(()=>validateProject(p));p.scenes[0].motionStack[0].motionId='M-001';p.scenes[0].motionStack[0].params.speed=NaN;assert.throws(()=>validateProject(p));
+});
+test('動画分割は総尺・参照・音量を保ち右クリップの元動画時刻を進める',()=>{
+ const p=clone(example) as Project;p.assets=[{assetId:'test-video',kind:'video',path:'assets/test.mp4'}];p.scenes=[p.scenes[0]];const s=p.scenes[0];s.durationFrames=120;s.layers[0].kind='video';s.layers[0].assetId='test-video';s.layers[0].inFrame=0;s.layers[0].durationFrames=120;s.layers[0].style={fit:'cover',trimStartFrames:10,playbackRate:1.5,videoMuted:false,videoVolume:.7};s.motionStack=[{motionId:'M-014',startOffsetFrames:0,durationFrames:60,params:{speed:1}}];const before=clone(p),split=splitSceneAt(p,s.sceneId,45).project;assert.equal(totalFrames(split),120);assert.equal(split.scenes.length,2);assert.equal(split.scenes[1].layers[0].style?.trimStartFrames,78);assert.equal(split.scenes[1].layers[0].style?.videoVolume,.7);assert.equal(split.scenes[1].motionStack?.[0].params.elapsedOffsetFrames,45);assert.notEqual(split.scenes[0].layers[0].layerId,split.scenes[1].layers[0].layerId);assert.deepEqual(p,before);assert.throws(()=>splitSceneAt(p,s.sceneId,0));p.scenes[0].layers[0].locked=true;assert.throws(()=>splitSceneAt(p,s.sceneId,45));
+});
+test('コマの動きの部分パッチも対象を限定し手動確定を保護',()=>{const p=clone(example) as Project,proposal={proposalId:'scene-motion-patch',baseRevision:p.revision,targetSceneId:p.scenes[1].sceneId,reason:'動きの変更',operations:[{op:'setSceneMotionStack',sceneId:p.scenes[1].sceneId,motionStack:[{motionId:'M-054',startOffsetFrames:0,durationFrames:60,params:{speed:1}}]}]};const result=previewPatch(p,proposal).next;assert.equal(result.scenes[1].motionStack?.[0].motionId,'M-054');for(const i of [0,2,3])assert.deepEqual(result.scenes[i],p.scenes[i]);markManual(p,'scene',p.scenes[1].sceneId,'motionStack');assert.throws(()=>previewPatch(p,proposal));});

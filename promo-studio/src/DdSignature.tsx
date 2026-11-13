@@ -1,0 +1,28 @@
+import React from 'react';
+import {AbsoluteFill,Audio,Img,staticFile,useCurrentFrame} from 'remotion';
+const navy='#12232d',paper='#f3f0e9',gold='#bcaa85';
+const p=(v:number)=>Math.max(0,Math.min(1,v));
+const ease=(v:number)=>1-(1-p(v))**3;
+const image=(name:string,style:React.CSSProperties={})=><Img src={staticFile(`captures/dd/${name}`)} style={{width:'100%',display:'block',...style}}/>;
+const Frame:React.FC<{children:React.ReactNode;style?:React.CSSProperties}>=({children,style})=><div style={{position:'absolute',overflow:'hidden',borderRadius:18,background:'#fff',border:'1px solid #ffffff55',boxShadow:'0 35px 100px #00000030',...style}}>{children}</div>;
+const Tiny:React.FC<{children:React.ReactNode;style?:React.CSSProperties}>=({children,style})=><div style={{fontSize:20,letterSpacing:5,color:gold,...style}}>{children}</div>;
+// Six bespoke treatments, each used exactly once. No shared entrance animation.
+export const DdSignature:React.FC<{plan:{music:string}}>=({plan})=>{
+ const f=useCurrentFrame();
+ const s=f<120?0:f<300?1:f<450?2:f<630?3:f<780?4:5;
+ const t=f-[0,120,300,450,630,780][s];
+ const light=s===2||s===4;
+ const foreground=light?navy:paper;
+ let content:React.ReactNode;
+ if(s===0){const q=ease(t/75);content=<><div style={{position:'absolute',left:160,top:300}}><Tiny>AXEON / DD INTELLIGENCE</Tiny><div style={{fontSize:100,fontWeight:400,letterSpacing:16-11*q,marginTop:48,lineHeight:1.45}}>確かな根拠が、<br/>判断を変える。</div></div><div style={{position:'absolute',left:1190,top:250,width:510,height:530,overflow:'hidden',clipPath:`inset(0 ${49*(1-q)}% 0 ${49*(1-q)}%)`,borderRadius:12}}>{image('overview.jpg',{width:850,maxWidth:'none',transform:'translate(-240px,-35px)'})}<div style={{position:'absolute',inset:0,background:'linear-gradient(90deg,#12232d22,transparent)'}}/></div></>;}
+ else if(s===1){const q=ease(t/55);const scan=Math.min(119,Math.max(0,t-25));content=<><div style={{position:'absolute',left:140,top:305,width:490}}><Tiny>01 / RECONCILE</Tiny><div style={{fontSize:84,lineHeight:1.5,marginTop:45,fontWeight:400}}>差異を、<br/>捉える。</div></div><Frame style={{left:700,top:215,width:1080,height:590,transform:`perspective(1800px) rotateY(${-14*(1-q)}deg) translateX(${90*(1-q)}px)`,transformOrigin:'right center'}}>{image(`scan/${String(scan).padStart(4,'0')}.jpg`,{width:1080})}</Frame></>;}
+ else if(s===2){const q=ease(t/65);content=<><Tiny style={{position:'absolute',left:140,top:170,color:'#887958'}}>02 / DISCOVER</Tiny><div style={{position:'absolute',left:140,top:245,fontSize:76,letterSpacing:3}}>小さな差異を、見過ごさない。</div><Frame style={{left:140,top:430,width:1640,height:280,boxShadow:'0 25px 65px #12232d15',clipPath:`inset(0 ${100*(1-q)}% 0 0)`}}>{image('result.jpg',{width:1640,transform:'translateY(-175px)'})}</Frame><div style={{position:'absolute',left:140,top:835,fontSize:22,color:'#728087',letterSpacing:3}}>PAYROLL × ATTENDANCE</div></>;}
+ else if(s===3){const q=ease(t/65);content=<><div style={{position:'absolute',left:145,top:300}}><Tiny>03 / TRACE</Tiny><div style={{fontSize:85,lineHeight:1.5,marginTop:45}}>その判断に、<br/>根拠がある。</div></div><Frame style={{left:875,top:270+100*(1-q),width:880,height:536,opacity:q,boxShadow:`0 ${35+20*q}px 100px #00000045`}}>{image('evidence-card.jpg')}</Frame></>;}
+ else if(s===4){const q=ease(t/80);content=<><Tiny style={{position:'absolute',left:140,top:150,color:'#887958'}}>A CLEARER PERSPECTIVE</Tiny><div style={{position:'absolute',left:140,top:210,fontSize:72,letterSpacing:3}}>見抜く。その先へ。</div><Frame style={{left:140-32*q,top:380,width:950,height:440,transform:`rotate(${-1.8*q}deg)`}}>{image('overview.jpg',{width:950,transform:'translateY(-100px)'})}</Frame><Frame style={{left:1000+32*q,top:470,width:750,height:457,transform:`rotate(${2*q}deg)`}}>{image('evidence-card.jpg')}</Frame></>;}
+ else {const q=ease(t/38);content=<div style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',filter:`blur(${12*(1-q)}px)`,opacity:.25+.75*q}}><Tiny>EVIDENCE FOR DECISIONS</Tiny><div style={{fontFamily:'Georgia,serif',fontSize:154,letterSpacing:19,marginTop:36}}>AXEON</div><div style={{fontSize:28,letterSpacing:11,marginTop:9}}>DD INTELLIGENCE</div><div style={{fontSize:43,letterSpacing:4,marginTop:60}}>確信をもって、次の一手へ。</div><div style={{fontSize:22,letterSpacing:3,color:gold,marginTop:42}}>EXPERIENCE THE DEMO　↗</div></div>;}
+ // Distinct boundary grammar: opening slit, perspective arrival, match cut,
+ // vertical evidence lift, diagonal ivory curtain, optical focus dissolve.
+ const curtain=s===4?1-ease(t/24):0;
+ return <AbsoluteFill style={{background:light?paper:navy,color:foreground,fontFamily:'"Yu Gothic", "Meiryo", sans-serif'}}><Audio src={staticFile(plan.music)} volume={.85}/><div style={{position:'absolute',inset:0,background:light?'radial-gradient(ellipse at 70% 20%,#fff8,transparent 70%)':'radial-gradient(ellipse at 75% 35%,#29414a88,transparent 65%)'}}/><div style={{position:'absolute',left:100,right:100,top:55,display:'flex',justifyContent:'space-between',fontSize:18,letterSpacing:4,color:light?'#6d7b80':'#acb7b9'}}><span>AXEON</span><span>DD INTELLIGENCE</span></div>{content}{curtain>0&&<div style={{position:'absolute',inset:-300,background:navy,transform:`translateX(${-2400*(1-curtain)}px) skewX(-16deg)`}}/>}<div style={{position:'absolute',left:100,right:100,bottom:40,borderTop:`1px solid ${light?'#12232d22':'#ffffff22'}`,paddingTop:19,display:'flex',justifyContent:'space-between',fontSize:18,color:light?'#6a777c':'#a9b5b8'}}><span>ACTUAL PRODUCT / SAMPLE DATA</span><span>画面・数値はデモ用サンプル。最終判断は人が行います。</span></div></AbsoluteFill>;
+};
+

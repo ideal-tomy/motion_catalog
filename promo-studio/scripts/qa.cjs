@@ -40,7 +40,7 @@ function run(exe,args){const p=spawnSync(path.join(native,exe+'.exe'),args,{enco
       return {width:el.videoWidth,height:el.videoHeight,duration:el.duration};
     });assert.equal(meta.width,1920);assert.equal(meta.height,1080);assert.ok(Math.abs(meta.duration-expectedDuration)<.1);
     await page.locator('video').evaluate(el=>{el.currentTime=0;el.volume=.4;return el.play();});
-    await page.waitForFunction(()=>document.querySelector('video').ended,{},{timeout:35000});
+    await page.waitForFunction(()=>document.querySelector('video').ended,{},{timeout:expectedDuration*1000+15000});
     const playback=await page.locator('video').evaluate(el=>({ended:el.ended,currentTime:el.currentTime,muted:el.muted,volume:el.volume,error:el.error?.message??null,quality:el.getVideoPlaybackQuality().totalVideoFrames}));
     assert.equal(playback.ended,true);assert.equal(playback.error,null);assert.equal(playback.muted,false);
     // Frame-by-frame inspection uses the fully decoded native output above.
@@ -54,3 +54,4 @@ function run(exe,args){const p=spawnSync(path.join(native,exe+'.exe'),args,{enco
     if(fs.existsSync(path.join(job,'delivery.json'))){const {exportJob}=await import('./library.mjs');exportJob(job);}
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
+

@@ -1,0 +1,11 @@
+{
+  "project": "dd-signature-ten-20261113",
+  "source": "../dd_demo",
+  "instruction": "高級感・信頼感を維持して30秒10コマ。2コマ目はスキャン。モーションと9種類のページ切り替えを積極的に使用し重複させない。",
+  "durationSeconds": 30,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "captureMode": "actual-ui-existing-verified-sequence",
+  "locale": "ja"
+}

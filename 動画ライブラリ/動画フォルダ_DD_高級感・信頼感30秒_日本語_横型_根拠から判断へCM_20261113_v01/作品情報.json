@@ -1,0 +1,18 @@
+{
+  "subject": "DD",
+  "tone": "高級感・信頼感",
+  "language": "日本語",
+  "variant": "根拠から判断へCM",
+  "description": "DDデモの実画面を切り抜いた30秒ブランドCM。濃紺とアイボリー、6場面それぞれ異なる演出、オリジナルBGM。",
+  "date": "20261113",
+  "version": 1,
+  "stem": "DD_高級感・信頼感30秒_日本語_横型_根拠から判断へCM_20261113_v01",
+  "job": "dd-signature-20261113",
+  "durationSeconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "7d2faa637d6a8803785d6bfd7c804b94e16de19adea7f63da6423698f621bcca",
+  "previewSHA256": "c4612711d61dba87a1a7b8fa281ba423e857489ca590725b86a8578da04a6db3",
+  "sourceJob": "promo-studio/jobs/dd-signature-20261113"
+}

@@ -4,9 +4,18 @@
 
 ## 入口
 
+- [UI/UX改善版の編集画面](http://127.0.0.1:4319/?project=copy-44e78c84-e29)：コマ／選択レイヤー／全体、要約付きの設定群、文字・素材の文脈表示、固定プレビューと時間軸（[v0.8の変更と検証](docs/UIUX_VERIFICATION.md)）
+
+- [個別アニメーション24種・DD操作サンプル](http://127.0.0.1:4319/?project=copy-44e78c84-e29&panel=animations)：枠全体／内部画像、実文字の動き、合成、試着と保存（[v0.7レポート](ai-promo-editor/docs/LAYER_ANIMATIONS.md)）
+
+- [編集状態・Codex引き継ぎサンプル](http://127.0.0.1:4319/?project=copy-8d2ed409-d89&panel=handoff)：メモと手動確定を区別し、保存済みJSON・最終差分・素材付きZIPを出力（[実装レポート](ai-promo-editor/docs/HANDOFF_IMPLEMENTATION.md)）
+- [枠なし・配色・レイヤー編集サンプル](http://127.0.0.1:4319/?project=sample-7ede3a5b-62b)：全画面と6種類の見せ方を即時変更。素材内の拡大、レイヤー編集、全体配色に対応（[操作方法](ai-promo-editor/docs/PRESENTATION_EDITING.md)）
+- [DD・30秒10コマのスキャンCM](promo-studio/jobs/dd-signature-ten-20261113/README.md)：2コマ目スキャン・9種類のページ切り替え。高級感と信頼のテンポアップ版
+- [DD・高級感と信頼の30秒CM](promo-studio/jobs/dd-signature-20261113/README.md)：実画面の切り抜き・6場面の固有演出・オリジナルBGM。完成動画は動画ライブラリへ集約
 - [再出力カタログの20秒テスト制作](promo-studio/jobs/atlas-reexport-tournament-20261113/README.md)：指定6種類の部品・単体プレビュー・大会オープニング
 - [ブラウザ編集ツール](ai-promo-editor/README.md)：v3。原本60種の動く図鑑、素材サムネイル、12レイアウト試着、ドラッグ編集・保存
 - 編集ツール起動中：[AI PROMO STUDIOを開く](http://127.0.0.1:4319)
+- [素材付き編集サンプルを開く](http://127.0.0.1:4319/?project=sample-d041aeef-bcf)：画像・文字・BGMを別々に編集し、全60種の素材用モーションを即時試着
 - [完成動画ライブラリ](動画ライブラリ/index.html)：対象・雰囲気・尺・言語で検索、MP4・HTMLを作品単位で保存
 - [制作プラン比較](制作プラン/index.html)：同じ素材で迫力・落ち着き・緩急を比較、癒しも個別選択
 - [動画の保存ルール](docs/動画の保存ルール.md)：フォルダ・ファイル命名、自動集約、版管理

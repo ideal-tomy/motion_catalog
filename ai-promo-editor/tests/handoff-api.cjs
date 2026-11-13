@@ -1,0 +1,20 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const base='http://127.0.0.1:4319',out=path.resolve('docs/qa/handoff'),created=[];
+async function api(url,method='GET',body,status=200){const r=await fetch(base+url,{method,headers:{'Content-Type':'application/json','X-Promo-Local':'1'},...(body?{body:JSON.stringify(body)}:{})});const j=await r.json();assert.equal(r.status,status,j.error);return j;}
+async function save(p){const baseRevision=p.revision;p.revision++;return api('/api/projects/'+p.projectId,'PUT',{project:p,baseRevision});}
+(async()=>{
+ const source=JSON.parse(fs.readFileSync('docs/qa/presentation/ready-project.json')).projectId;let p=await api('/api/projects/'+source+'/duplicate','POST',{});created.push(p.projectId);fs.writeFileSync(path.join(out,'api-projects.json'),JSON.stringify(created));const checks=[];
+ for(const seconds of [20,30,40]){
+  const delta=seconds*p.video.fps-p.scenes.reduce((n,s)=>n+s.durationFrames,0);p.scenes[0].durationFrames+=delta;p.scenes[0].layers.forEach(l=>l.durationFrames=p.scenes[0].durationFrames);p.video.targetDurationFrames=seconds*p.video.fps;p=await save(p);
+  const r=await api(`/api/projects/${p.projectId}/handoffs`,'POST',{baseRevision:p.revision,purpose:seconds===40?'review':'render',selectedNoteIds:[]});p=r.project;assert.equal(r.report.facts.totalFrames,seconds*30);assert.equal(r.report.facts.scenes[0].durationFrames,p.scenes[0].durationFrames);assert.ok(r.markdown.includes(`${seconds}秒／30fps`));checks.push(seconds+'秒の実データで時間を照合');
+ }
+ await api(`/api/projects/${p.projectId}/checkpoints`,'POST',{baseRevision:p.revision-1,label:'古い版'},409);checks.push('古い保存版のチェックポイント拒否');
+ p=await api(`/api/projects/${p.projectId}/checkpoints`,'POST',{baseRevision:p.revision,label:'素材を含む基準'});const cp=p.meta.handoff.checkpoints[0],a=p.assets.find(a=>a.kind==='image');
+ const original=path.resolve('workspace/projects',p.projectId,a.path),missing=original+'.qa-held';assert.ok(original.startsWith(path.resolve('workspace/projects',p.projectId)+path.sep));fs.renameSync(original,missing);
+ try{const r=await api(`/api/projects/${p.projectId}/handoffs`,'POST',{baseRevision:p.revision,purpose:'render',selectedNoteIds:[]});p=r.project;assert.equal(r.report.assetManifest.find(m=>m.assetId===a.assetId).available,false);assert.ok(r.report.warnings.some(w=>w.includes(a.assetId)));await api(`/api/projects/${p.projectId}/checkpoints/${cp.id}?restore=1`,'GET',undefined,400);checks.push('素材欠落を警告・復元を遮断・MD/JSON出力は維持');}finally{fs.renameSync(missing,original);}
+ // Historical checkpoint assets survive removing them from the current asset list.
+ p.scenes.forEach(s=>s.layers=s.layers.filter(l=>l.assetId!==a.assetId));p.assets=p.assets.filter(v=>v.assetId!==a.assetId);p=await save(p);const copy=await api('/api/projects/'+p.projectId+'/duplicate','POST',{});created.push(copy.projectId);fs.writeFileSync(path.join(out,'api-projects.json'),JSON.stringify(created));assert.ok(fs.existsSync(path.resolve('workspace/projects',copy.projectId,a.path)));const snapshot=await api(`/api/projects/${copy.projectId}/checkpoints/${cp.id}?restore=1`);assert.ok(snapshot.assets.some(v=>v.assetId===a.assetId));checks.push('現行一覧から外した素材も基準復元用に複製');
+ // ZIP's CRC and UTF-8 names are verified independently by Python zipfile.
+ const r=await api(`/api/projects/${copy.projectId}/handoffs`,'POST',{baseRevision:copy.revision,purpose:'review',selectedNoteIds:[]});const zip=Buffer.from(await fetch(`${base}/api/projects/${copy.projectId}/handoffs/${r.record.id}/bundle.zip`).then(v=>v.arrayBuffer()));fs.writeFileSync(path.join(out,'api-bundle.zip'),zip);const bytes=Buffer.from(await fetch(`${base}/api/projects/${copy.projectId}/handoffs/${r.record.id}/project.json`).then(v=>v.arrayBuffer()));assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),r.report.projectSHA256);
+ fs.writeFileSync(path.join(out,'api-result.json'),JSON.stringify({checks,created},null,2));console.log(checks);
+})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,8 @@
+// Small dependency-free ZIP store writer. UTF-8 names and CRC32, no executable data.
+const table=Array.from({length:256},(_,n)=>{for(let k=0;k<8;k++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});
+const crc32=b=>{let n=0xffffffff;for(const v of b)n=table[(n^v)&255]^(n>>>8);return (n^0xffffffff)>>>0;};
+export function zipStore(entries){
+ const files=[],central=[];let offset=0,total=0;
+ for(const {name,data}of entries){if(!name||name.startsWith('/')||name.includes('\\')||name.split('/').includes('..'))throw Error('Unsafe ZIP name');total+=data.length;if(total>256*1024*1024)throw Error('一式出力は256MBまでです。素材を別途コピーしてください');const filename=Buffer.from(name),crc=crc32(data),local=Buffer.alloc(30),directory=Buffer.alloc(46);local.writeUInt32LE(0x04034b50);local.writeUInt16LE(20,4);local.writeUInt16LE(0x800,6);local.writeUInt32LE(crc,14);local.writeUInt32LE(data.length,18);local.writeUInt32LE(data.length,22);local.writeUInt16LE(filename.length,26);directory.writeUInt32LE(0x02014b50);directory.writeUInt16LE(20,4);directory.writeUInt16LE(20,6);directory.writeUInt16LE(0x800,8);directory.writeUInt32LE(crc,16);directory.writeUInt32LE(data.length,20);directory.writeUInt32LE(data.length,24);directory.writeUInt16LE(filename.length,28);directory.writeUInt32LE(offset,42);files.push(local,filename,data);central.push(directory,filename);offset+=local.length+filename.length+data.length;}
+ const size=central.reduce((n,b)=>n+b.length,0),end=Buffer.alloc(22);end.writeUInt32LE(0x06054b50);end.writeUInt16LE(entries.length,8);end.writeUInt16LE(entries.length,10);end.writeUInt32LE(size,12);end.writeUInt32LE(offset,16);return Buffer.concat([...files,...central,end]);
+}

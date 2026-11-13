@@ -16,4 +16,10 @@ const StudioRoot:React.FC=()=> <><Root/><Composition id="DdPremium" component={P
 import {AtlasTournament,AtlasSingle} from './AtlasTournament';
 import atlasPlan from '../jobs/atlas-reexport-tournament-20261113/composition.json';
 const AtlasRoot:React.FC=()=> <><StudioRoot/><Composition id="AtlasTournament" component={AtlasTournament} durationInFrames={600} fps={30} width={1920} height={1080} defaultProps={{plan:atlasPlan}}/>{atlasPlan.scenes.map(scene=><Composition key={scene.id} id={scene.id.replace('-','')} component={AtlasSingle} durationInFrames={scene.endFrame-scene.startFrame} fps={30} width={1920} height={1080} defaultProps={{scene,theme:atlasPlan.theme}}/>)}</>;
-registerRoot(AtlasRoot);
+import {DdSignature} from './DdSignature';
+import signaturePlan from '../jobs/dd-signature-20261113/composition.json';
+const SignatureRoot:React.FC=()=> <><AtlasRoot/><Composition id="DdSignature" component={DdSignature} durationInFrames={900} fps={30} width={1920} height={1080} defaultProps={{plan:signaturePlan}}/></>;
+import {DdSignatureTen} from './DdSignatureTen';
+import tenPlan from '../jobs/dd-signature-ten-20261113/composition.json';
+const TenRoot:React.FC=()=> <><SignatureRoot/><Composition id="DdSignatureTen" component={DdSignatureTen} durationInFrames={900} fps={30} width={1920} height={1080} defaultProps={{plan:tenPlan}}/></>;
+registerRoot(TenRoot);

@@ -10,7 +10,11 @@ const deliveryPath=path.join(job,'delivery.json');
 if(!fs.existsSync(deliveryPath))throw Error('Create delivery.json with subject/tone/language/variant/date/version before rendering. See docs/動画の保存ルール.md');
 naming(JSON.parse(fs.readFileSync(deliveryPath,'utf8')),request);
 const plan=JSON.parse(fs.readFileSync(path.join(job,'composition.json'),'utf8'));
-if(![20,22].includes(request.durationSeconds)||request.fps!==30||request.width!==1920||request.height!==1080)throw Error('This MVP supports 20/22s / 1920x1080 / 30fps');
+if(![20,22,30].includes(request.durationSeconds)||request.fps!==30||request.width!==1920||request.height!==1080)throw Error('This MVP supports 20/22/30s / 1920x1080 / 30fps');
+const isTen=plan.compositionId==='DdSignatureTen';
+const isSignature=plan.compositionId==='DdSignature'||isTen;
+if(isTen){if(plan.scenes.length!==10||plan.transitions.length!==9||new Set(plan.transitions.map(t=>t.kind)).size!==9||plan.scenes[1].motion!=='M-008')throw Error('Ten-cut scan/transition requirements failed');}
+if(isSignature){let end=0;const seen=new Set();for(const s of plan.scenes){if(s.from!==end||s.to<=s.from||seen.has(s.motion))throw Error('Invalid or repeated signature motion');seen.add(s.motion);end=s.to;}if(end!==30||request.durationSeconds!==30)throw Error('Signature requires 30 seconds');}
 const isAtlas=plan.compositionId==='AtlasTournament';
 if(isAtlas){let end=0;const supported=new Set(['M-009','M-017','M-060','M-054','M-014','M-016']);for(const s of plan.scenes){if(!supported.has(s.id)||!Number.isInteger(s.startFrame)||!Number.isInteger(s.endFrame)||s.startFrame!==end||s.endFrame<=s.startFrame||s.from*30!==s.startFrame||s.to*30!==s.endFrame||!Number.isFinite(s.speed)||s.speed<=0||!['linear','easeOut'].includes(s.easing)||!Number.isInteger(s.audioCue)||s.audioCue<0||s.audioCue>=s.endFrame-s.startFrame||typeof s.text!=='string')throw Error('Invalid Atlas scene');end=s.endFrame;}if(end!==600)throw Error('Atlas sample requires 600 frames');}
 const isEnglish=plan.compositionId==='TournamentRockEnglish';
@@ -24,7 +28,7 @@ const serveUrl=await bundle({entryPoint:path.resolve('src/index.tsx'),publicDir:
 const inputProps={plan};
 const browser=await openBrowser('chrome',{browserExecutable});
 const composition=await selectComposition({serveUrl,id:plan.compositionId??'TournamentPromo',inputProps,browserExecutable,puppeteerInstance:browser});
-const baseFrames=isAtlas?[0,45,120,192,210,330,420,540,599]:isPremium?[0,30,75,105,150,205,225,285,315,330,375,420,450,480,540,599]:isRock?[0,...plan.scenes.map(s=>s.from*30+30),659]:[0,45,165,255,345,465,570,599];
+const baseFrames=isTen?[0,45,89,...plan.scenes.slice(1).flatMap(s=>[s.from*30,s.from*30+9,s.from*30+45]),840,899]:isSignature?[0,60,119,120,145,220,299,300,335,400,449,450,480,550,629,630,642,680,750,779,780,800,840,899]:isAtlas?[0,45,120,192,210,330,420,540,599]:isPremium?[0,30,75,105,150,205,225,285,315,330,375,420,450,480,540,599]:isRock?[0,...plan.scenes.map(s=>s.from*30+30),659]:[0,45,165,255,345,465,570,599];
 const previewFrames=isEnglish?[...new Set([...baseFrames,...plan.transitions.flatMap(t=>[t.atFrame-5,t.atFrame,t.atFrame+5])])].sort((a,b)=>a-b):baseFrames;
 const frames=process.argv.includes('--skip-stills')?[]:previewFrames;
 for(let i=0;i<frames.length;i+=3){
@@ -35,7 +39,7 @@ let last=-1;
 await renderMedia({serveUrl,composition,inputProps,browserExecutable,puppeteerInstance:browser,codec:'h264',audioCodec:'aac',pixelFormat:'yuv420p',crf:18,concurrency:3,outputLocation:path.join(out,'promo_16x9.mp4'),onProgress:({progress})=>{const p=Math.floor(progress*10);if(p!==last){console.log(`Render ${p*10}%`);last=p;}}});
 await browser.close({silent:true});
 fs.copyFileSync(path.join(out,'promo_16x9.mp4'),path.join(out,'preview/promo_16x9.mp4'));
-fs.copyFileSync(path.join(job,isPremium?'qa/frame-540.png':isRock?'qa/frame-570.png':'qa/frame-045.png'),path.join(out,'preview/poster.png'));
+fs.copyFileSync(path.join(job,isSignature?'qa/frame-840.png':isPremium?'qa/frame-540.png':isRock?'qa/frame-570.png':'qa/frame-045.png'),path.join(out,'preview/poster.png'));
 fs.writeFileSync(path.join(out,'preview/index.html'),`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DARTS TOURNAMENT — Promo</title><style>body{margin:0;background:#070d17;color:#e9f1f4;font-family:system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:40px 24px}p{color:#9fb0bd;line-height:1.8}video{width:100%;aspect-ratio:16/9;background:#070d17;border:1px solid #29404d;border-radius:12px}a{color:#8af0ed}h1{font-size:clamp(24px,4vw,40px)}small{color:#94a5b2}</style><main><p>DARTS TOURNAMENT / MOTION ATLAS</p><h1>大会の瞬間を、見せ場に。</h1><video controls playsinline preload="metadata" poster="poster.png"><source src="promo_16x9.mp4" type="video/mp4">動画を再生できません。MP4を直接開いてください。</video><p>20秒 · 1920×1080 · 30fps · オリジナルBGM</p><p><a href="promo_16x9.mp4" download>MP4をダウンロード</a></p><small>指定アプリの既存Animation Previewを撮影しています。サンプル演出であり、実際の大会結果・本番操作の記録ではありません。</small></main></html>`);
 console.log(`Output: ${out}`);
 if(isRock){const htmlPath=path.join(out,'preview/index.html');let html=fs.readFileSync(htmlPath,'utf8');html=html.replaceAll('大会の瞬間を、見せ場に。','次の大会を、もっと熱く。').replace('20秒 ·','22秒 · 10カット · 180 BPM ·').replace('オリジナルBGM','オリジナル・ロック調BGM');fs.writeFileSync(htmlPath,html);}
@@ -44,3 +48,6 @@ if(isEnglish){fs.writeFileSync(path.join(out,'preview/index.html'),`<!doctype ht
 if(isPremium){fs.writeFileSync(path.join(out,'preview/index.html'),`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DD — 高級感・信頼感 / 20秒</title><style>${css}</style><main><p>AXEON / DD INTELLIGENCE</p><h1>根拠から、次の判断へ。</h1><video controls playsinline preload="metadata" poster="poster.png"><source src="promo_16x9.mp4" type="video/mp4">MP4を直接開いて再生してください。</video><p>20秒 · 1920×1080 · 30fps · オリジナルのピアノ風BGM</p><p><a href="promo_16x9.mp4" download>MP4をダウンロード</a></p><small>DDデモの実画面キャプチャを使用。${escape(plan.disclaimer)}。数値・氏名はサンプルであり、実案件の結果ではありません。</small></main></html>`);}
 
 if(isAtlas){fs.writeFileSync(path.join(out,'preview/index.html'),`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ATLAS 6種 / Tournament opening</title><style>${css}</style><main><p>MOTION ATLAS / 6 MOTIONS</p><h1>ダーツ大会オープニング — 20秒</h1><video controls playsinline preload="metadata" poster="poster.png" src="promo_16x9.mp4"></video><p>M-009 → M-017 → M-060 → M-054 → M-014 → M-016</p><p>1920×1080 / 30fps / オリジナルBGM・SE</p><p><a href="promo_16x9.mp4" download>MP4を保存</a></p><small>演出用に再構築した架空の大会・対戦例です。実画面や実際の大会結果ではありません。</small></main></html>`);}
+
+if(isSignature){fs.writeFileSync(path.join(out,'preview/index.html'),`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DD — 根拠から判断へ / 30秒CM</title><style>${css}body{background:#12232d}a{color:#d6c7a6}</style><main><p>AXEON / DD INTELLIGENCE</p><h1>確かな根拠が、判断を変える。</h1><video controls playsinline preload="metadata" poster="poster.png" src="promo_16x9.mp4"></video><p>30秒 / Full HD / オリジナルBGM / ${isTen?"10コマ / 9種類のページ切り替え / スキャン":"6つの異なる演出"}</p><p><a href="promo_16x9.mp4" download>MP4を保存</a></p><small>DDデモの実画面・照合処理の連続キャプチャを使用し、画面の一部を切り抜いて構成しています。画面・氏名・数値は架空のサンプルで、実案件の成果ではありません。最終判断は人が行います。</small></main></html>`);}
+

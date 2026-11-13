@@ -1,0 +1,11 @@
+import {clone,id,markManual,protectedPath,validateProject,type Project,type Layer,type Motion} from './core.ts';
+function shifted(m:Motion,amount:number):Motion{const next=clone(m);next.startOffsetFrames=Math.max(0,m.startOffsetFrames-amount);next.params.elapsedOffsetFrames=Number(m.params.elapsedOffsetFrames??0)+Math.max(0,amount-m.startOffsetFrames)*Number(m.params.speed??1);return next;}
+export function splitSceneAt(p:Project,sceneId:string,cut:number){
+ const next=clone(p),index=next.scenes.findIndex(s=>s.sceneId===sceneId),s=next.scenes[index];if(!s||!Number.isInteger(cut)||cut<=0||cut>=s.durationFrames)throw Error('コマの途中へ再生位置を移動してから分割してください');if(protectedPath(p,'scene',sceneId,'*',true)||s.layers.some(l=>l.locked)||p.locks.some(l=>l.targetId===sceneId||s.layers.some(a=>a.layerId===l.targetId)))throw Error('分割前にコマやレイヤーの固定を解除してください');
+ if((s.animations??[]).length||s.layers.some(l=>(l.animations??[]).length))throw Error('個別アニメーション付きのコマ分割は未対応です。元のコマは変更していません。先に複製して動きの区間を調整してください');
+ const right=clone(s),original=clone(s);right.sceneId=id('scene');right.durationFrames=s.durationFrames-cut;right.motionStack=(s.motionStack??[]).map(m=>shifted(m,cut));s.durationFrames=cut;
+ const map=new Map<string,string>();right.layers=[];s.layers=[];
+ for(const layer of original.layers){const end=layer.inFrame+layer.durationFrames;if(layer.inFrame<cut){const left=clone(layer);left.durationFrames=Math.min(end,cut)-layer.inFrame;if(left.durationFrames>0)s.layers.push(left);}if(end>cut){const l:Layer=clone(layer),passed=Math.max(0,cut-layer.inFrame);l.layerId=id('layer');map.set(layer.layerId,l.layerId);l.inFrame=Math.max(0,layer.inFrame-cut);l.durationFrames=end-Math.max(cut,layer.inFrame);l.motionStack=l.motionStack.map(m=>shifted(m,passed));if(l.kind==='video')l.style={...l.style,trimStartFrames:Number(l.style?.trimStartFrames??0)+Math.round(passed*Number(l.style?.playbackRate??1))};right.layers.push(l);}}
+ s.unplacedLayerIds=s.unplacedLayerIds.filter(key=>s.layers.some(l=>l.layerId===key));right.unplacedLayerIds=original.unplacedLayerIds.filter(key=>map.has(key)).map(key=>map.get(key)!);
+ next.scenes.splice(index+1,0,right);markManual(next,'scene',s.sceneId,'*');markManual(next,'scene',right.sceneId,'*');validateProject(next);return {project:next,rightSceneId:right.sceneId};
+}

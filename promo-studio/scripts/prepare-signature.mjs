@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const sr=48000,seconds=30,n=sr*seconds,L=new Float32Array(n),R=new Float32Array(n);
+function add(at,duration,fn,gain,pan=0){for(let i=0;i<duration*sr&&Math.round(at*sr)+i<n;i++){const t=i/sr,j=Math.round(at*sr)+i,v=fn(t)*gain;L[j]+=v*(1-pan*.35);R[j]+=v*(1+pan*.35);}}
+const chords=[[146.832,220,277.183,329.628],[123.471,184.997,246.942,293.665],[97.999,196,246.942,293.665],[110,164.814,220,277.183],[146.832,220,277.183,369.994]];
+for(let c=0;c<5;c++){const at=[0,6,12,18,24][c],duration=Math.min(8,30-at);for(const [i,hz]of chords[c].entries())add(at,duration,t=>Math.min(1,t/1.8,(duration-t)/2)*(Math.sin(2*Math.PI*hz*t)+.12*Math.sin(2*Math.PI*hz*2.001*t)),.033,(i-1.5)/2);for(let k=0;k<4;k++){const atNote=at+.3+k*1.25;if(atNote>27)continue;const hz=chords[c][k]*2;add(atNote,3,t=>Math.min(1,t/.018)*Math.exp(-t*1.8)*(Math.sin(2*Math.PI*hz*t)+.18*Math.sin(2*Math.PI*hz*2.003*t)),.09,(k-1.5)/2);}}
+// Low, restrained heartbeat gives the film forward momentum, then resolves.
+for(let at=4;at<26;at+=1.25)add(at,.35,t=>Math.sin(2*Math.PI*(51*t+1.6*(1-Math.exp(-t*17))))*Math.exp(-t*15),.043);
+let peak=0;for(let i=0;i<n;i++){const g=Math.min(1,i/sr/.25,(30-i/sr)/2.3);L[i]*=g;R[i]*=g;peak=Math.max(peak,Math.abs(L[i]),Math.abs(R[i]));}
+const b=Buffer.alloc(44+n*4);b.write('RIFF');b.writeUInt32LE(36+n*4,4);b.write('WAVEfmt ',8);b.writeUInt32LE(16,16);b.writeUInt16LE(1,20);b.writeUInt16LE(2,22);b.writeUInt32LE(sr,24);b.writeUInt32LE(sr*4,28);b.writeUInt16LE(4,32);b.writeUInt16LE(16,34);b.write('data',36);b.writeUInt32LE(n*4,40);for(let i=0;i<n;i++){b.writeInt16LE(Math.round(L[i]/peak*.43*32767),44+i*4);b.writeInt16LE(Math.round(R[i]/peak*.43*32767),46+i*4);}fs.writeFileSync('public/audio/dd-signature-original.wav',b);
+fs.writeFileSync('jobs/dd-signature-20261113/music-report.json',JSON.stringify({seconds,sampleRate:sr,original:true,source:'original sine-partial piano, warm sustained voicings and soft synthesized pulse; no external recording or API',loop:false},null,2));

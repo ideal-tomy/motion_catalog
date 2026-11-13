@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import {makePlan} from './planner.mjs';
+const job='dd-signature-ten-20261113',dir=`jobs/${job}`;
+fs.mkdirSync(dir,{recursive:true});
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
+const write=(name,data)=>fs.writeFileSync(`${dir}/${name}.json`,JSON.stringify(data,null,2));
+write('request',{...read('jobs/dd-signature-20261113/request.json'),project:job,instruction:'高級感・信頼感を維持して30秒10コマ。2コマ目はスキャン。モーションと9種類のページ切り替えを積極的に使用し重複させない。'});
+write('delivery',{...read('jobs/dd-signature-20261113/delivery.json'),variant:'10コマ・スキャンCM',description:'30秒10コマ。2コマ目にスキャン。9種類の異なるページ切り替えと実画面の切り抜き。高級感と信頼感を保ったテンポアップ版。'});
+const treatments=['tracking-aperture','M-008','row-outline','M-028','hinge-panel','crop-travel','comparison-mask','evidence-focus','three-card-stagger','brand-rule'];
+const labels=['AXEON / DD INTELLIGENCE','01 / RECONCILE','02 / DISCOVER','03 / TRACE','04 / PERSPECTIVE','05 / VALUE','06 / CONNECT','07 / EVIDENCE','A CLEARER PERSPECTIVE','EVIDENCE FOR DECISIONS'];
+const copies=['確かな根拠が、\n判断を変える。','差異を、捉える。','小さな差異を、見過ごさない。','その判断に、\n根拠がある。','全体を、見渡す。','次の可能性へ。','発見と、根拠をつなぐ。','数字の、その奥へ。','見抜く。その先へ。','確信をもって、次の一手へ。'];
+write('composition',{compositionId:'DdSignatureTen',music:'audio/dd-signature-original.wav',durationSeconds:30,scenes:treatments.map((motion,i)=>({from:i*3,to:(i+1)*3,motion,label:labels[i],copy:copies[i]})),transitions:['depth-pass','horizontal-push','page-turn','iris-open','vertical-pass','diagonal-reveal','split-door','card-stack','optical-dissolve'].map(kind=>({kind,frames:18}))});
+write('assets',{...read('jobs/dd-signature-20261113/assets.json'),job,notes:['既存の検証済みDDデモ実画面を再利用。架空サンプル。','2コマ目は連続キャプチャ120枚を75フレームに時間圧縮し、その上にM-008スキャンを1回適用。','planningは共通プランナーの別案。完成映像はcomposition.jsonとDdSignatureTen.tsx。']});
+fs.mkdirSync(`${dir}/planning`,{recursive:true});
+for(const p of read('presets/styles.json').presets)fs.writeFileSync(`${dir}/planning/${p.id}.json`,JSON.stringify(makePlan(job,p),null,2));

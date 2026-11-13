@@ -1,0 +1,18 @@
+{
+  "subject": "DD",
+  "tone": "高級感・信頼感",
+  "language": "日本語",
+  "variant": "10コマ・スキャンCM",
+  "description": "30秒10コマ。2コマ目にスキャン。9種類の異なるページ切り替えと実画面の切り抜き。高級感と信頼感を保ったテンポアップ版。",
+  "date": "20261113",
+  "version": 1,
+  "stem": "DD_高級感・信頼感30秒_日本語_横型_10コマ・スキャンCM_20261113_v01",
+  "job": "dd-signature-ten-20261113",
+  "durationSeconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "d7db8a0b8941dc8364f503b6dba325e2039d86c1570ea3e6fbc38e4adf19066b",
+  "previewSHA256": "708f227a2a9ed218b5a080ca578045c0de8c5e863ef55870e167e9ccfe682930",
+  "sourceJob": "promo-studio/jobs/dd-signature-ten-20261113"
+}

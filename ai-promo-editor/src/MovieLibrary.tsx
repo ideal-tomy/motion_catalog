@@ -1,0 +1,8 @@
+import React,{useEffect,useState} from 'react';
+type Movie={id:string;subject:string;variant:string;tone:string;durationSeconds:number;description:string};
+export function MovieLibrary({onImport,onSample,onClose}:{onImport:(id:string)=>Promise<void>;onSample:()=>Promise<void>;onClose:()=>void}){
+ const [items,setItems]=useState<Movie[]>([]),[busy,setBusy]=useState(''),[error,setError]=useState('');
+ useEffect(()=>{let active=true;fetch('/api/library').then(r=>{if(!r.ok)throw Error('動画一覧を取得できません');return r.json();}).then(list=>{if(active)setItems(list);}).catch(e=>setError(String(e)));return()=>{active=false;};},[]);
+ async function run(key:string,fn:()=>Promise<void>){setBusy(key);setError('');try{await fn();}catch(e){setError((e as Error).message);setBusy('');}}
+ return <div className="modal-backdrop"><section className="modal movie-library" role="dialog" aria-label="動画から編集を始める"><div className="row"><h2>動画から編集を始める</h2><button disabled={!!busy} onClick={onClose}>閉じる</button></div><section className="trial-banner"><h3>まず、文字と画像を別々に編集してみる</h3><p>DDの既存撮影素材と編集できる見出しを使う20秒サンプル。レイアウトや60種の動きを試せます。</p><button disabled={!!busy} onClick={()=>run('sample',onSample)}>{busy==='sample'?'準備中…':'素材付き編集サンプルを開く'}</button></section><p>完成MP4は、ひとつの映像にまとまっています。取り込み後は分割・開始位置変更・文字追加・マスク・動きの追加ができます。映像内の元の文字や演出を個別に取り出すことはできません。元の完成動画は保持します。</p>{error?<p className="error">{error}</p>:null}<div className="layout-grid">{items.map(m=><section className="movie-card" key={m.id}><img loading="lazy" src={`/library-media/${m.id}/poster`} alt={m.variant}/><h3>{m.subject} / {m.variant}</h3><p>{m.tone} · {m.durationSeconds}秒</p><button disabled={!!busy} onClick={()=>run(m.id,()=>onImport(m.id))}>{busy===m.id?'取り込み中…':'この動画を編集用にコピー'}</button></section>)}</div></section></div>;
+}

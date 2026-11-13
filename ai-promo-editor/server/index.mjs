@@ -5,6 +5,10 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {createServer as createViteServer} from 'vite';
 import {validateProject,implemented} from '../src/core.ts';
+import {animationCatalog} from '../src/animations.ts';
+import {libraryRoutes} from './library.mjs';
+import {handoffRoutes,copyHandoff} from './handoff.mjs';
+import {enforceHandoffScope} from '../src/handoff.ts';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const workspace=path.join(root,'workspace/projects');await fs.mkdir(workspace,{recursive:true});
 const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
@@ -23,11 +27,12 @@ app.use((req,res,next)=>{
  res.setHeader('X-Content-Type-Options','nosniff');next();
 });
 app.use('/api',express.json({limit:'2mb'}));
-app.get('/api/health',(req,res)=>res.json({app:'AI_PROMO_STUDIO_EDITOR',version:'0.3.0',phase:'v3'}));
+app.get('/api/health',(req,res)=>res.json({app:'AI_PROMO_STUDIO_EDITOR',version:'0.8.0',phase:'context-inspector-live'}));
+app.get('/api/animations',(req,res)=>res.json(animationCatalog));
 app.get('/api/projects',async(req,res)=>{const out=[];for(const d of await fs.readdir(workspace,{withFileTypes:true})){if(!d.isDirectory())continue;try{const p=await read(path.join(workspace,d.name,'project.json'));out.push({projectId:p.projectId,title:p.title,revision:p.revision});}catch{}}res.json(out);});
 app.get('/api/projects/:id',async(req,res)=>res.json(await read(path.join(dir(req.params.id),'project.json'))));
 app.post('/api/projects/:id/duplicate',async(req,res)=>{
- const result=await serial(async()=>{const old=await read(path.join(dir(req.params.id),'project.json'));const project=structuredClone(old);project.projectId='copy-'+crypto.randomUUID().slice(0,12);project.title=old.title.slice(0,150)+'（複製）';project.revision=1;validateProject(project);const folder=dir(project.projectId);await fs.mkdir(folder,{recursive:false});if(project.assets.length)await fs.mkdir(path.join(folder,'assets'));for(const a of project.assets)for(const media of [a.path,...(a.posterPath?[a.posterPath]:[])]){const source=path.join(dir(req.params.id),media),st=await fs.lstat(source);if(!st.isFile()||st.isSymbolicLink())throw Error('Invalid source asset');await fs.copyFile(source,path.join(folder,media));}await atomic(path.join(folder,'project.json'),project);return project;});res.json(result);
+ const result=await serial(async()=>{const old=await read(path.join(dir(req.params.id),'project.json'));const project=structuredClone(old);project.projectId='copy-'+crypto.randomUUID().slice(0,12);project.title=old.title.slice(0,150)+'（複製）';project.revision=1;validateProject(old);const folder=dir(project.projectId);await fs.mkdir(folder,{recursive:false});if(project.assets.length)await fs.mkdir(path.join(folder,'assets'));for(const a of project.assets)for(const media of [a.path,...(a.posterPath?[a.posterPath]:[])]){const source=path.join(dir(req.params.id),media),st=await fs.lstat(source);if(!st.isFile()||st.isSymbolicLink())throw Error('Invalid source asset');await fs.copyFile(source,path.join(folder,media));}await copyHandoff(old,project,dir(req.params.id),folder);validateProject(project);await atomic(path.join(folder,'project.json'),project);return project;});res.json(result);
 });
 app.put('/api/projects/:id',async(req,res)=>{
  const {project,baseRevision}=req.body;validateProject(project);if(project.projectId!==validId(req.params.id))throw Error('Project ID mismatch');
@@ -46,8 +51,9 @@ app.get('/api/projects/:id/history',async(req,res)=>{let names=[];try{names=awai
 app.get('/api/projects/:id/history/:revision',async(req,res)=>{if(!/^\d+$/.test(req.params.revision))throw Error('Invalid revision');res.json(await read(path.join(dir(req.params.id),'history',req.params.revision+'.json')));});
 app.post('/api/projects/:id/proposals',async(req,res)=>{
  const p=req.body.proposal;await fs.access(path.join(dir(req.params.id),'project.json'));
- const allowed=['setSceneDuration','setLayout','setLayerText','setLayerMotionStack','setSceneTheme','setPaceKeyframes','addLayer'];
+ const allowed=['setSceneDuration','setLayout','setLayerText','setLayerMotionStack','setSceneMotionStack','setSceneTheme','setPaceKeyframes','addLayer'];
  if(!p||!/^[-a-zA-Z0-9_]{2,80}$/.test(p.proposalId)||!/^[-a-zA-Z0-9_]{2,80}$/.test(p.targetSceneId)||!Number.isInteger(p.baseRevision)||!Array.isArray(p.operations)||!p.operations.length||p.operations.length>50||p.operations.some(o=>!allowed.includes(o.op)||o.sceneId!==p.targetSceneId))throw Error('部分修正の対象・操作が不正です');
+ enforceHandoffScope(await read(path.join(dir(req.params.id),'project.json')),p);
  const folder=path.join(dir(req.params.id),'proposals');await fs.mkdir(folder,{recursive:true});const file=`${p.proposalId}-${crypto.randomUUID().slice(0,8)}.json`;await atomic(path.join(folder,file),p);res.json({file});
 });
 app.post('/api/projects/:id/assets',express.raw({type:()=>true,limit:'20mb'}),async(req,res)=>{
@@ -75,6 +81,8 @@ const catalog=await read(path.join(root,'reference/catalog/MOTION_ATLAS_60/motio
 if(catalog.motions.length!==60)throw Error('Expected 60 motions');
 const styleTags=await read(path.join(root,'reference/style-tags.json'));
 app.get('/api/catalog',(req,res)=>res.json(catalog.motions.map(m=>({...m,tags:styleTags[m.id]??[],previewAvailable:true,sceneApplicable:implemented.includes(m.id),mp4Exportable:false,implementationStatus:implemented.includes(m.id)?'implemented':'demo-only'}))));
+libraryRoutes(app,{root,workspace,example,atomic,serial});
+handoffRoutes(app,{workspace,atomic,serial});
 app.get('/api/example',(req,res)=>res.json(example));
 app.get('/api/example-patch',async(req,res)=>res.json(await read(path.join(root,'examples/example-patch.json'))));
 app.use('/api',(req,res)=>res.status(404).json({error:'この段階では未実装です'}));
@@ -82,4 +90,11 @@ const vite=await createViteServer({root,server:{middlewareMode:true,host:'127.0.
 app.use((error,req,res,next)=>{console.error(error.message);res.status(error.code==='ENOENT'?404:400).json({error:error.message||'処理に失敗しました'});});
 const server=app.listen(4319,'127.0.0.1',()=>console.log('AI PROMO STUDIO http://127.0.0.1:4319'));
 process.on('SIGINT',async()=>{server.close();await vite.close();process.exit(0);});
+
+
+
+
+
+
+
 

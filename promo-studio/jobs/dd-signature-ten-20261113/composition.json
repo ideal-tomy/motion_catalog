@@ -1,0 +1,115 @@
+{
+  "compositionId": "DdSignatureTen",
+  "music": "audio/dd-signature-original.wav",
+  "durationSeconds": 30,
+  "scenes": [
+    {
+      "from": 0,
+      "to": 3,
+      "motion": "tracking-aperture",
+      "label": "AXEON / DD INTELLIGENCE",
+      "copy": "確かな根拠が、\n判断を変える。"
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "motion": "M-008",
+      "label": "01 / RECONCILE",
+      "copy": "差異を、捉える。"
+    },
+    {
+      "from": 6,
+      "to": 9,
+      "motion": "row-outline",
+      "label": "02 / DISCOVER",
+      "copy": "小さな差異を、見過ごさない。"
+    },
+    {
+      "from": 9,
+      "to": 12,
+      "motion": "M-028",
+      "label": "03 / TRACE",
+      "copy": "その判断に、\n根拠がある。"
+    },
+    {
+      "from": 12,
+      "to": 15,
+      "motion": "hinge-panel",
+      "label": "04 / PERSPECTIVE",
+      "copy": "全体を、見渡す。"
+    },
+    {
+      "from": 15,
+      "to": 18,
+      "motion": "crop-travel",
+      "label": "05 / VALUE",
+      "copy": "次の可能性へ。"
+    },
+    {
+      "from": 18,
+      "to": 21,
+      "motion": "comparison-mask",
+      "label": "06 / CONNECT",
+      "copy": "発見と、根拠をつなぐ。"
+    },
+    {
+      "from": 21,
+      "to": 24,
+      "motion": "evidence-focus",
+      "label": "07 / EVIDENCE",
+      "copy": "数字の、その奥へ。"
+    },
+    {
+      "from": 24,
+      "to": 27,
+      "motion": "three-card-stagger",
+      "label": "A CLEARER PERSPECTIVE",
+      "copy": "見抜く。その先へ。"
+    },
+    {
+      "from": 27,
+      "to": 30,
+      "motion": "brand-rule",
+      "label": "EVIDENCE FOR DECISIONS",
+      "copy": "確信をもって、次の一手へ。"
+    }
+  ],
+  "transitions": [
+    {
+      "kind": "depth-pass",
+      "frames": 18
+    },
+    {
+      "kind": "horizontal-push",
+      "frames": 18
+    },
+    {
+      "kind": "page-turn",
+      "frames": 18
+    },
+    {
+      "kind": "iris-open",
+      "frames": 18
+    },
+    {
+      "kind": "vertical-pass",
+      "frames": 18
+    },
+    {
+      "kind": "diagonal-reveal",
+      "frames": 18
+    },
+    {
+      "kind": "split-door",
+      "frames": 18
+    },
+    {
+      "kind": "card-stack",
+      "frames": 18
+    },
+    {
+      "kind": "optical-dissolve",
+      "frames": 18
+    }
+  ]
+}
