@@ -1,0 +1,75 @@
+version: 1
+workflow_id: promo_director_v1
+applies_to:
+  - new_promo_video
+  - major_story_rework
+excludes:
+  - minor_layer_edit
+  - text_typo_fix
+  - color_only_change
+mode:
+  initial: plan_first
+  auto_create_preview_after_approval: true
+  final_export_requires_approval: true
+rules:
+  verify_product_claims: true
+  separate_observed_inferred_unverified: true
+  require_justification_for_each_shot: true
+  require_purpose_for_motion: true
+  preserve_user_confirmed_edits: true
+  do_not_invent_product_features: true
+  avoid_reference_video_copying: true
+stages:
+  - id: product_audit
+    label: 製品・デモ調査
+    outputs:
+      - research/product_audit.md
+      - research/evidence.json
+    gate: evidence_reviewed
+  - id: creative_strategy
+    label: 訴求設計と企画案
+    min_distinct_concepts: 3
+    outputs:
+      - planning/creative_brief.md
+      - planning/concepts.yaml
+    gate: concept_approved
+  - id: storyboard
+    label: 絵コンテ・演出設計
+    require_per_shot:
+      - scene_id
+      - start_s
+      - duration_s
+      - intended_message
+      - viewer_attention_target
+      - product_evidence_refs
+      - real_interaction
+      - composition
+      - camera
+      - text
+      - audio
+      - motion_ids
+      - motion_rationale
+    outputs:
+      - planning/storyboard.yaml
+      - planning/director_notes.md
+    gate: storyboard_approved
+  - id: preview
+    label: 仮制作・編集
+    outputs:
+      - project.json
+      - preview
+    gate: preview_approved
+  - id: export
+    label: 品質検証・書き出し
+    outputs:
+      - review/quality_report.md
+      - final_media
+    gate: export_approved
+quality_checks:
+  - actual_feature_evidence_present
+  - product_specific_value_conveyed
+  - no_template_only_slideshow
+  - scene_purpose_and_motion_rationale_present
+  - readability_and_audio_checked
+  - project_state_preserved
+  - final_render_matches_preview

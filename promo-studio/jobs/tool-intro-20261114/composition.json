@@ -1,0 +1,116 @@
+{
+  "compositionId": "SavedEditorProject",
+  "projectId": "ai-promo-tool-intro-20261114-v01",
+  "shots": [
+    {
+      "sceneId": "tool-intro-01",
+      "start": 0,
+      "end": 2.9,
+      "copy": "つくる人の速度で。",
+      "motion": [
+        "A-001",
+        "A-011"
+      ],
+      "uiCapture": "workspace"
+    },
+    {
+      "sceneId": "tool-intro-02",
+      "start": 2.9,
+      "end": 5.8,
+      "copy": "コマで、流れを設計。",
+      "motion": [
+        "A-002",
+        "A-012"
+      ],
+      "uiCapture": "workspace"
+    },
+    {
+      "sceneId": "tool-intro-03",
+      "start": 5.8,
+      "end": 8.7,
+      "copy": "素材を、狙った場所へ。",
+      "motion": [
+        "A-003",
+        "A-013"
+      ],
+      "uiCapture": "media"
+    },
+    {
+      "sceneId": "tool-intro-04",
+      "start": 8.7,
+      "end": 11.6,
+      "copy": "60種から、動きを選ぶ。",
+      "motion": [
+        "A-004",
+        "A-014"
+      ],
+      "uiCapture": "motion-catalog"
+    },
+    {
+      "sceneId": "tool-intro-05",
+      "start": 11.6,
+      "end": 14.5,
+      "copy": "文字も、ひとつのレイヤーに。",
+      "motion": [
+        "A-017",
+        "A-015"
+      ],
+      "uiCapture": "text-inspector"
+    },
+    {
+      "sceneId": "tool-intro-06",
+      "start": 14.5,
+      "end": 17.4,
+      "copy": "構成も、色も、その場で整える。",
+      "motion": [
+        "A-018",
+        "A-016"
+      ],
+      "uiCapture": "palette"
+    },
+    {
+      "sceneId": "tool-intro-07",
+      "start": 17.4,
+      "end": 20.3,
+      "copy": "演出を重ね、動きを磨く。",
+      "motion": [
+        "A-013",
+        "A-019"
+      ],
+      "uiCapture": "motion-settings"
+    },
+    {
+      "sceneId": "tool-intro-08",
+      "start": 20.3,
+      "end": 23.2,
+      "copy": "再生して、すぐ確かめる。",
+      "motion": [
+        "A-016",
+        "A-020"
+      ],
+      "uiCapture": "playback"
+    },
+    {
+      "sceneId": "tool-intro-09",
+      "start": 23.2,
+      "end": 26.1,
+      "copy": "保存して、次の制作へ。",
+      "motion": [
+        "A-019",
+        "A-009"
+      ],
+      "uiCapture": "handoff"
+    },
+    {
+      "sceneId": "tool-intro-10",
+      "start": 26.1,
+      "end": 30,
+      "copy": "つくる。試す。伝える。",
+      "motion": [
+        "A-010"
+      ],
+      "uiCapture": "brand end card"
+    }
+  ],
+  "notes": "Actual screenshots from the running local editor. Sample project/data. This film covers edit, motion preview, and local handoff; final MP4 rendering uses the separate local production tool."
+}

@@ -1,0 +1,106 @@
+{
+  "compositionId": "SavedEditorProject",
+  "projectId": "dd-cm-editor-20261113-v01",
+  "scenes": [
+    {
+      "sceneId": "dd-cm-scene-01",
+      "from": 0,
+      "to": 3,
+      "presetId": "A-019",
+      "label": "EVIDENCE FOR DECISIONS",
+      "copy": "根拠が、\n判断を変える。",
+      "sourceAsset": "overview",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-02",
+      "from": 3,
+      "to": 6,
+      "presetId": "A-020",
+      "label": "01 / RECONCILE",
+      "copy": "差異を、捉える。",
+      "sourceAsset": "result",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-03",
+      "from": 6,
+      "to": 9,
+      "presetId": "A-017",
+      "label": "02 / DISCOVER",
+      "copy": "小さな違いに、\n目を向ける。",
+      "sourceAsset": "result",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-04",
+      "from": 9,
+      "to": 12,
+      "presetId": "A-024",
+      "label": "03 / TRACE",
+      "copy": "数字から、\n根拠へ。",
+      "sourceAsset": "evidence-card",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-05",
+      "from": 12,
+      "to": 15,
+      "presetId": "A-018",
+      "label": "04 / PERSPECTIVE",
+      "copy": "全体像を、\n見失わない。",
+      "sourceAsset": "overview",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-06",
+      "from": 15,
+      "to": 18,
+      "presetId": "A-013",
+      "label": "05 / EVIDENCE",
+      "copy": "判断のそばに、\n確かな情報を。",
+      "sourceAsset": "evidence-card",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-07",
+      "from": 18,
+      "to": 21,
+      "presetId": "A-011",
+      "label": "06 / CONNECT",
+      "copy": "発見と根拠が、\nつながる。",
+      "sourceAsset": "result",
+      "editableLayers": 7
+    },
+    {
+      "sceneId": "dd-cm-scene-08",
+      "from": 21,
+      "to": 24,
+      "presetId": "A-002",
+      "label": "A CLEARER PERSPECTIVE",
+      "copy": "見抜く。\nその先へ。",
+      "sourceAsset": "overview",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-09",
+      "from": 24,
+      "to": 26,
+      "presetId": "A-007",
+      "label": "THE NEXT MOVE",
+      "copy": "次の一手を、\n確かなものに。",
+      "sourceAsset": "evidence-card",
+      "editableLayers": 6
+    },
+    {
+      "sceneId": "dd-cm-scene-10",
+      "from": 26,
+      "to": 30,
+      "presetId": "A-009",
+      "label": "AXEON / DD INTELLIGENCE",
+      "copy": "確信をもって、次の一手へ。",
+      "sourceAsset": null,
+      "editableLayers": 7
+    }
+  ]
+}

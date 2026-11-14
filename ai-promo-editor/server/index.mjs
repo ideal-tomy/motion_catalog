@@ -1,4 +1,5 @@
 import express from 'express';
+import {outputRoutes} from './outputs.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -85,11 +86,14 @@ libraryRoutes(app,{root,workspace,example,atomic,serial});
 handoffRoutes(app,{workspace,atomic,serial});
 app.get('/api/example',(req,res)=>res.json(example));
 app.get('/api/example-patch',async(req,res)=>res.json(await read(path.join(root,'examples/example-patch.json'))));
+outputRoutes(app,root);
 app.use('/api',(req,res)=>res.status(404).json({error:'この段階では未実装です'}));
+app.use('/guide',express.static(path.join(root,'docs/操作ガイド')));
 const vite=await createViteServer({root,server:{middlewareMode:true,host:'127.0.0.1',hmr:false},appType:'spa'});app.use(vite.middlewares);
 app.use((error,req,res,next)=>{console.error(error.message);res.status(error.code==='ENOENT'?404:400).json({error:error.message||'処理に失敗しました'});});
 const server=app.listen(4319,'127.0.0.1',()=>console.log('AI PROMO STUDIO http://127.0.0.1:4319'));
 process.on('SIGINT',async()=>{server.close();await vite.close();process.exit(0);});
+
 
 
 

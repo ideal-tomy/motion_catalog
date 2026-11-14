@@ -26,7 +26,7 @@ function run(exe,args){const p=spawnSync(path.join(native,exe+'.exe'),args,{enco
   const audio=fs.readFileSync(wav);let offset=12,peakSample=0,samples=0,squareSum=0;
   while(offset+8<audio.length){const type=audio.toString('ascii',offset,offset+4),size=audio.readUInt32LE(offset+4);if(type==='data'){for(let j=offset+8;j<Math.min(audio.length,offset+8+size);j+=2){const v=audio.readInt16LE(j)/32768;peakSample=Math.max(peakSample,Math.abs(v));squareSum+=v*v;samples++;}break;}offset+=8+size+(size%2);}
   const peak=20*Math.log10(peakSample);assert.ok(samples>48000*expectedDuration&&peak<-.1&&peak>-40,'Audio peak invalid');
-  const raw=spawnSync(path.join(native,'ffmpeg.exe'),['-hide_banner','-v','error','-i',video,'-an','-vf','scale=160:90','-pix_fmt','rgb24','-c:v','rawvideo','-f','image2pipe','pipe:1'],{windowsHide:true,maxBuffer:40*1024*1024});
+  const raw=spawnSync(path.join(native,'ffmpeg.exe'),['-hide_banner','-v','error','-i',video,'-an','-vf','scale=160:90','-pix_fmt','rgb24','-c:v','rawvideo','-f','image2pipe','pipe:1'],{windowsHide:true,maxBuffer:Math.max(40*1024*1024,expectedFrames*160*90*3+1024*1024)});
   assert.equal(raw.status,0,String(raw.stderr));const frameBytes=160*90*3;assert.equal(raw.stdout.length/frameBytes,expectedFrames);
   const everyFrameQA={checked:expectedFrames,black:[],brightestPixelsMin:Infinity};
   for(let f=0;f<expectedFrames;f++){let bright=0;for(let i=f*frameBytes;i<(f+1)*frameBytes;i+=3)if(Math.max(raw.stdout[i],raw.stdout[i+1],raw.stdout[i+2])>55)bright++;everyFrameQA.brightestPixelsMin=Math.min(everyFrameQA.brightestPixelsMin,bright);if(bright<5)everyFrameQA.black.push(f);}
@@ -51,7 +51,7 @@ function run(exe,args){const p=spawnSync(path.join(native,exe+'.exe'),args,{enco
     const mediaSHA256=require('node:crypto').createHash('sha256').update(fs.readFileSync(video)).digest('hex');
     const report={mediaSHA256,format:{video:v.codec_name,audio:a.codec_name,width:v.width,height:v.height,fps:v.r_frame_rate,frames:Number(v.nb_frames),duration:Number(probe.format.duration)},audioPeakDB:peak,audioRmsDB:20*Math.log10(Math.sqrt(squareSum/samples)),fullDecode:true,everyFrameQA,localFileHTML:true,desktopAndMobile:true,playback,errors};
     fs.writeFileSync(path.join(qa,'result.json'),JSON.stringify(report,null,2));fs.writeFileSync(path.join(qa,'ffprobe.json'),JSON.stringify(probe,null,2));console.log(JSON.stringify(report));
-    if(fs.existsSync(path.join(job,'delivery.json'))){const {exportJob}=await import('./library.mjs');exportJob(job);}
+    if(fs.existsSync(path.join(job,'delivery.json'))&&!process.argv.includes('--preview-only')){const {exportJob}=await import('./library.mjs');exportJob(job);}
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
 

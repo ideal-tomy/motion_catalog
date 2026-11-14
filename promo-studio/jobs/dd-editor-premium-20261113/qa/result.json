@@ -1,0 +1,31 @@
+{
+  "mediaSHA256": "9b8bbb1b9a71816bdd64d4a761b420c5322e59276a8d000ddfa499aca93b7aa5",
+  "format": {
+    "video": "h264",
+    "audio": "aac",
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "frames": 900,
+    "duration": 30.016
+  },
+  "audioPeakDB": -10.161725612948791,
+  "audioRmsDB": -23.48645874485871,
+  "fullDecode": true,
+  "everyFrameQA": {
+    "checked": 900,
+    "black": [],
+    "brightestPixelsMin": 288
+  },
+  "localFileHTML": true,
+  "desktopAndMobile": true,
+  "playback": {
+    "ended": true,
+    "currentTime": 30.016,
+    "muted": false,
+    "volume": 0.4,
+    "error": null,
+    "quality": 900
+  },
+  "errors": []
+}

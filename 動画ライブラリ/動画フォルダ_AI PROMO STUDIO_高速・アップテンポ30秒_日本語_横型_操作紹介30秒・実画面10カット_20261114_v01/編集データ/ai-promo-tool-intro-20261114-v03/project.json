@@ -1,0 +1,2284 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectId": "ai-promo-tool-intro-20261114-v03",
+  "revision": 1,
+  "title": "AI PROMO STUDIO｜つくる・試す・伝える 30秒ツール紹介CM",
+  "brief": "実際の編集UIと操作手順を、短いカット・画面移動・異なるAモーションで紹介する。",
+  "video": {
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "targetDurationFrames": 900,
+    "durationPolicy": "ripple"
+  },
+  "theme": {
+    "requestedColors": {
+      "primary": "#0b1420",
+      "secondary": "#75e4d1"
+    },
+    "palette": {
+      "background": "#0b1420",
+      "surface": "#152434",
+      "text": "#eff4f6",
+      "primary": "#0b1420",
+      "accent": "#75e4d1",
+      "mutedText": "#a8bdca"
+    }
+  },
+  "assets": [
+    {
+      "assetId": "tool-01",
+      "kind": "image",
+      "path": "assets/tool-01.png",
+      "posterPath": "assets/tool-01.thumb.jpg",
+      "originalName": "実画面・01-workspace.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-02",
+      "kind": "image",
+      "path": "assets/tool-02.png",
+      "posterPath": "assets/tool-02.thumb.jpg",
+      "originalName": "実画面・02-media.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-03",
+      "kind": "image",
+      "path": "assets/tool-03.png",
+      "posterPath": "assets/tool-03.thumb.jpg",
+      "originalName": "実画面・03-motion-catalog.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-04",
+      "kind": "image",
+      "path": "assets/tool-04.png",
+      "posterPath": "assets/tool-04.thumb.jpg",
+      "originalName": "実画面・04-text-inspector.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-05",
+      "kind": "image",
+      "path": "assets/tool-05.png",
+      "posterPath": "assets/tool-05.thumb.jpg",
+      "originalName": "実画面・05-palette.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-06",
+      "kind": "image",
+      "path": "assets/tool-06.png",
+      "posterPath": "assets/tool-06.thumb.jpg",
+      "originalName": "実画面・06-motion-settings.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-07",
+      "kind": "image",
+      "path": "assets/tool-07.png",
+      "posterPath": "assets/tool-07.thumb.jpg",
+      "originalName": "実画面・07-handoff.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-08",
+      "kind": "image",
+      "path": "assets/tool-08.png",
+      "posterPath": "assets/tool-08.thumb.jpg",
+      "originalName": "実画面・08-playback.png",
+      "license": "ローカル編集アプリの実UIキャプチャ。編集例は架空サンプル。",
+      "verifiedForUse": true,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "assetId": "tool-intro-bgm",
+      "kind": "audio",
+      "path": "assets/tool-intro-bgm.wav",
+      "originalName": "MOTION ATLAS オリジナル・アップテンポBGM.wav",
+      "license": "制作環境の既存オリジナルBGM",
+      "verifiedForUse": true,
+      "durationSeconds": 22
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "tool-intro-01",
+      "role": "intro",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-1-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-01",
+          "animations": [
+            {
+              "id": "tool-image-animation-1",
+              "presetId": "A-001",
+              "targetLayerId": "tool-1-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-1-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-1-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-1-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "つくる人の速度で。",
+          "animations": [
+            {
+              "id": "tool-text-animation-1",
+              "presetId": "A-011",
+              "targetLayerId": "tool-1-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-1-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "01 / 09"
+        },
+        {
+          "layerId": "tool-1-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-02",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-2-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-01",
+          "animations": [
+            {
+              "id": "tool-image-animation-2",
+              "presetId": "A-002",
+              "targetLayerId": "tool-2-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "right",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-2-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-2-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-2-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "コマで、流れを設計。",
+          "animations": [
+            {
+              "id": "tool-text-animation-2",
+              "presetId": "A-012",
+              "targetLayerId": "tool-2-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-2-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "02 / 09"
+        },
+        {
+          "layerId": "tool-2-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-03",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-3-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 36
+          },
+          "motionStack": [],
+          "assetId": "tool-02",
+          "animations": [
+            {
+              "id": "tool-image-animation-3",
+              "presetId": "A-003",
+              "targetLayerId": "tool-3-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "up",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-3-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-3-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-3-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "素材を、狙った場所へ。",
+          "animations": [
+            {
+              "id": "tool-text-animation-3",
+              "presetId": "A-013",
+              "targetLayerId": "tool-3-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-3-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "03 / 09"
+        },
+        {
+          "layerId": "tool-3-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-04",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-4-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1.12,
+            "cropX": 65,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-03",
+          "animations": [
+            {
+              "id": "tool-image-animation-4",
+              "presetId": "A-004",
+              "targetLayerId": "tool-4-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "down",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-4-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-4-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-4-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "60種から、動きを選ぶ。",
+          "animations": [
+            {
+              "id": "tool-text-animation-4",
+              "presetId": "A-014",
+              "targetLayerId": "tool-4-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-4-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "04 / 09"
+        },
+        {
+          "layerId": "tool-4-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-05",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-5-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1.12,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-04",
+          "animations": [
+            {
+              "id": "tool-image-animation-5",
+              "presetId": "A-017",
+              "targetLayerId": "tool-5-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-5-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-5-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-5-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "文字も、ひとつのレイヤーに。",
+          "animations": [
+            {
+              "id": "tool-text-animation-5",
+              "presetId": "A-015",
+              "targetLayerId": "tool-5-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-5-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "05 / 09"
+        },
+        {
+          "layerId": "tool-5-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-06",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-6-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-05",
+          "animations": [
+            {
+              "id": "tool-image-animation-6",
+              "presetId": "A-018",
+              "targetLayerId": "tool-6-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "right",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-6-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-6-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-6-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "構成も、色も、その場で整える。",
+          "animations": [
+            {
+              "id": "tool-text-animation-6",
+              "presetId": "A-016",
+              "targetLayerId": "tool-6-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-6-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "06 / 09"
+        },
+        {
+          "layerId": "tool-6-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-07",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-7-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-06",
+          "animations": [
+            {
+              "id": "tool-image-animation-7",
+              "presetId": "A-013",
+              "targetLayerId": "tool-7-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "up",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-7-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-7-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-7-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "演出を重ね、動きを磨く。",
+          "animations": [
+            {
+              "id": "tool-text-animation-7",
+              "presetId": "A-019",
+              "targetLayerId": "tool-7-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-7-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "07 / 09"
+        },
+        {
+          "layerId": "tool-7-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-08",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-8-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-08",
+          "animations": [
+            {
+              "id": "tool-image-animation-8",
+              "presetId": "A-016",
+              "targetLayerId": "tool-8-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "down",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-8-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-8-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-8-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "再生して、すぐ確かめる。",
+          "animations": [
+            {
+              "id": "tool-text-animation-8",
+              "presetId": "A-020",
+              "targetLayerId": "tool-8-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-8-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "08 / 09"
+        },
+        {
+          "layerId": "tool-8-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-09",
+      "role": "feature",
+      "durationFrames": 87,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-9-ui",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "background",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "tool-07",
+          "animations": [
+            {
+              "id": "tool-image-animation-9",
+              "presetId": "A-019",
+              "targetLayerId": "tool-9-ui",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 28,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "parentFrame",
+                "easing": "easeOut",
+                "overshootPx": 18,
+                "distancePx": 26,
+                "scale": 0.9,
+                "rotationDeg": -5,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-9-copy-band",
+          "kind": "shape",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.775,
+            "width": 1,
+            "height": 0.225,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#0b1420"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-9-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.812,
+            "width": 0.009,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-9-headline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.078,
+            "y": 0.81,
+            "width": 0.83,
+            "height": 0.11,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 72,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "保存して、次の制作へ。",
+          "animations": [
+            {
+              "id": "tool-text-animation-9",
+              "presetId": "A-009",
+              "targetLayerId": "tool-9-headline",
+              "targetScope": "text",
+              "startFrame": 7,
+              "durationFrames": 23,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 12,
+                "distancePx": 12,
+                "scale": 0.9,
+                "rotationDeg": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-9-step",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.88,
+            "y": 0.82,
+            "width": 0.075,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 24,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "right",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "09 / 09"
+        },
+        {
+          "layerId": "tool-9-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 87,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.045,
+            "y": 0.045,
+            "width": 0.5,
+            "height": 0.045,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "fontFamily": "Arial",
+            "align": "left",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO   /   LOCAL EDITOR"
+        }
+      ],
+      "animations": []
+    },
+    {
+      "sceneId": "tool-intro-10",
+      "role": "cta",
+      "durationFrames": 117,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 70
+        },
+        {
+          "position": 1,
+          "intensity": 92
+        }
+      ],
+      "colorOverrides": {
+        "background": "#0b1420",
+        "surface": "#152434",
+        "text": "#eff4f6",
+        "primary": "#0b1420",
+        "accent": "#75e4d1",
+        "mutedText": "#a8bdca"
+      },
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "tool-10-logo",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 117,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.08,
+            "y": 0.24,
+            "width": 0.84,
+            "height": 0.2,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 112,
+            "colorToken": "text",
+            "fontFamily": "Arial",
+            "align": "center",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO",
+          "animations": [
+            {
+              "id": "tool-final-logo",
+              "presetId": "A-010",
+              "targetLayerId": "tool-10-logo",
+              "targetScope": "text",
+              "startFrame": 0,
+              "durationFrames": 35,
+              "params": {
+                "direction": "left",
+                "easing": "easeOut",
+                "scale": 0.65,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "tool-10-accent-rule",
+          "kind": "shape",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 117,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.15,
+            "y": 0.51,
+            "width": 0.7,
+            "height": 0.008,
+            "rotateDeg": 0
+          },
+          "style": {
+            "mask": "rect",
+            "background": "#75e4d1"
+          },
+          "motionStack": []
+        },
+        {
+          "layerId": "tool-10-tagline",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 117,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.1,
+            "y": 0.58,
+            "width": 0.8,
+            "height": 0.08,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 48,
+            "colorToken": "accent",
+            "fontFamily": "Yu Gothic",
+            "align": "center",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "つくる。試す。伝える。"
+        },
+        {
+          "layerId": "tool-10-cta",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 117,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.12,
+            "y": 0.72,
+            "width": 0.76,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 30,
+            "colorToken": "text",
+            "fontFamily": "Yu Gothic",
+            "align": "center",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "操作ガイドから、はじめよう。"
+        },
+        {
+          "layerId": "tool-10-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 117,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.28,
+            "y": 0.87,
+            "width": 0.44,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "fontFamily": "Arial",
+            "align": "center",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AI PROMO STUDIO  ·  30 SEC TOOL FILM"
+        }
+      ],
+      "animations": []
+    }
+  ],
+  "audioTracks": [
+    {
+      "trackId": "tool-intro-bgm-track",
+      "assetId": "tool-intro-bgm",
+      "startFrame": 0,
+      "durationFrames": 900,
+      "volume": 0.55,
+      "fadeInFrames": 4,
+      "fadeOutFrames": 28
+    }
+  ],
+  "locks": [],
+  "meta": {
+    "productionKind": "tool-introduction",
+    "sampleData": true,
+    "renderComponent": "ProjectComposition"
+  }
+}

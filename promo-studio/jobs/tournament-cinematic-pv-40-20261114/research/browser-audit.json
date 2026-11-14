@@ -1,0 +1,13 @@
+{
+  "scenes": [
+    "draw",
+    "result",
+    "bracket",
+    "vs",
+    "champion"
+  ],
+  "errors": [],
+  "writes": [],
+  "external": [],
+  "source": "local Animation Preview, fixture/sample-only scene"
+}

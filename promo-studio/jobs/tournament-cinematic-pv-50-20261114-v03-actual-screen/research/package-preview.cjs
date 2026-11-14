@@ -1,0 +1,14 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const job=path.resolve(__dirname,'..');
+const preview=path.join(job,'output/preview');
+const generic=path.join(preview,'promo_16x9.mp4');
+const descriptiveName='トーナメント_実画面CM_50秒_日本語_16x9_20261114_v03_仮制作.mp4';
+const descriptive=path.join(preview,descriptiveName);
+if(fs.existsSync(generic)&&!fs.existsSync(descriptive))fs.renameSync(generic,descriptive);
+if(!fs.existsSync(descriptive))throw Error(`Preview movie missing: ${descriptive}`);
+const htmlPath=path.join(preview,'index.html');
+let html=fs.readFileSync(htmlPath,'utf8').replaceAll('promo_16x9.mp4',descriptiveName);
+fs.writeFileSync(htmlPath,html);
+console.log(`Preview bundle: ${preview}`);
+console.log(`Named movie: ${descriptiveName}`);

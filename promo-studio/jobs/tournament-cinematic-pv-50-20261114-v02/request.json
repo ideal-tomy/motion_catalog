@@ -1,0 +1,19 @@
+{
+  "project": "tournament-cinematic-pv-50-20261114-v02",
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+  "instruction": "トーナメント機能を、実アプリの動くAnimation Previewと説明コピーを組み合わせて紹介する最大60秒の映画予告風PV。今回は50秒の仮制作。ペア発表は高速連続カットとし、各機能に適した演出映像を選定する。",
+  "durationSeconds": 50,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audience": "大会主催者・運営者、参加者",
+  "goal": "参加登録からペア発表、対戦、勝ち上がり、優勝演出までを動きのある実画面サンプルで伝える",
+  "visualTone": "cinematic sports trailer / high-energy / Japanese copy / live application animation",
+  "captureMode": "read-only local animation-preview captures plus original motion graphics",
+  "music": "新規制作のオリジナル・シネマティックロック。既存音源は流用しない。",
+  "preserveOriginal": true,
+  "approval": {
+    "gate": "preview-review-before-final-export",
+    "finalExportRequiresSeparateApproval": true
+  }
+}

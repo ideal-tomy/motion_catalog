@@ -1,0 +1,43 @@
+{
+  "compositionId": "TournamentCinematic50",
+  "durationSeconds": 50,
+  "fps": 30,
+  "transitionWindowFrames": 12,
+  "music": "audio/tournament-cinematic-50-original.wav",
+  "actualScreenRecording": true,
+  "scenes": [
+    {"from":0,"to":3,"kind":"opener","motion":"M-060","copy":"大会の一日を、SHOWに。","accent":"#38b7ff"},
+    {"from":3,"to":6,"kind":"entry","motion":"M-028","copy":"エントリーが、演出に変わる。","accent":"#38b7ff","asset":"cinematic-pv-v03/dart-entry.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":6,"to":8,"kind":"card-open","motion":"M-014","copy":"カードが、開く。","accent":"#f6ca73","asset":"cinematic-pv-v03/entrant-card.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":8,"to":10,"kind":"pair-build","motion":"M-017","copy":"次の相手は、誰だ。","accent":"#38b7ff","asset":"cinematic-pv-v03/pair-build-one.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":10,"to":13,"kind":"pair-confirmed","motion":"M-046","copy":"2人を、ひとつのチームに。","accent":"#ff8e52","asset":"cinematic-pv-v03/pair-confirmed-one.mp4","sourceFrame":0,"speed":0.45,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":13,"to":15,"kind":"draw-reset","motion":"M-005","copy":"発表は、止まらない。","accent":"#38b7ff","asset":"cinematic-pv-v03/draw-reset.mp4","sourceFrame":0,"speed":1.05,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":15,"to":17,"kind":"pair-two-reveal","motion":"M-022","copy":"次の組み合わせへ。","accent":"#f6ca73","asset":"cinematic-pv-v03/pair-confirmed-two.mp4","sourceFrame":60,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":17,"to":20,"kind":"pair-two-confirmed","motion":"M-032","copy":"ペアが決まる。","accent":"#ff8e52","asset":"cinematic-pv-v03/pair-confirmed-two.mp4","sourceFrame":90,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":20,"to":23,"kind":"teams-overview","motion":"M-016","copy":"チームが、出そろう。","accent":"#f6ca73","asset":"cinematic-pv-v03/teams-overview.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":23,"to":26,"kind":"versus-build","motion":"M-054","copy":"そして、対戦へ。","accent":"#38b7ff","asset":"cinematic-pv-v03/versus.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":26,"to":29,"kind":"versus-impact","motion":"M-009","copy":"勝負の瞬間を、前面に。","accent":"#ff8e52","asset":"cinematic-pv-v03/versus.mp4","sourceFrame":120,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":29,"to":33,"kind":"winner","motion":"M-018","copy":"勝者が決まる。","accent":"#f6ca73","asset":"cinematic-pv-v03/winner.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":33,"to":36,"kind":"runner-up","motion":"M-041","copy":"惜敗も、記憶に残る。","accent":"#38b7ff","asset":"cinematic-pv-v03/second-place.mp4","sourceFrame":0,"speed":1,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":36,"to":41,"kind":"bracket","motion":"M-020","copy":"勝者が決まり、次の試合へ。","accent":"#f6ca73","asset":"cinematic-pv-v03/bracket-advance.mp4","sourceFrame":0,"speed":0.7,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":41,"to":46,"kind":"champion","motion":"M-060-FINAL","copy":"栄冠の、その瞬間。","accent":"#f6ca73","asset":"cinematic-pv-v03/champion.mp4","sourceFrame":0,"speed":0.38,"tag":"SYSTEM CAPTURE / TEST DATA"},
+    {"from":46,"to":50,"kind":"finale","motion":"M-060-OUTRO","copy":"次の大会を、もっと熱く。","accent":"#f6ca73"}
+  ],
+  "transitions": [
+    {"id":"T01","name":"Fly-through","kind":"fly-through","atFrame":90,"durationFrames":12,"fromScene":0,"toScene":1},
+    {"id":"T02","name":"Whip spin","kind":"whip-spin","atFrame":180,"durationFrames":12,"fromScene":1,"toScene":2},
+    {"id":"T03","name":"Card flip","kind":"card-flip","atFrame":240,"durationFrames":12,"fromScene":2,"toScene":3},
+    {"id":"T04","name":"Diagonal reveal","kind":"diagonal","atFrame":300,"durationFrames":12,"fromScene":3,"toScene":4},
+    {"id":"T05","name":"Split gate","kind":"split-gate","atFrame":390,"durationFrames":12,"fromScene":4,"toScene":5},
+    {"id":"T06","name":"Whip pan","kind":"whip-pan","atFrame":450,"durationFrames":12,"fromScene":5,"toScene":6},
+    {"id":"T07","name":"Cube turn","kind":"cube","atFrame":510,"durationFrames":12,"fromScene":6,"toScene":7},
+    {"id":"T08","name":"Iris","kind":"iris","atFrame":600,"durationFrames":12,"fromScene":7,"toScene":8},
+    {"id":"T09","name":"Quad burst","kind":"quad-burst","atFrame":690,"durationFrames":12,"fromScene":8,"toScene":9},
+    {"id":"T10","name":"Fly-through","kind":"fly-through","atFrame":780,"durationFrames":12,"fromScene":9,"toScene":10},
+    {"id":"T11","name":"Whip spin","kind":"whip-spin","atFrame":870,"durationFrames":12,"fromScene":10,"toScene":11},
+    {"id":"T12","name":"Diagonal reveal","kind":"diagonal","atFrame":990,"durationFrames":12,"fromScene":11,"toScene":12},
+    {"id":"T13","name":"Card flip","kind":"card-flip","atFrame":1080,"durationFrames":12,"fromScene":12,"toScene":13},
+    {"id":"T14","name":"Whip pan","kind":"whip-pan","atFrame":1230,"durationFrames":12,"fromScene":13,"toScene":14},
+    {"id":"T15","name":"Quad burst","kind":"quad-burst","atFrame":1380,"durationFrames":12,"fromScene":14,"toScene":15}
+  ]
+}

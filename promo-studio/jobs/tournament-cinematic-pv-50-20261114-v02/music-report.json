@@ -1,0 +1,28 @@
+{
+  "durationSeconds": 50,
+  "bpm": 156,
+  "channels": 2,
+  "sampleRate": 48000,
+  "peakDB": -1.2096149476276294,
+  "rmsDB": -16.739405218893022,
+  "music": "new original synthesized cinematic-rock score",
+  "recordedSamples": "none",
+  "cutCuesSeconds": [
+    3,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    24,
+    29,
+    33,
+    37,
+    41,
+    46
+  ],
+  "seed": "MOTION-ATLAS-CINEMATIC-50"
+}

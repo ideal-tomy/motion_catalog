@@ -1,0 +1,20 @@
+{
+  "project": "tournament-cinematic-pv-50-20261114-v03-actual-screen",
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/motion_catalog/docs/画面録画 2026-11-14 204055.mp4",
+  "instruction": "ユーザー提供のトーナメントシステム画面録画を主素材に、ペアエントリー、カード開示、チーム確定、VS、WINNER、CHAMPIONを見せる50秒の映画予告風仮制作。既存v02は保持し、テストデータであることを明示する。",
+  "durationSeconds": 50,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audience": "大会主催者・運営者、参加者",
+  "goal": "実際のトーナメントシステムの演出を中心に、エントリーから優勝までの高揚感を伝える",
+  "visualTone": "cinematic sports trailer / high-energy / Japanese copy / real system screen recording",
+  "captureMode": "user-provided read-only screen recording; original audio muted and replaced with existing original score",
+  "music": "v02で制作したオリジナル・シネマティックロックを継続使用",
+  "preserveOriginal": true,
+  "actualScreenRecording": true,
+  "approval": {
+    "gate": "preview-review-before-final-export",
+    "finalExportRequiresSeparateApproval": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "subject": "AI PROMO STUDIO",
+  "tone": "高速・アップテンポ",
+  "language": "日本語",
+  "variant": "操作紹介30秒・実画面10カット",
+  "description": "実際の編集画面で、コマ構成・素材配置・モーション選択・文字設定・再生・保存の流れを紹介。出力に制作ツールを使う仕様も明示。",
+  "date": "20261114",
+  "version": 2,
+  "editorProjectId": "ai-promo-tool-intro-20261114-v04",
+  "stem": "AI PROMO STUDIO_高速・アップテンポ30秒_日本語_横型_操作紹介30秒・実画面10カット_20261114_v02",
+  "job": "tool-intro-20261114-v04",
+  "durationSeconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "sha256": "165d2ce4f8458e833ee5fb1fd4dafa7a2fd39a91981cf1ba5e8963f92f108892",
+  "previewSHA256": "abd1c447c4f17b5bd955dc4d56e6ff92a0a25409e9d4188175ce6c87cbda74a1",
+  "sourceJob": "promo-studio/jobs/tool-intro-20261114-v04"
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import {MediaBaseContext,useMediaBase,projectMedia} from './MediaEnvironment';
 import {evaluateAnimations,logicalRect,inverseBoundary,aabb,identity,type Rect} from './animations';
 import {AnimationSurface,AnimationText} from './AnimationView';
 import {AbsoluteFill,Audio,Img,Sequence,Video,useCurrentFrame} from 'remotion';
@@ -21,6 +22,7 @@ function groupRect(s:Scene,l:Layer,p:Project):Rect{
 }
 type LayerProps={layer:Layer;scene:Scene;project:Project;editing?:boolean;sceneFrame:number;index:number;count:number};
 const LayerView:React.FC<LayerProps>=({layer:l,scene,project,editing=false,sceneFrame,index,count})=>{
+ const mediaBase=useMediaBase();
  const frame=useCurrentFrame(),palette={...project.theme.palette,...scene.colorOverrides},{width:W,height:H}=project.video;
  const cell=l.style?.cellIndex??0;
  if(!l.visible||scene.layout.type!=='free'&&cell>=scene.layout.cells||scene.unplacedLayerIds.includes(l.layerId))return null;
@@ -41,7 +43,7 @@ const LayerView:React.FC<LayerProps>=({layer:l,scene,project,editing=false,scene
  const local=inverseBoundary(sceneCanvas,{x:rect.x+w/2,y:rect.y+h/2},{...combined,rotation:t.rotateDeg+combined.rotation});
  const localCanvas={...local,x:local.x-rect.x,y:local.y-rect.y};
  const inner=evaluateAnimations(items.filter(a=>a.targetScope==='imageContent'),sceneFrame,contentRect,localCanvas,{x:0,y:0,w,h:contentHeight});
- const asset=project.assets.find(a=>a.assetId===l.assetId),src=asset?`/media/${encodeURIComponent(project.projectId)}/${encodeURIComponent(asset.path.slice(7))}`:'';
+ const asset=project.assets.find(a=>a.assetId===l.assetId),src=asset?projectMedia(project.projectId,asset.path,mediaBase):'';
  const color=l.style?.color??palette[l.style?.colorToken??'text']??palette.text;
  const sceneMotions=editing?[]:(scene.motionStack??[]).filter(m=>isContentMotion(m.motionId));
  const contexts=[...sceneMotions.map(m=>({m,f:sceneFrame,overlay:false})),...(editing?[]:l.motionStack).map(m=>({m,f:frame,overlay:true}))];
@@ -55,6 +57,7 @@ const LayerView:React.FC<LayerProps>=({layer:l,scene,project,editing=false,scene
  return <div data-layer-container={l.layerId} data-presentation={String(l.style?.presentation??'layer')} data-media-frame={String(l.style?.frame??'none')} style={{position:'absolute',left:(b.x+t.x*b.w)*W,top:(b.y+t.y*b.h)*H,width:w,height:h,zIndex:index+1,opacity:l.opacity*combined.opacity,transform:`translate(${combined.x}px, ${combined.y}px) rotate(${t.rotateDeg+combined.rotation}deg) scale(${combined.scale})`,clipPath:combined.clip,...(framed?{borderRadius:l.style?.frame==='browser'?16:24,overflow:'hidden',boxShadow:'0 24px 65px #00000035',outline:`1px solid ${palette.mutedText}44`}:{})}}>{l.style?.frame==='browser'?<><div data-media-chrome style={{position:'absolute',top:0,left:0,right:0,height:42,background:palette.surface??'#e9edf0',display:'flex',alignItems:'center',paddingLeft:20,gap:9}}>{['#c58b88','#c8b68c','#8faa9a'].map(c=><span key={c} style={{width:10,height:10,borderRadius:'50%',background:c}}/>)}</div><div style={{position:'absolute',inset:'42px 0 0'}}>{content}</div></>:content}{combined.scan!==undefined?<div data-animation-scan style={{position:'absolute',left:`${combined.scan*100}%`,top:0,bottom:0,width:4,background:palette.accent,boxShadow:`0 0 30px 8px ${palette.accent}`,pointerEvents:'none'}}/>:null}</div>;
 };
 const SceneView:React.FC<{scene:Scene;project:Project;editing?:boolean}>=({scene,project,editing=false})=>{
+ const mediaBase=useMediaBase();
  const frame=useCurrentFrame(),palette={...project.theme.palette,...scene.colorOverrides},layers=[...scene.layers].sort((a,b)=>a.zIndex-b.zIndex);
  const motions:Motion[]=editing?[]:scene.motionStack??[];
  let content:React.ReactNode=<AbsoluteFill><CellGuides scene={scene} palette={palette} editing={editing}/>{layers.map((layer,index)=>editing?<LayerView key={layer.layerId} layer={layer} scene={scene} project={project} editing sceneFrame={frame} index={index} count={layers.length}/>:<Sequence key={layer.layerId} from={layer.inFrame} durationInFrames={layer.durationFrames} layout="none"><LayerView layer={layer} scene={scene} project={project} sceneFrame={frame} index={index} count={layers.length}/></Sequence>)}</AbsoluteFill>;
@@ -63,11 +66,12 @@ const SceneView:React.FC<{scene:Scene;project:Project;editing?:boolean}>=({scene
  content=<AnimationSurface delta={sceneDelta} scope="scene">{content}</AnimationSurface>;
  return <AbsoluteFill data-scene={scene.sceneId} style={{background:palette.background,overflow:'hidden'}}>{content}{motions.filter(m=>isContentMotion(m.motionId)).map(m=><MotionOverlay key={m.motionId} motion={m} frame={frame} color={palette.accent} background={palette.background}/>)}</AbsoluteFill>;
 };
-export const ProjectComposition:React.FC<{project:Project;editingScene?:string}>=({project,editingScene})=>{
- if(editingScene){const scene=project.scenes.find(s=>s.sceneId===editingScene)!;return <SceneView scene={scene} project={project} editing/>;}
+export const ProjectComposition:React.FC<{project:Project;editingScene?:string;mediaBaseUrl?:string}>=({project,editingScene,mediaBaseUrl=""})=>{
+ if(editingScene){const scene=project.scenes.find(s=>s.sceneId===editingScene)!;return <MediaBaseContext.Provider value={mediaBaseUrl}><SceneView scene={scene} project={project} editing/></MediaBaseContext.Provider>;}
  const starts=sceneStarts(project);
- return <AbsoluteFill>{project.scenes.map((scene,i)=><Sequence key={scene.sceneId} from={starts[i]} durationInFrames={scene.durationFrames}><SceneView scene={scene} project={project}/></Sequence>)}{project.audioTracks.map(t=>{const asset=project.assets.find(a=>a.assetId===t.assetId)!;return <Sequence key={t.trackId} from={t.startFrame} durationInFrames={t.durationFrames}><Audio src={`/media/${project.projectId}/${asset.path.slice(7)}`} volume={f=>(t.volume??.5)*Math.max(0,Math.min(1,f/(t.fadeInFrames||1),(t.durationFrames-f)/(t.fadeOutFrames||1)))}/></Sequence>;})}</AbsoluteFill>;
+ return <MediaBaseContext.Provider value={mediaBaseUrl}><AbsoluteFill>{project.scenes.map((scene,i)=><Sequence key={scene.sceneId} from={starts[i]} durationInFrames={scene.durationFrames}><SceneView scene={scene} project={project}/></Sequence>)}{project.audioTracks.map(t=>{const asset=project.assets.find(a=>a.assetId===t.assetId)!;return <Sequence key={t.trackId} from={t.startFrame} durationInFrames={t.durationFrames}><Audio src={projectMedia(project.projectId,asset.path,mediaBaseUrl)} volume={f=>(t.volume??.5)*Math.max(0,Math.min(1,f/(t.fadeInFrames||1),(t.durationFrames-f)/(t.fadeOutFrames||1)))}/></Sequence>;})}</AbsoluteFill></MediaBaseContext.Provider>;
 };
+
 
 
 

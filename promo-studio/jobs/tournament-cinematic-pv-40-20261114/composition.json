@@ -1,0 +1,30 @@
+{
+  "compositionId": "TournamentCinematic40",
+  "durationSeconds": 40,
+  "fps": 30,
+  "transitionWindowFrames": 24,
+  "music": "audio/tournament-cinematic-40-original.wav",
+  "scenes": [
+    {"from":0,"to":3,"kind":"arena","motion":"M-060","copy":"大会の一日を、SHOWに。","accent":"#28a8ff"},
+    {"from":3,"to":7,"kind":"registration-diagram","motion":"M-028","copy":"参加を登録。","accent":"#28a8ff","tag":"CONCEPT DIAGRAM"},
+    {"from":7,"to":11,"kind":"pairing-diagram","motion":"M-005","copy":"2人を、ひとつのチームに。","accent":"#ff8c48","tag":"SAMPLE PARTICIPANTS"},
+    {"from":11,"to":15,"kind":"draw-preview","motion":"M-008","copy":"組合せを発表。","accent":"#28a8ff","asset":"cinematic-pv/draw.png","tag":"SAMPLE PREVIEW"},
+    {"from":15,"to":19,"kind":"bracket-preview","motion":"M-046","copy":"勝ち上がりを、見える流れに。","accent":"#28a8ff","asset":"cinematic-pv/bracket.png","tag":"SAMPLE PREVIEW"},
+    {"from":19,"to":23,"kind":"vs-preview","motion":"M-012","copy":"次の対戦へ。","accent":"#ff8c48","asset":"cinematic-pv/vs.png","tag":"SAMPLE PREVIEW"},
+    {"from":23,"to":27,"kind":"operations-diagram","motion":"M-022","copy":"試合を動かす。","accent":"#f4c66d","tag":"CONCEPT DIAGRAM"},
+    {"from":27,"to":31,"kind":"result-preview","motion":"M-018","copy":"その結果が、次の舞台をつくる。","accent":"#ff8c48","asset":"cinematic-pv/result.png","tag":"SAMPLE PREVIEW"},
+    {"from":31,"to":35,"kind":"advancement-preview","motion":"M-032","copy":"一つの勝利から、次の対戦へ。","accent":"#28a8ff","asset":"cinematic-pv/bracket.png","tag":"SAMPLE PREVIEW"},
+    {"from":35,"to":40,"kind":"champion-preview","motion":"M-016","copy":"受付から、優勝の瞬間まで。","accent":"#f4c66d","asset":"cinematic-pv/champion.png","tag":"SAMPLE PREVIEW"}
+  ],
+  "transitions": [
+    {"id":"T01","name":"Fly-through","kind":"fly-through","atFrame":90,"durationFrames":24,"fromScene":0,"toScene":1},
+    {"id":"T02","name":"Whip spin","kind":"whip-spin","atFrame":210,"durationFrames":24,"fromScene":1,"toScene":2},
+    {"id":"T03","name":"Card flip","kind":"card-flip","atFrame":330,"durationFrames":24,"fromScene":2,"toScene":3},
+    {"id":"T04","name":"Diagonal reveal","kind":"diagonal","atFrame":450,"durationFrames":24,"fromScene":3,"toScene":4},
+    {"id":"T05","name":"Split gate","kind":"split-gate","atFrame":570,"durationFrames":24,"fromScene":4,"toScene":5},
+    {"id":"T06","name":"Whip pan","kind":"whip-pan","atFrame":690,"durationFrames":24,"fromScene":5,"toScene":6},
+    {"id":"T07","name":"Cube turn","kind":"cube","atFrame":810,"durationFrames":24,"fromScene":6,"toScene":7},
+    {"id":"T08","name":"Iris","kind":"iris","atFrame":930,"durationFrames":24,"fromScene":7,"toScene":8},
+    {"id":"T09","name":"Quad burst","kind":"quad-burst","atFrame":1050,"durationFrames":24,"fromScene":8,"toScene":9}
+  ]
+}

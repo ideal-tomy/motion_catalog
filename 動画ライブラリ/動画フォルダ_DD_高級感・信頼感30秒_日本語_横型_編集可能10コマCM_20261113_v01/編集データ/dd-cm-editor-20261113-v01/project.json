@@ -1,0 +1,2231 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectId": "dd-cm-editor-20261113-v01",
+  "revision": 1,
+  "title": "DD｜根拠が、判断を変える。30秒・10コマCM",
+  "brief": "高級感と信頼。DDデモの実画面を切り抜き、説明文を詰めずに判断と根拠を印象づける。10コマ、30秒、編集可能な文字・画像・図形・BGM。",
+  "video": {
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "targetDurationFrames": 900,
+    "durationPolicy": "ripple"
+  },
+  "theme": {
+    "requestedColors": {
+      "primary": "#12232d",
+      "secondary": "#bcaa85"
+    },
+    "palette": {
+      "background": "#12232d",
+      "surface": "#1b3540",
+      "text": "#f3f0e9",
+      "primary": "#12232d",
+      "accent": "#bcaa85",
+      "mutedText": "#9eafb7"
+    }
+  },
+  "assets": [
+    {
+      "assetId": "dd-overview",
+      "kind": "image",
+      "path": "assets/dd-overview.jpg",
+      "posterPath": "assets/dd-overview.thumb.jpg",
+      "originalName": "DDデモ実画面・overview.jpg",
+      "license": "DDローカルデモの既存撮影素材。氏名・数値は架空サンプル。",
+      "verifiedForUse": true
+    },
+    {
+      "assetId": "dd-result",
+      "kind": "image",
+      "path": "assets/dd-result.jpg",
+      "posterPath": "assets/dd-result.thumb.jpg",
+      "originalName": "DDデモ実画面・result.jpg",
+      "license": "DDローカルデモの既存撮影素材。氏名・数値は架空サンプル。",
+      "verifiedForUse": true
+    },
+    {
+      "assetId": "dd-evidence-card",
+      "kind": "image",
+      "path": "assets/dd-evidence-card.jpg",
+      "posterPath": "assets/dd-evidence-card.thumb.jpg",
+      "originalName": "DDデモ実画面・evidence-card.jpg",
+      "license": "DDローカルデモの既存撮影素材。氏名・数値は架空サンプル。",
+      "verifiedForUse": true
+    },
+    {
+      "assetId": "dd-evidence",
+      "kind": "image",
+      "path": "assets/dd-evidence.jpg",
+      "posterPath": "assets/dd-evidence.thumb.jpg",
+      "originalName": "DDデモ実画面・evidence.jpg",
+      "license": "DDローカルデモの既存撮影素材。氏名・数値は架空サンプル。",
+      "verifiedForUse": true
+    },
+    {
+      "assetId": "dd-input",
+      "kind": "image",
+      "path": "assets/dd-input.jpg",
+      "posterPath": "assets/dd-input.thumb.jpg",
+      "originalName": "DDデモ実画面・input.jpg",
+      "license": "DDローカルデモの既存撮影素材。氏名・数値は架空サンプル。",
+      "verifiedForUse": true
+    },
+    {
+      "assetId": "dd-bgm",
+      "kind": "audio",
+      "path": "assets/dd-original-bgm.wav",
+      "originalName": "DD オリジナル30秒BGM.wav",
+      "license": "既存制作環境で生成したオリジナルBGM",
+      "verifiedForUse": true,
+      "durationSeconds": 30
+    }
+  ],
+  "scenes": [
+    {
+      "sceneId": "dd-cm-scene-01",
+      "role": "intro",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-1-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-1-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-1-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-1-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.17,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "EVIDENCE FOR DECISIONS"
+        },
+        {
+          "layerId": "dd-1-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.29,
+            "width": 0.54,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 96,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "根拠が、\n判断を変える。"
+        },
+        {
+          "layerId": "dd-1-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.63,
+            "y": 0.235,
+            "width": 0.37,
+            "height": 0.59,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "diagonal-left",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 70,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "dd-overview",
+          "animations": [
+            {
+              "id": "dd-animation-1",
+              "presetId": "A-019",
+              "targetLayerId": "dd-1-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 26,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-02",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-2-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-2-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-2-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-2-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.13,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "01 / RECONCILE"
+        },
+        {
+          "layerId": "dd-2-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.215,
+            "width": 0.87,
+            "height": 0.24,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 84,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "差異を、捉える。"
+        },
+        {
+          "layerId": "dd-2-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.48,
+            "width": 0.87,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 0
+          },
+          "motionStack": [],
+          "assetId": "dd-result",
+          "animations": [
+            {
+              "id": "dd-animation-2",
+              "presetId": "A-020",
+              "targetLayerId": "dd-2-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 75,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-03",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {
+        "background": "#f3f0e9",
+        "surface": "#e6e2d9",
+        "text": "#12232d",
+        "primary": "#12232d",
+        "accent": "#8c7957",
+        "mutedText": "#66737b"
+      },
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-3-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-3-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-3-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-3-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.13,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "02 / DISCOVER"
+        },
+        {
+          "layerId": "dd-3-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.215,
+            "width": 0.87,
+            "height": 0.24,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 84,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "小さな違いに、\n目を向ける。"
+        },
+        {
+          "layerId": "dd-3-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.48,
+            "width": 0.87,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 0
+          },
+          "motionStack": [],
+          "assetId": "dd-result",
+          "animations": [
+            {
+              "id": "dd-animation-3",
+              "presetId": "A-017",
+              "targetLayerId": "dd-3-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 26,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-04",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-4-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-4-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-4-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-4-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.17,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "03 / TRACE"
+        },
+        {
+          "layerId": "dd-4-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.29,
+            "width": 0.54,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 96,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "数字から、\n根拠へ。"
+        },
+        {
+          "layerId": "dd-4-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.59,
+            "y": 0.235,
+            "width": 0.36,
+            "height": 0.6,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "contain",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "dd-evidence-card",
+          "animations": [
+            {
+              "id": "dd-animation-4",
+              "presetId": "A-024",
+              "targetLayerId": "dd-4-media",
+              "targetScope": "imageContent",
+              "startFrame": 0,
+              "durationFrames": 90,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "parentFrame",
+                "easing": "linear",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 24,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-05",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {
+        "background": "#f3f0e9",
+        "surface": "#e6e2d9",
+        "text": "#12232d",
+        "primary": "#12232d",
+        "accent": "#8c7957",
+        "mutedText": "#66737b"
+      },
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-5-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-5-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-5-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-5-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.13,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "04 / PERSPECTIVE"
+        },
+        {
+          "layerId": "dd-5-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.215,
+            "width": 0.87,
+            "height": 0.24,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 84,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "全体像を、\n見失わない。"
+        },
+        {
+          "layerId": "dd-5-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0,
+            "y": 0.48,
+            "width": 1,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1.08,
+            "cropX": 70,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "dd-overview",
+          "animations": [
+            {
+              "id": "dd-animation-5",
+              "presetId": "A-018",
+              "targetLayerId": "dd-5-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 26,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-06",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-6-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-6-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-6-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-6-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.17,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "05 / EVIDENCE"
+        },
+        {
+          "layerId": "dd-6-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.29,
+            "width": 0.54,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 96,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "判断のそばに、\n確かな情報を。"
+        },
+        {
+          "layerId": "dd-6-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.59,
+            "y": 0.235,
+            "width": 0.36,
+            "height": 0.6,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "contain",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "dd-evidence-card",
+          "animations": [
+            {
+              "id": "dd-animation-6",
+              "presetId": "A-013",
+              "targetLayerId": "dd-6-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 26,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-07",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {
+        "background": "#f3f0e9",
+        "surface": "#e6e2d9",
+        "text": "#12232d",
+        "primary": "#12232d",
+        "accent": "#8c7957",
+        "mutedText": "#66737b"
+      },
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-7-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-7-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-7-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-7-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.13,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "06 / CONNECT"
+        },
+        {
+          "layerId": "dd-7-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.215,
+            "width": 0.87,
+            "height": 0.24,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 84,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "発見と根拠が、\nつながる。"
+        },
+        {
+          "layerId": "dd-7-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.49,
+            "width": 0.55,
+            "height": 0.32,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 0
+          },
+          "motionStack": [],
+          "assetId": "dd-result",
+          "animations": [
+            {
+              "id": "dd-animation-7",
+              "presetId": "A-011",
+              "targetLayerId": "dd-7-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 26,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "dd-7-proof",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.67,
+            "y": 0.4,
+            "width": 0.28,
+            "height": 0.43,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "contain",
+            "mask": "rect",
+            "frame": "none"
+          },
+          "motionStack": [],
+          "assetId": "dd-evidence-card"
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-08",
+      "role": "feature",
+      "durationFrames": 90,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-8-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-8-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-8-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-8-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.17,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "A CLEARER PERSPECTIVE"
+        },
+        {
+          "layerId": "dd-8-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.29,
+            "width": 0.54,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 110,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "見抜く。\nその先へ。"
+        },
+        {
+          "layerId": "dd-8-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 90,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.6,
+            "y": 0.23,
+            "width": 0.4,
+            "height": 0.64,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "cover",
+            "mask": "diagonal-left",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 70,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "dd-overview",
+          "animations": [
+            {
+              "id": "dd-animation-8",
+              "presetId": "A-002",
+              "targetLayerId": "dd-8-media",
+              "targetScope": "frame",
+              "startFrame": 0,
+              "durationFrames": 26,
+              "params": {
+                "direction": "right",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-09",
+      "role": "feature",
+      "durationFrames": 60,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {
+        "background": "#f3f0e9",
+        "surface": "#e6e2d9",
+        "text": "#12232d",
+        "primary": "#12232d",
+        "accent": "#8c7957",
+        "mutedText": "#66737b"
+      },
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-9-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 60,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-9-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 60,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-9-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 60,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-9-chapter",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 60,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.17,
+            "width": 0.86,
+            "height": 0.05,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "THE NEXT MOVE"
+        },
+        {
+          "layerId": "dd-9-headline",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 60,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.29,
+            "width": 0.54,
+            "height": 0.36,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 96,
+            "colorToken": "text",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "次の一手を、\n確かなものに。"
+        },
+        {
+          "layerId": "dd-9-media",
+          "kind": "image",
+          "zIndex": 0,
+          "inFrame": 0,
+          "durationFrames": 60,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.59,
+            "y": 0.22,
+            "width": 0.36,
+            "height": 0.62,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fit": "contain",
+            "mask": "rect",
+            "frame": "none",
+            "presentation": "layer",
+            "mediaZoom": 1,
+            "cropX": 50,
+            "cropY": 50
+          },
+          "motionStack": [],
+          "assetId": "dd-evidence-card",
+          "animations": [
+            {
+              "id": "dd-animation-9",
+              "presetId": "A-007",
+              "targetLayerId": "dd-9-media",
+              "targetScope": "frame",
+              "startFrame": 39,
+              "durationFrames": 21,
+              "params": {
+                "direction": "up",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        }
+      ],
+      "motionStack": []
+    },
+    {
+      "sceneId": "dd-cm-scene-10",
+      "role": "cta",
+      "durationFrames": 120,
+      "layout": {
+        "type": "free",
+        "direction": "horizontal",
+        "splitRatio": 0.5,
+        "cells": 1
+      },
+      "paceKeyframes": [
+        {
+          "position": 0,
+          "intensity": 20
+        },
+        {
+          "position": 1,
+          "intensity": 40
+        }
+      ],
+      "colorOverrides": {},
+      "unplacedLayerIds": [],
+      "layers": [
+        {
+          "layerId": "dd-10-brand",
+          "kind": "text",
+          "zIndex": 1,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.047,
+            "width": 0.45,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 20,
+            "colorToken": "accent",
+            "align": "left",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON"
+        },
+        {
+          "layerId": "dd-10-suite",
+          "kind": "text",
+          "zIndex": 2,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.65,
+            "y": 0.047,
+            "width": 0.285,
+            "height": 0.035,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "right",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-10-disclosure",
+          "kind": "text",
+          "zIndex": 3,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.065,
+            "y": 0.94,
+            "width": 0.87,
+            "height": 0.03,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 18,
+            "colorToken": "mutedText",
+            "align": "left",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "画面・氏名・数値はデモ用サンプル。最終判断は人が行います。"
+        },
+        {
+          "layerId": "dd-10-hero-brand",
+          "kind": "text",
+          "zIndex": 4,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.11,
+            "y": 0.24,
+            "width": 0.78,
+            "height": 0.23,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 155,
+            "colorToken": "text",
+            "align": "center",
+            "fontFamily": "Georgia",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "AXEON",
+          "animations": [
+            {
+              "id": "dd-animation-10",
+              "presetId": "A-009",
+              "targetLayerId": "dd-10-hero-brand",
+              "targetScope": "text",
+              "startFrame": 0,
+              "durationFrames": 32,
+              "params": {
+                "direction": "left",
+                "exitBoundary": "canvas",
+                "easing": "easeOut",
+                "overshootPx": 32,
+                "scale": 0.94,
+                "rotationDeg": -3,
+                "distancePx": 0,
+                "fromCurrentPosition": true
+              },
+              "afterEnd": "holdEnd"
+            }
+          ]
+        },
+        {
+          "layerId": "dd-10-brand-caption",
+          "kind": "text",
+          "zIndex": 5,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.11,
+            "y": 0.48,
+            "width": 0.78,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 31,
+            "colorToken": "accent",
+            "align": "center",
+            "fontFamily": "Arial",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DD INTELLIGENCE"
+        },
+        {
+          "layerId": "dd-10-headline",
+          "kind": "text",
+          "zIndex": 6,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.08,
+            "y": 0.6,
+            "width": 0.84,
+            "height": 0.09,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 52,
+            "colorToken": "text",
+            "align": "center",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "確信をもって、次の一手へ。"
+        },
+        {
+          "layerId": "dd-10-cta",
+          "kind": "text",
+          "zIndex": 7,
+          "inFrame": 0,
+          "durationFrames": 120,
+          "opacity": 1,
+          "visible": true,
+          "locked": false,
+          "transform": {
+            "x": 0.15,
+            "y": 0.77,
+            "width": 0.7,
+            "height": 0.06,
+            "rotateDeg": 0
+          },
+          "style": {
+            "fontSize": 29,
+            "colorToken": "accent",
+            "align": "center",
+            "fontFamily": "Yu Gothic",
+            "mask": "rect"
+          },
+          "motionStack": [],
+          "text": "DDデモを体験する　↗"
+        }
+      ],
+      "motionStack": []
+    }
+  ],
+  "audioTracks": [
+    {
+      "trackId": "dd-bgm-track",
+      "assetId": "dd-bgm",
+      "startFrame": 0,
+      "durationFrames": 900,
+      "volume": 0.72,
+      "fadeInFrames": 18,
+      "fadeOutFrames": 45
+    }
+  ],
+  "locks": [],
+  "meta": {
+    "importMode": "editable-source-sample",
+    "productionKind": "editable-commercial",
+    "sourceJob": "promo-studio/jobs/dd-editor-premium-20261113",
+    "sampleData": true,
+    "renderComponent": "ProjectComposition"
+  }
+}

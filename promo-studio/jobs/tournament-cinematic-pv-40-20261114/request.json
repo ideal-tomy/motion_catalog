@@ -1,0 +1,22 @@
+{
+  "project": "tournament-cinematic-pv-40-20261114",
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+  "instruction": "新しい制作ワークフローで、トーナメント運営機能を映画予告編級の迫力とスピード感で紹介する日本語40秒PVを企画する。過去作の構成・コピー・素材・音楽は流用しない。",
+  "durationSeconds": 40,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audience": "大会主催者・運営者、参加者",
+  "goal": "受付から試合進行・優勝演出まで、トーナメント運営の流れと会場の高揚感を伝える",
+  "visualTone": "cinematic sports trailer / high-energy / Japanese copy",
+  "captureMode": "verified-ui-plus-explicitly-labeled-sample-preview",
+  "music": "新規制作のオリジナル・シネマティックロック。過去案件の音源は使用しない。",
+  "preserveOriginal": true,
+  "doNotReusePreviousCreative": true,
+  "approval": {
+    "gate": "preview-review-before-final-export",
+    "creativeBriefAndStoryboardApprovedOn": "2026-11-14",
+    "previewReadyOn": "2026-11-14",
+    "finalExportRequiresSeparateApproval": true
+  }
+}

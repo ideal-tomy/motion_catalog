@@ -1,0 +1,33 @@
+{
+  "source": "C:/Users/ryoji/00myapp/ai_demo_workspace/tournament-latest-review-20261024",
+  "capturedAt": "2026-11-14",
+  "sampleOnly": true,
+  "browserAudit": "research/browser-audit.json",
+  "screenshots": [
+    { "scene": "draw", "file": "research/draw.png", "meaning": "Fixture-only pair reveal animation preview" },
+    { "scene": "result", "file": "research/result.png", "meaning": "Fixture-only result stage preview" },
+    { "scene": "bracket", "file": "research/bracket.png", "meaning": "Fixture-only bracket advance schematic" },
+    { "scene": "vs", "file": "research/vs.png", "meaning": "Fixture-only VS display" },
+    { "scene": "champion", "file": "research/champion.png", "meaning": "Fixture-only champion ceremony" }
+  ],
+  "sourceEvidence": [
+    "src/checkin/EntryTeams.tsx",
+    "src/checkin/DrawControl.tsx",
+    "src/checkin/AnimatedBracketAdvance.tsx",
+    "src/checkin/FlowPresentation.tsx",
+    "src/features/presentation/ceremony/ChampionBoard.tsx",
+    "docs/CHECKIN_LIFECYCLE.md",
+    "docs/PAIR_ANNOUNCEMENT_FLOW.md",
+    "docs/MATCH_PROGRESS_LOOP.md",
+    "docs/TOURNAMENT_FLOW.md",
+    "docs/ANIMATION_PREVIEW.md"
+  ],
+  "liveOperationalWrites": false,
+  "externalRequests": 0,
+  "browserErrors": 0,
+  "unverified": [
+    "Current production app state and real event data were not accessed.",
+    "Check-in and team-entry screens were not captured; feature support is based on source and recorded verification.",
+    "Animation Preview screens are fixtures and do not prove production display equivalence."
+  ]
+}
